@@ -90,6 +90,7 @@ def main() -> None:
         )
     provenance = {
         "runtime": runtime_record(),
+        "project_commit": git_revision(Path(__file__).resolve().parent),
         "progen_upstream_path": str(args.progen_repo.resolve()),
         "progen_upstream_commit": actual_progen_commit,
         "progen_checkpoint_path": str(args.progen_checkpoint.resolve()),
