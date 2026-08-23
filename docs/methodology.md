@@ -1,6 +1,6 @@
 # Mandrake Experiment 1 replication protocol
 
-Status: implementation scaffold complete; no model inference or scientific result has been produced.  
+Status: model smoke test passed and replacement cohort frozen; no protein contact result has been produced.
 Protocol version: 0.3 (2026-08-22)  
 Scope: reproduce the attention-contact experiment in Mandrake Bio's post, *Protein Language Models: Fluent, but clueless*.
 
@@ -186,17 +186,26 @@ If Mandrake's manifest remains unavailable:
 
 The clustering and stratification are replacement choices. They are not inferred Mandrake methodology.
 
-Implementation status (2026-08-23): `build-cohort` implements this fallback but has
-not yet been executed against RCSB. It uses the live RCSB Search and Data APIs, saves
-the exact query, every raw response, and a UTC retrieval timestamp, and therefore
-implements the “timestamped query” branch rather than an archived PDB snapshot. It
-pins MMseqs2 `15.6f452` and invokes `easy-cluster` with `--min-seq-id 0.30 -c 0.80
---cov-mode 0`; coverage mode 0 requires the declared coverage on both sequences.
-The four length-bin quotas for 150 chains are deterministically 38, 38, 37, and 37.
-Restarting in the same work directory reuses downloaded responses, cluster output,
-and mmCIF files, but refuses to proceed if the cohort-defining configuration has
-changed. This implementation is not evidence that Mandrake used any of these
-fallback choices.
+Execution status (2026-08-24): the fallback cohort was built from a live RCSB query
+recorded at `2026-08-23T17:58:38.046531+00:00`. The run found 96,666 search hits,
+retained 95,589 candidates after the declared API filters, produced 12,793 MMseqs2
+clusters, and froze 150 unique chains. The manifest SHA-256 is
+`10b89e0f3a6dccbacf081ca03a18aebc9001e4dd83f1e4c364e15ecbe3022b09`.
+The four length-bin counts are 38, 38, 37, and 37. The five-chain pilot manifest
+SHA-256 is `7873e16b49516d4ff760f3c0e91989262630ecb66550e76f1ea7d04272a77996`.
+An independent audit replayed the pilot selection, verified every selected mmCIF
+hash, and confirmed that every pilot chain produces nonempty exact-distance-matched
+contact/decoy pairs. Full details are in `docs/experiment_log.md`.
+
+The implementation uses the live RCSB Search and Data APIs, saves the exact query,
+every raw response, and a UTC retrieval timestamp, and therefore implements the
+“timestamped query” branch rather than an archived PDB snapshot. It pins MMseqs2
+`15.6f452` and invokes `easy-cluster` with `--min-seq-id 0.30 -c 0.80 --cov-mode 0`;
+coverage mode 0 requires the declared coverage on both sequences. Restarting in the
+same work directory reuses downloaded responses, cluster output, and mmCIF files,
+but refuses to proceed if the cohort-defining configuration has changed. This
+implementation and the completed fallback cohort are not evidence that Mandrake
+used any of these choices or structures.
 
 ### 5.3 Structure and contact labels
 
