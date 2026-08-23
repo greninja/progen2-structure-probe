@@ -17,14 +17,14 @@ from progen2_structure_probe.cohort import (
 class CohortTests(unittest.TestCase):
     def test_post_json_retries_remote_disconnect(self):
         response = io.BytesIO(b'{"status": "ok"}')
-        with (
-            patch(
-                "progen2_structure_probe.cohort.urlopen",
-                side_effect=[RemoteDisconnected("closed"), response],
-            ),
-            patch("progen2_structure_probe.cohort.time.sleep") as sleep,
+        with patch(
+            "progen2_structure_probe.cohort.urlopen",
+            side_effect=[RemoteDisconnected("closed"), response],
         ):
-            self.assertEqual(_post_json("https://example.test", {}), {"status": "ok"})
+            with patch("progen2_structure_probe.cohort.time.sleep") as sleep:
+                self.assertEqual(
+                    _post_json("https://example.test", {}), {"status": "ok"}
+                )
         sleep.assert_called_once_with(1)
 
     def test_rcsb_query_contains_declared_primary_filters(self):
