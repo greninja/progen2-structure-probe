@@ -36,12 +36,14 @@ Then run:
 
 ```bash
 cd /workspace/project
-bash scripts/runpod_bootstrap.sh /workspace/volume
+bash scripts/runpod_bootstrap.sh /workspace/volume progen2-base
 ```
 
-The bootstrap script checks out the pinned Salesforce and ESM commits, downloads the
-official ProGen2 base and small archives, and records archive, environment, driver,
-and source provenance. The persistent volume prevents repeated model downloads.
+The bootstrap script checks out the pinned Salesforce and ESM commits, downloads only
+the requested official ProGen2 archive, and records archive, environment, driver, and
+source provenance. The Experiment 1 default is `progen2-base`; do not download
+`progen2-small` unless Experiment 2 is explicitly resumed. The persistent volume
+prevents repeated model downloads.
 
 Before inference, populate and hash the manifests described in
 `data/manifests/README.md`. Do not fill unresolved Mandrake sequence or structure IDs
@@ -60,7 +62,9 @@ python -m pytest
 Run deterministic extraction before downloading structures or launching the pilot:
 
 ```bash
-progen2-probe smoke-models configs/experiment1_pilot.yaml \
+TORCH_HOME=/workspace/volume/torch-cache \
+/workspace/volume/envs/progen2-probe/bin/progen2-probe \
+  smoke-models configs/experiment1_pilot.yaml \
   --progen-repo /workspace/volume/upstream/progen \
   --progen-checkpoint /workspace/volume/checkpoints/progen2-base \
   --esm-repo /workspace/volume/upstream/esm \
