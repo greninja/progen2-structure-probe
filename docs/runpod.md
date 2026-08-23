@@ -5,10 +5,34 @@ and an 80–100 GB persistent volume mounted at `/workspace/volume`. Heavy data 
 and all model inference run there. Only compact results, tests, plots, and analysis
 belong on the local machine.
 
-## Build and bootstrap
+## Create the isolated runtime
 
-Build `Dockerfile.runpod` as a RunPod custom image or build it in a Pod after syncing
-the repository. Then run:
+The observed RTX 4090 Pod base environment uses Python 3.11, PyTorch 2.4.1, and
+CUDA 12.4. Preserve that functioning base environment. Create a persistent isolated
+Python 3.8 runtime with the hash-pinned micromamba bootstrap:
+
+```bash
+bash scripts/runpod_create_env.sh /workspace/volume /workspace/project
+```
+
+The isolated runtime pins PyTorch 2.0.1 with CUDA 11.8, selected for RTX 4090
+compatibility with the older ProGen2 dependency stack. This is an
+environment compatibility substitution, not a recovered Mandrake setting. Its
+package freeze and CUDA runtime check are written under
+`/workspace/volume/bootstrap-artifacts`.
+
+Run commands through:
+
+```bash
+/workspace/volume/envs/progen2-probe/bin/python
+/workspace/volume/envs/progen2-probe/bin/progen2-probe
+```
+
+## Source and checkpoint bootstrap
+
+The custom Dockerfile encodes the same Python/PyTorch/CUDA compatibility choice for
+future image builds. The current Pod uses the isolated persistent environment above.
+Then run:
 
 ```bash
 cd /workspace/project

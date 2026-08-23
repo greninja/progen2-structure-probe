@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:1.9.0-cuda11.1-cudnn8-runtime
+FROM pytorch/pytorch:2.1.0-cuda11.8-cudnn8-runtime
 
 ENV DEBIAN_FRONTEND=noninteractive \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
@@ -8,12 +8,15 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends git ca-certificates wget \
     && rm -rf /var/lib/apt/lists/*
 
-RUN conda install -y -c conda-forge -c bioconda mmseqs2=15.6f452 \
-    && conda clean -afy
-
 WORKDIR /workspace/project
 COPY requirements/remote.txt /tmp/remote.txt
-RUN python -m pip install --upgrade "pip<24" "setuptools<70" wheel \
+RUN conda create -y -p /opt/progen2-probe \
+      -c conda-forge python=3.8.20 pip=23.3.2 setuptools=69.5.1 wheel=0.42.0 \
+      mmseqs2=15.6f452 \
+    && conda clean -afy
+ENV PATH=/opt/progen2-probe/bin:$PATH
+RUN python -m pip install --index-url https://download.pytorch.org/whl/cu118 \
+      "torch==2.0.1+cu118" \
     && python -m pip install --no-cache-dir -r /tmp/remote.txt
 
 COPY . /workspace/project

@@ -351,6 +351,13 @@ For ProGen2-base in FP16, batch size 1, length 500 plus two terminal tokens:
 - theoretical forward compute: approximately 0.81 TFLOP;
 - practical GPU target: at least 8 GiB after accounting for masks, temporary tensors, framework overhead, and allocator workspace.
 
+The initial remote Pod is an RTX 4090, whose working base runtime is Python 3.11,
+PyTorch 2.4.1, and CUDA 12.4. Because the pinned ProGen2-era tokenizer stack requires
+an older Python, remote execution uses an isolated Python 3.8.20 environment with
+PyTorch 2.0.1 and its CUDA 11.8 wheel. This compatibility substitution is recorded
+separately from model and analysis methodology and must pass the deterministic model
+smoke test before any protein is analyzed.
+
 At average protein length 300, storing every FP16 attention and hidden-state tensor for 150 proteins would require about 15 GiB. For this replication, aggregate attention per protein and retain score tables; raw tensor caching is optional. Measure actual peak memory and seconds per protein in the pilot before extrapolating full-run time.
 
 ## 10. Reproducibility artifacts
