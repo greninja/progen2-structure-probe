@@ -1,0 +1,20 @@
+FROM pytorch/pytorch:1.9.0-cuda11.1-cudnn8-runtime
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PYTHONHASHSEED=0
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends git ca-certificates wget \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace/project
+COPY requirements/remote.txt /tmp/remote.txt
+RUN python -m pip install --upgrade "pip<24" "setuptools<70" wheel \
+    && python -m pip install --no-cache-dir -r /tmp/remote.txt
+
+COPY . /workspace/project
+RUN python -m pip install --no-deps -e /workspace/project
+
+CMD ["bash"]
+

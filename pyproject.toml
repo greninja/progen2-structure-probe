@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "progen2-structure-probe"
+version = "0.1.0"
+description = "Reproducible replications of Mandrake Bio ProGen2 experiments"
+requires-python = ">=3.8"
+dependencies = [
+  "numpy>=1.23,<1.25",
+  "PyYAML>=6,<7",
+  "scipy>=1.9,<2",
+]
+
+[project.optional-dependencies]
+remote = [
+  "biopython>=1.81,<2",
+  "pandas>=1.5,<3",
+  "scikit-learn>=1.2,<2",
+  "statsmodels>=0.14,<1",
+]
+test = ["pytest>=7,<9"]
+
+[project.scripts]
+progen2-probe = "progen2_structure_probe.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
