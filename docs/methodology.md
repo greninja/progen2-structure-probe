@@ -1,6 +1,6 @@
 # Mandrake Experiment 1 replication protocol
 
-Status: model smoke test passed and replacement cohort frozen; no protein contact result has been produced.
+Status: public-information partial reproduction completed on the 150-chain replacement cohort.
 Protocol version: 0.3 (2026-08-22)  
 Scope: reproduce the attention-contact experiment in Mandrake Bio's post, *Protein Language Models: Fluent, but clueless*.
 

@@ -75,3 +75,37 @@ The audit verified:
 This audit establishes that the pilot is technically runnable under the declared
 fallback protocol. It does not establish equivalence to Mandrake's unpublished
 cohort and does not provide a contact-attention result.
+
+## 2026-08-24 — Experiment 1 full replacement-cohort run
+
+The existing attention pipeline was run on all 150 frozen chains at project commit
+`7355110`. It produced 88,473 exact-sequence-distance-matched contact/decoy pairs.
+
+| Result | ProGen2-base | ESM-2 35M |
+|---|---:|---:|
+| Pooled ROC-AUC | 0.5374 | 0.6147 |
+| Pooled Cohen's d | 0.1501 | 0.3930 |
+| Mean per-protein ROC-AUC | 0.5380 | 0.6210 |
+| Best layer ROC-AUC | 0.5759 (layer 25) | 0.6834 (layer 11) |
+| Best layer Cohen's d | 0.2095 | 0.5213 |
+
+Distance-binned ROC-AUC:
+
+| Separation | Pairs per class | ProGen2-base | ESM-2 35M |
+|---|---:|---:|---:|
+| (10,20] | 14,255 | 0.5697 | 0.6209 |
+| (20,40] | 25,326 | 0.5704 | 0.6712 |
+| (40,60] | 14,033 | 0.5512 | 0.6630 |
+| (60,100] | 14,031 | 0.5518 | 0.6626 |
+| (100,150] | 7,658 | 0.5524 | 0.6238 |
+| (150,500] | 13,170 | 0.5113 | 0.5781 |
+
+Mandrake reported pooled AUC values of 0.527 for ProGen2 and 0.611 for ESM-2.
+The replacement-cohort result therefore reproduces the main qualitative finding:
+ProGen2 attention has weak contact-discrimination signal that approaches random at
+long sequence separation, while ESM-2 is consistently stronger. Numerical differences
+are expected because Mandrake did not publish its structures or complete method and
+reported 38,286 comparisons rather than the 88,473 used here.
+
+Accepted summary SHA-256:
+`a7a35aaeaeb2d6b692c1152054b3b050224b71293e37d831234c149ee48304a4`.
