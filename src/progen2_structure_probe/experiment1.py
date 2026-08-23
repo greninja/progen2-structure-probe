@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 from pathlib import Path
+import time
 from typing import Any
 
 import numpy as np
@@ -18,6 +19,7 @@ from .metrics import (
     roc_auc,
 )
 from .mmcif import load_polymer_chain
+from .smoke import _measure_cuda
 
 
 def load_structure_manifest(path: Path) -> list[dict[str, str]]:
@@ -92,6 +94,7 @@ def run_experiment1(
     chain_summaries: list[dict[str, Any]] = []
 
     for record in manifest:
+        chain_started = time.perf_counter()
         chain = load_polymer_chain(Path(record["mmcif_path"]), record["label_asym_id"])
         if chain.structure_id != record["structure_id"].upper():
             raise ValueError(f"structure ID mismatch for {record['mmcif_path']}")
@@ -106,7 +109,9 @@ def run_experiment1(
         if len(pairs) == 0:
             raise ValueError(f"{chain.structure_id}:{chain.label_asym_id} has no matched pairs")
 
-        progen = progen_model.extract(chain.sequence)
+        progen, progen_seconds, progen_memory = _measure_cuda(
+            progen_model.torch, lambda: progen_model.extract(chain.sequence)
+        )
         if progen.attentions.shape[-2:] != (len(chain.sequence), len(chain.sequence)):
             raise ValueError("ProGen2 residue attention shape is misaligned")
         if progen.attentions.shape[:2] != (27, 16):
@@ -121,7 +126,9 @@ def run_experiment1(
         progen_layer_positive = progen_layer_score[:, pairs.contact_i, pairs.contact_j]
         progen_layer_negative = progen_layer_score[:, pairs.decoy_i, pairs.decoy_j]
 
-        esm_attention = esm_model.extract_attention(chain.sequence)
+        esm_attention, esm_seconds, esm_memory = _measure_cuda(
+            esm_model.torch, lambda: esm_model.extract_attention(chain.sequence)
+        )
         if esm_attention.shape[0] != 12 or esm_attention.shape[-2:] != (
             len(chain.sequence), len(chain.sequence)
         ):
@@ -160,6 +167,13 @@ def run_experiment1(
                 "length": len(chain.sequence),
                 "valid_backbone_residues": int(chain.valid_backbone.sum()),
                 "matched_pairs": len(pairs),
+                "resources": {
+                    "chain_wall_seconds": time.perf_counter() - chain_started,
+                    "progen2_extraction_seconds": progen_seconds,
+                    "progen2_memory": progen_memory,
+                    "esm2_extraction_seconds": esm_seconds,
+                    "esm2_memory": esm_memory,
+                },
                 "progen2": _summary(progen_positive, progen_negative),
                 "esm2": _summary(esm_positive, esm_negative),
             }
