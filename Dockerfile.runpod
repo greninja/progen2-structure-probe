@@ -8,6 +8,9 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends git ca-certificates wget \
     && rm -rf /var/lib/apt/lists/*
 
+RUN conda install -y -c conda-forge -c bioconda mmseqs2=15.6f452 \
+    && conda clean -afy
+
 WORKDIR /workspace/project
 COPY requirements/remote.txt /tmp/remote.txt
 RUN python -m pip install --upgrade "pip<24" "setuptools<70" wheel \
@@ -17,4 +20,3 @@ COPY . /workspace/project
 RUN python -m pip install --no-deps -e /workspace/project
 
 CMD ["bash"]
-

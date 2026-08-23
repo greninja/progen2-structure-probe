@@ -28,6 +28,27 @@ def load_config(path: Path) -> dict[str, Any]:
         raise ValueError("experiment must be 1 or 2")
     if not isinstance(config["run"].get("seed"), int):
         raise ValueError("run.seed must be an integer")
+    if config["experiment"] == 1:
+        required_cohort = {
+            "min_length",
+            "max_length",
+            "maximum_resolution_angstrom",
+            "target_count",
+            "minimum_coordinate_coverage",
+            "mmseqs_version",
+            "sequence_identity",
+            "bidirectional_coverage",
+        }
+        cohort = config.get("cohort")
+        if not isinstance(cohort, dict) or not required_cohort.issubset(cohort):
+            missing_cohort = required_cohort - set(cohort or {})
+            raise ValueError(f"Experiment 1 cohort config is missing: {sorted(missing_cohort)}")
+        if not 0 < float(cohort["sequence_identity"]) <= 1:
+            raise ValueError("cohort.sequence_identity must be in (0, 1]")
+        if not 0 < float(cohort["bidirectional_coverage"]) <= 1:
+            raise ValueError("cohort.bidirectional_coverage must be in (0, 1]")
+        if not 0 < float(cohort["minimum_coordinate_coverage"]) <= 1:
+            raise ValueError("cohort.minimum_coordinate_coverage must be in (0, 1]")
     return config
 
 
@@ -39,4 +60,3 @@ def resolved_config_record(path: Path) -> dict[str, Any]:
         "resolved_sha256": canonical_json_sha256(config),
         "config": config,
     }
-

@@ -31,6 +31,38 @@ progen2-probe validate-config configs/experiment2_reproduction.yaml
 python -m pytest
 ```
 
+## Model and memory smoke test
+
+Run deterministic extraction before downloading structures or launching the pilot:
+
+```bash
+progen2-probe smoke-models configs/experiment1_pilot.yaml \
+  --progen-repo /workspace/volume/upstream/progen \
+  --progen-checkpoint /workspace/volume/checkpoints/progen2-base \
+  --esm-repo /workspace/volume/upstream/esm \
+  --sequence-length 128 \
+  --output-dir /workspace/volume/results/smoke
+```
+
+Review `smoke.json` for tensor shapes, determinism, causal masking, wall time, and
+peak CUDA allocation. This is an engineering check, not a contact result.
+
+## Build the documented fallback cohort
+
+Only use this when the unpublished Mandrake manifest remains unavailable:
+
+```bash
+progen2-probe build-cohort configs/experiment1_pilot.yaml \
+  --work-dir /workspace/volume/data/experiment1-cohort \
+  --threads 16
+```
+
+The command is restartable and produces raw RCSB request/response records,
+candidate CSV/FASTA, MMseqs2 clusters, rejection records, downloaded mmCIF files,
+the frozen 150-chain manifest, and the five-chain pilot manifest. Do not delete or
+edit individual candidates after seeing model results; rebuild under a new work
+directory if the predeclared cohort protocol changes.
+
 ## Five-protein Experiment 1 pilot
 
 ```bash
@@ -38,6 +70,7 @@ progen2-probe experiment1 configs/experiment1_pilot.yaml \
   --progen-repo /workspace/volume/upstream/progen \
   --progen-checkpoint /workspace/volume/checkpoints/progen2-base \
   --esm-repo /workspace/volume/upstream/esm \
+  --manifest /workspace/volume/data/experiment1-cohort/experiment1_pilot.csv \
   --output-dir /workspace/volume/results/experiment1/pilot
 ```
 
@@ -56,4 +89,3 @@ progen2-probe experiment2 configs/experiment2_reproduction.yaml \
 Terminate GPU compute when a batch completes. Retain only the persistent volume while
 reviewing results. Sync `resolved_config.json`, JSON summaries, per-chain NPZ files,
 bootstrap metadata, and logs back to the local repository's ignored `results/` tree.
-

@@ -10,6 +10,16 @@ run:
   precision: float16
   manifest: data/manifests/experiment1_pilot.csv
   output_directory: results/experiment1/pilot
+cohort:
+  source: live-rcsb-query-recorded-at-retrieval
+  min_length: 100
+  max_length: 500
+  maximum_resolution_angstrom: 2.0
+  target_count: 150
+  minimum_coordinate_coverage: 0.95
+  mmseqs_version: 15.6f452
+  sequence_identity: 0.30
+  bidirectional_coverage: 0.80
 model:
   progen2:
     checkpoint_name: progen2-base

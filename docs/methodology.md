@@ -186,6 +186,18 @@ If Mandrake's manifest remains unavailable:
 
 The clustering and stratification are replacement choices. They are not inferred Mandrake methodology.
 
+Implementation status (2026-08-23): `build-cohort` implements this fallback but has
+not yet been executed against RCSB. It uses the live RCSB Search and Data APIs, saves
+the exact query, every raw response, and a UTC retrieval timestamp, and therefore
+implements the “timestamped query” branch rather than an archived PDB snapshot. It
+pins MMseqs2 `15.6f452` and invokes `easy-cluster` with `--min-seq-id 0.30 -c 0.80
+--cov-mode 0`; coverage mode 0 requires the declared coverage on both sequences.
+The four length-bin quotas for 150 chains are deterministically 38, 38, 37, and 37.
+Restarting in the same work directory reuses downloaded responses, cluster output,
+and mmCIF files, but refuses to proceed if the cohort-defining configuration has
+changed. This implementation is not evidence that Mandrake used any of these
+fallback choices.
+
 ### 5.3 Structure and contact labels
 
 - Preserve the mmCIF polymer-to-observed-residue mapping; never assume author residue numbering is contiguous.

@@ -25,8 +25,8 @@ def load_structure_manifest(path: Path) -> list[dict[str, str]]:
     manifest = Path(path)
     with manifest.open("r", encoding="utf-8", newline="") as handle:
         reader = csv.DictReader(handle)
-        if reader.fieldnames is None or set(reader.fieldnames) != required:
-            raise ValueError(f"structure manifest columns must be exactly {sorted(required)}")
+        if reader.fieldnames is None or not required.issubset(reader.fieldnames):
+            raise ValueError(f"structure manifest must contain columns {sorted(required)}")
         records = list(reader)
     if not records:
         raise ValueError("structure manifest is empty")
@@ -34,6 +34,15 @@ def load_structure_manifest(path: Path) -> list[dict[str, str]]:
         source = Path(record["mmcif_path"])
         if not source.is_absolute():
             source = (manifest.parent / source).resolve()
+        if not source.exists():
+            raise ValueError(f"mmCIF file does not exist: {source}")
+        expected_hash = record.get("mmcif_sha256")
+        if expected_hash:
+            from .artifacts import sha256_file
+
+            actual_hash = sha256_file(source)
+            if actual_hash != expected_hash:
+                raise ValueError(f"mmCIF hash mismatch for {source}")
         record["mmcif_path"] = str(source)
     return records
 
