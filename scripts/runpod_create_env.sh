@@ -26,6 +26,7 @@ if [[ ! -x "${environment_prefix}/bin/python" ]]; then
   "${micromamba}" --root-prefix "${mamba_root}" create -y \
     --prefix "${environment_prefix}" \
     --channel conda-forge \
+    --channel bioconda \
     python=3.8.20 pip=23.3.2 setuptools=69.5.1 wheel=0.42.0 mmseqs2=15.6f452
 fi
 

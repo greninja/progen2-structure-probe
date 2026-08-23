@@ -11,7 +11,8 @@ RUN apt-get update \
 WORKDIR /workspace/project
 COPY requirements/remote.txt /tmp/remote.txt
 RUN conda create -y -p /opt/progen2-probe \
-      -c conda-forge python=3.8.20 pip=23.3.2 setuptools=69.5.1 wheel=0.42.0 \
+      -c conda-forge -c bioconda \
+      python=3.8.20 pip=23.3.2 setuptools=69.5.1 wheel=0.42.0 \
       mmseqs2=15.6f452 \
     && conda clean -afy
 ENV PATH=/opt/progen2-probe/bin:$PATH
