@@ -1,9 +1,12 @@
+import io
+from http.client import RemoteDisconnected
 import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
 
 from progen2_structure_probe.cohort import (
+    _post_json,
     fetch_candidates,
     read_clusters,
     rcsb_search_payload,
@@ -12,6 +15,18 @@ from progen2_structure_probe.cohort import (
 
 
 class CohortTests(unittest.TestCase):
+    def test_post_json_retries_remote_disconnect(self):
+        response = io.BytesIO(b'{"status": "ok"}')
+        with (
+            patch(
+                "progen2_structure_probe.cohort.urlopen",
+                side_effect=[RemoteDisconnected("closed"), response],
+            ),
+            patch("progen2_structure_probe.cohort.time.sleep") as sleep,
+        ):
+            self.assertEqual(_post_json("https://example.test", {}), {"status": "ok"})
+        sleep.assert_called_once_with(1)
+
     def test_rcsb_query_contains_declared_primary_filters(self):
         payload = rcsb_search_payload(100, 500)
         self.assertEqual(payload["return_type"], "polymer_entity")

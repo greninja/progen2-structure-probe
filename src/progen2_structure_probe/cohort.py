@@ -6,6 +6,7 @@ import csv
 from dataclasses import dataclass
 from datetime import datetime, timezone
 import hashlib
+from http.client import IncompleteRead, RemoteDisconnected
 import json
 from pathlib import Path
 import subprocess
@@ -101,7 +102,14 @@ def _post_json(url: str, payload: dict[str, Any], attempts: int = 5) -> dict[str
         try:
             with urlopen(request, timeout=120) as response:
                 return json.load(response)
-        except (HTTPError, URLError, TimeoutError):
+        except (
+            HTTPError,
+            URLError,
+            TimeoutError,
+            ConnectionResetError,
+            IncompleteRead,
+            RemoteDisconnected,
+        ):
             if attempt + 1 == attempts:
                 raise
             time.sleep(2**attempt)
