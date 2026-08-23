@@ -9,7 +9,9 @@ import hashlib
 from http.client import IncompleteRead, RemoteDisconnected
 import json
 from pathlib import Path
+import shutil
 import subprocess
+import sys
 import time
 from typing import Any, Iterable, Optional
 from urllib.error import HTTPError, URLError
@@ -299,6 +301,20 @@ def write_candidates(candidates: list[Candidate], directory: Path) -> tuple[Path
     return csv_path, fasta_path
 
 
+def _resolve_mmseqs() -> str:
+    """Find MMseqs2 on PATH or beside the active Python interpreter."""
+
+    executable = shutil.which("mmseqs")
+    if executable is not None:
+        return executable
+    environment_executable = Path(sys.executable).with_name("mmseqs")
+    if environment_executable.is_file():
+        return str(environment_executable)
+    raise FileNotFoundError(
+        "mmseqs is not on PATH or installed beside the active Python interpreter"
+    )
+
+
 def run_mmseqs(
     fasta_path: Path,
     directory: Path,
@@ -307,7 +323,8 @@ def run_mmseqs(
     sequence_identity: float = 0.30,
     bidirectional_coverage: float = 0.80,
 ) -> Path:
-    version = subprocess.check_output(["mmseqs", "version"], text=True).strip()
+    mmseqs = _resolve_mmseqs()
+    version = subprocess.check_output([mmseqs, "version"], text=True).strip()
     if version != expected_version:
         raise ValueError(f"MMseqs2 version {version!r} does not match {expected_version!r}")
     root = Path(directory)
@@ -332,7 +349,7 @@ def run_mmseqs(
     write_json_atomic(input_record_path, input_record)
     subprocess.run(
         [
-            "mmseqs", "easy-cluster", str(fasta_path), str(prefix), str(temporary),
+            mmseqs, "easy-cluster", str(fasta_path), str(prefix), str(temporary),
             "--min-seq-id", str(sequence_identity),
             "-c", str(bidirectional_coverage), "--cov-mode", "0",
             "--threads", str(threads),

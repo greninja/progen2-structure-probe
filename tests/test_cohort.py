@@ -7,6 +7,7 @@ from unittest.mock import patch
 
 from progen2_structure_probe.cohort import (
     _post_json,
+    _resolve_mmseqs,
     fetch_candidates,
     read_clusters,
     rcsb_search_payload,
@@ -15,6 +16,17 @@ from progen2_structure_probe.cohort import (
 
 
 class CohortTests(unittest.TestCase):
+    def test_mmseqs_resolves_from_active_environment_when_absent_from_path(self):
+        with tempfile.TemporaryDirectory() as directory:
+            environment_bin = Path(directory) / "bin"
+            environment_bin.mkdir()
+            python = environment_bin / "python"
+            mmseqs = environment_bin / "mmseqs"
+            mmseqs.touch()
+            with patch("progen2_structure_probe.cohort.shutil.which", return_value=None):
+                with patch("progen2_structure_probe.cohort.sys.executable", str(python)):
+                    self.assertEqual(_resolve_mmseqs(), str(mmseqs))
+
     def test_post_json_retries_remote_disconnect(self):
         response = io.BytesIO(b'{"status": "ok"}')
         with patch(

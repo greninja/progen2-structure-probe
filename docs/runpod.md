@@ -89,7 +89,9 @@ The command is restartable and produces raw RCSB request/response records,
 candidate CSV/FASTA, MMseqs2 clusters, rejection records, downloaded mmCIF files,
 the frozen 150-chain manifest, and the five-chain pilot manifest. Do not delete or
 edit individual candidates after seeing model results; rebuild under a new work
-directory if the predeclared cohort protocol changes.
+directory if the predeclared cohort protocol changes. The runner resolves the pinned
+MMseqs2 executable either from `PATH` or beside the active Python interpreter, so
+invoking the environment's `progen2-probe` entry point by absolute path remains safe.
 
 ## Five-protein Experiment 1 pilot
 
