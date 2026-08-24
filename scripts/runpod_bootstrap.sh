@@ -28,7 +28,7 @@ git -C "${upstream_root}/esm" checkout --detach "${esm_commit}"
 checkpoint_archives=()
 for model_name in ${requested_models}; do
   case "${model_name}" in
-    progen2-base|progen2-small) ;;
+    progen2-base) ;;
     *)
       printf 'Unsupported checkpoint requested: %s\n' "${model_name}" >&2
       exit 2

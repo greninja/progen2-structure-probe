@@ -757,95 +757,7 @@ But the scientific probe should come first.
 
 ---
 
-# 21. Experiment 2 from the blog: copy bias
-
-This is not the primary project, but it is useful context.
-
-Mandrake duplicates a sequence:
-
-```text
-ABC | ABC
-```
-
-Here `ABC` represents an entire protein sequence, not three literal residues.
-
-ProGen2 predicts one amino acid at a time.
-
-For the first copy, it must genuinely model the sequence.
-
-For the second copy, it can detect that the same token pattern occurred earlier and copy the continuation.
-
-Reported result:
-
-- original sequence per-position perplexities roughly **19–27**
-- repeated copy roughly **1–2**
-
-Random amino-acid strings show the same collapse.
-
-Therefore:
-
-> Low perplexity can reflect trivial retrieval/copying rather than biological plausibility.
-
-## Perplexity
-
-For sequence length $L$:
-
-$$
-\mathrm{PPL}
-=
-\exp\left(
--\frac1L
-\sum_t
-\log P(x_t\mid x_{<t})
-\right)
-$$
-
-Equivalent form:
-
-$$
-\mathrm{PPL}
-=
-\frac{1}{
-\left(
-\prod_t P(x_t\mid x_{<t})
-\right)^{1/L}
-}
-$$
-
-So perplexity is the reciprocal of the geometric mean probability assigned to the correct tokens.
-
-If correct residues receive probability approximately 0.99:
-
-$$
-\mathrm{PPL}\approx1/0.99\approx1.01.
-$$
-
-Thus perplexity near 1 means near-perfect confidence.
-
-Mandrake also seeds ProGen2 with:
-
-```text
-full protein + first 25% of the same protein
-```
-
-and lets it generate.
-
-Reported result:
-
-- 5 of 7 proteins become exact character-for-character copy loops
-- even with top-p = 0.95 and temperature = 0.8
-
-They connect this to transformer induction-head / pattern-copying behavior.
-
-Important interpretation:
-
-> `ABCABC` is the simplest stress test, not a claim that only adjacent full-sequence duplicates can trigger the problem.
-
-More subtle partial/separated repeats may also be relevant.
-
----
-
-# 22. Experiment 3 from the blog: DMS variant scoring
+# 21. Experiment 3 from the blog: DMS variant scoring
 
 DMS = Deep Mutational Scanning.
 
@@ -906,7 +818,7 @@ The models differ in:
 
 ---
 
-# 23. DMS benchmark caveat
+# 22. DMS benchmark caveat
 
 DMS is experimental ground truth, but model performance can still be hard to interpret.
 
@@ -941,7 +853,7 @@ So "good DMS performance" should not automatically be interpreted as "deep mecha
 
 ---
 
-# 24. Broader eval problem raised by Mandrake
+# 23. Broader eval problem raised by Mandrake
 
 Mandrake argues common PLM benchmarks emphasize:
 
@@ -950,7 +862,6 @@ Mandrake argues common PLM benchmarks emphasize:
 
 but can miss failure modes such as:
 
-- trivial duplication causing confidence collapse
 - long-range structural-contact blindness
 - inability to combine multiple functional constraints
 - catastrophic behavior outside familiar sequence distributions
@@ -961,7 +872,7 @@ Their proposed broader philosophy is:
 
 ---
 
-# 25. Perplexity vs function caveat
+# 24. Perplexity vs function caveat
 
 The post also argues that optimizing perplexity too aggressively may favor highly consensus-like sequences.
 
@@ -988,7 +899,7 @@ This should be treated as a plausible design concern, not a universal law that l
 
 ---
 
-# 26. Why AlphaFold does not make this project irrelevant
+# 25. Why AlphaFold does not make this project irrelevant
 
 AlphaFold is directly designed for structure prediction.
 
@@ -1013,7 +924,7 @@ The project is therefore about the **representational content and limitations of
 
 ---
 
-# 27. What NOT to claim
+# 26. What NOT to claim
 
 Even if the hidden-state probe works extremely well, avoid:
 
@@ -1043,7 +954,7 @@ Probe results depend on:
 
 ---
 
-# 28. First implementation milestone
+# 27. First implementation milestone
 
 Do **not** begin by building the full hidden-state experiment.
 
@@ -1078,7 +989,7 @@ If our baseline disagrees drastically with Mandrake, we need to understand why b
 
 ---
 
-# 29. Suggested implementation phases
+# 28. Suggested implementation phases
 
 ## Phase 0 — resolve methodology
 
@@ -1198,7 +1109,7 @@ Try:
 
 ---
 
-# 30. Suggested repository structure
+# 29. Suggested repository structure
 
 ```text
 progen2-structure-probe/
@@ -1239,7 +1150,7 @@ Do not over-engineer this at the start.
 
 ---
 
-# 31. Reproducibility requirements
+# 30. Reproducibility requirements
 
 Every result should be reproducible from config + random seed.
 
@@ -1260,7 +1171,7 @@ Prefer cached immutable intermediate datasets.
 
 ---
 
-# 32. First plots worth producing
+# 31. First plots worth producing
 
 ## Plot 1 — reproduce Mandrake
 
@@ -1300,7 +1211,7 @@ Show whether improvement is broad or driven by a few proteins.
 
 ---
 
-# 33. What would make the result genuinely interesting?
+# 32. What would make the result genuinely interesting?
 
 ## Strong positive result
 
@@ -1350,7 +1261,7 @@ This is ambiguous because the probe may be learning the task.
 
 ---
 
-# 34. Possible follow-up project from Experiment 3
+# 33. Possible follow-up project from Experiment 3
 
 A second, independent project idea:
 
@@ -1380,31 +1291,7 @@ This is a clean mechanistic follow-up but secondary to the structural-probing pr
 
 ---
 
-# 35. Possible follow-up project from Experiment 2
-
-Another independent direction:
-
-> **Prevent pathological copy loops without suppressing legitimate biological repeats.**
-
-A naive repetition penalty is risky because real proteins contain repeated motifs/domains.
-
-A better intervention would detect:
-
-> "The model is continuing a long exact/near-exact suffix copied from earlier context."
-
-Then selectively penalize that continuation during decoding.
-
-Evaluation should include:
-- exact repeats
-- separated repeats
-- imperfect repeats
-- natural repeat proteins
-
-This is interesting but should not distract from the primary project.
-
----
-
-# 36. Recommended first prompt to Claude Code / Codex
+# 34. Recommended first prompt to Claude Code / Codex
 
 Use this before asking it to implement anything:
 
@@ -1442,7 +1329,7 @@ understanding of protein physics.
 
 ---
 
-# 37. Suggested CLAUDE.md
+# 35. Suggested CLAUDE.md
 
 ```markdown
 @PROJECT_CONTEXT.md
@@ -1465,7 +1352,7 @@ Do not optimize for writing lots of code.
 
 ---
 
-# 38. Suggested AGENTS.md for Codex
+# 36. Suggested AGENTS.md for Codex
 
 ```markdown
 # Research instructions
@@ -1488,7 +1375,7 @@ Prefer a small verified pipeline over a large speculative implementation.
 
 ---
 
-# 39. Core project summary
+# 37. Core project summary
 
 The entire project can be reduced to:
 
@@ -1531,7 +1418,7 @@ This project tests whether the stronger interpretation survives a simple hidden-
 
 ---
 
-# 40. Primary source links
+# 38. Primary source links
 
 Mandrake Bio blog:
 https://research.mandrake.bio/p/protein-language-models-fluent-but
@@ -1554,10 +1441,14 @@ https://www.biorxiv.org/content/10.1101/2024.10.03.616542v1
 
 ---
 
-# 41. Current status
+# 39. Current status
 
-No implementation has been started yet.
+The Experiment 1 attention-contact pipeline has been completed on the frozen
+150-chain public-information fallback cohort. It produced pooled ROC-AUC values of
+0.5374 for ProGen2-base and 0.6147 for ESM-2 35M, reproducing Mandrake's main
+qualitative finding despite the unpublished original cohort and methodological gaps.
 
-The recommended next step is **methodology recovery**, not coding.
-
-Before running the hidden-state experiment, establish a defensible version of Mandrake's attention-contact baseline and document all assumptions.
+The next step is the planned minimal hidden-state probe. Freeze the language models,
+split by protein before training, use a deliberately small regularized pairwise head,
+and report held-out and long-range performance without claiming that decodability
+implies mechanistic understanding.

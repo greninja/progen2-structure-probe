@@ -1,4 +1,3 @@
-"""Mandrake Experiment 1 and 2 replication utilities."""
+"""Mandrake Experiment 1 replication and structural-probing utilities."""
 
 __version__ = "0.1.0"
-

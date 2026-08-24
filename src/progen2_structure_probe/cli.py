@@ -39,11 +39,6 @@ def _parser() -> argparse.ArgumentParser:
     experiment1.add_argument("--output-dir", type=Path)
     experiment1.add_argument("--manifest", type=Path)
 
-    experiment2 = subcommands.add_parser("experiment2")
-    experiment2.add_argument("config", type=Path)
-    experiment2.add_argument("--progen-repo", type=Path, required=True)
-    experiment2.add_argument("--progen-checkpoint", type=Path, required=True)
-    experiment2.add_argument("--output-dir", type=Path)
     return parser
 
 
@@ -96,17 +91,16 @@ def main() -> None:
         "progen_checkpoint_path": str(args.progen_checkpoint.resolve()),
         "progen_checkpoint_tree_sha256": sha256_tree(args.progen_checkpoint),
     }
-    if args.command in {"experiment1", "smoke-models"}:
-        expected_esm_commit = config["model"]["esm2"]["upstream_commit"]
-        actual_esm_commit = git_revision(args.esm_repo)
-        if actual_esm_commit != expected_esm_commit:
-            raise ValueError(
-                f"ESM source commit {actual_esm_commit} does not match {expected_esm_commit}"
-            )
-        provenance.update(
-            esm_upstream_path=str(args.esm_repo.resolve()),
-            esm_upstream_commit=actual_esm_commit,
+    expected_esm_commit = config["model"]["esm2"]["upstream_commit"]
+    actual_esm_commit = git_revision(args.esm_repo)
+    if actual_esm_commit != expected_esm_commit:
+        raise ValueError(
+            f"ESM source commit {actual_esm_commit} does not match {expected_esm_commit}"
         )
+    provenance.update(
+        esm_upstream_path=str(args.esm_repo.resolve()),
+        esm_upstream_commit=actual_esm_commit,
+    )
     write_json_atomic(output_dir / "provenance.json", provenance)
 
     from .models.progen2 import OfficialProGen2
@@ -117,21 +111,17 @@ def main() -> None:
         device=config["run"]["device"],
         fp16=config["run"]["precision"] == "float16",
     )
-    if args.command in {"experiment1", "smoke-models"}:
+    from .models.esm2 import OfficialESM2
+
+    esm = OfficialESM2(args.esm_repo, device=config["run"]["device"])
+    if args.command == "experiment1":
         from .experiment1 import run_experiment1
-        from .models.esm2 import OfficialESM2
 
-        esm = OfficialESM2(args.esm_repo, device=config["run"]["device"])
-        if args.command == "experiment1":
-            run_experiment1(config, progen, esm, output_dir)
-        else:
-            from .smoke import run_model_smoke
+        run_experiment1(config, progen, esm, output_dir)
+    else:
+        from .smoke import run_model_smoke
 
-            run_model_smoke(progen, esm, output_dir, args.sequence_length)
-    elif args.command == "experiment2":
-        from .experiment2 import run_experiment2
-
-        run_experiment2(config, progen, output_dir)
+        run_model_smoke(progen, esm, output_dir, args.sequence_length)
 
 
 if __name__ == "__main__":

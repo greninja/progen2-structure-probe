@@ -7,7 +7,7 @@ import sys
 
 import numpy as np
 
-from ..copy_bias import validate_protein_sequence
+from ..sequences import validate_protein_sequence
 
 
 class OfficialESM2:
@@ -34,4 +34,3 @@ class OfficialESM2:
         # Official ESM result shape: [batch, layers, heads, tokens, tokens].
         attention = output["attentions"][0, :, :, 1 : len(seq) + 1, 1 : len(seq) + 1]
         return attention.detach().cpu().float().numpy()
-

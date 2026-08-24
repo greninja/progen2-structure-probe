@@ -9,7 +9,7 @@ from typing import Any
 
 import numpy as np
 
-from ..copy_bias import repeat_prompt, summarize_duplicate_log_probs, validate_protein_sequence
+from ..sequences import validate_protein_sequence
 
 
 @dataclass(frozen=True)
@@ -73,47 +73,3 @@ class OfficialProGen2:
             attentions=attention.detach().cpu().float().numpy(),
             hidden_states=hidden.detach().cpu().float().numpy(),
         )
-
-    def duplicate_perplexity(self, sequence: str) -> tuple[float, float, np.ndarray]:
-        seq = validate_protein_sequence(sequence)
-        input_ids = self._encode("1" + seq + seq + "2")
-        with self.torch.inference_mode():
-            logits = self.model(input_ids=input_ids, use_cache=False, return_dict=True).logits
-            next_log_probs = self.torch.log_softmax(logits[:, :-1, :], dim=-1)
-            targets = input_ids[:, 1:]
-            selected = next_log_probs.gather(-1, targets[..., None]).squeeze(-1)[0]
-        residue_log_probs = selected[: 2 * len(seq)].detach().cpu().numpy()
-        original, repeated = summarize_duplicate_log_probs(residue_log_probs, len(seq))
-        return original, repeated, residue_log_probs
-
-    def generate_repeat(
-        self,
-        sequence: str,
-        new_residues: int = 500,
-        strategy: str = "greedy",
-        top_p: float = 0.95,
-        temperature: float = 0.8,
-        seed: int = 20260822,
-    ) -> tuple[str, int]:
-        context, prefix_length = repeat_prompt(sequence)
-        input_ids = self._encode(context)
-        self.torch.manual_seed(seed)
-        if self.device.type == "cuda":
-            self.torch.cuda.manual_seed_all(seed)
-        generation = {
-            "input_ids": input_ids,
-            "max_length": input_ids.shape[1] + new_residues,
-            "pad_token_id": self.tokenizer.encode("<|pad|>").ids[0],
-        }
-        if strategy == "greedy":
-            generation["do_sample"] = False
-        elif strategy == "nucleus":
-            generation.update(do_sample=True, top_p=top_p, temperature=temperature)
-        else:
-            raise ValueError("strategy must be 'greedy' or 'nucleus'")
-        with self.torch.inference_mode():
-            output_ids = self.model.generate(**generation)
-        generated_ids = output_ids[0, input_ids.shape[1] :].detach().cpu().tolist()
-        decoded = self.tokenizer.decode(generated_ids, skip_special_tokens=False)
-        residues = "".join(character for character in decoded if character in "ACDEFGHIKLMNPQRSTVWY")
-        return residues, prefix_length

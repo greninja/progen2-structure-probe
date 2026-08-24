@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "progen2-structure-probe"
 version = "0.1.0"
-description = "Reproducible replications of Mandrake Bio ProGen2 experiments"
+description = "Reproducible ProGen2 attention-contact replication and structural probing"
 requires-python = ">=3.8"
 dependencies = [
   "numpy>=1.23,<1.25",
