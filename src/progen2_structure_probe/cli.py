@@ -6,7 +6,7 @@ import argparse
 import json
 from pathlib import Path
 
-from .artifacts import canonical_json_sha256, write_json_atomic
+from .artifacts import canonical_json_sha256, sha256_file, write_json_atomic
 from .config import load_config, resolved_config_record
 from .provenance import git_revision, runtime_record, sha256_tree
 
@@ -39,6 +39,18 @@ def _parser() -> argparse.ArgumentParser:
     experiment1.add_argument("--output-dir", type=Path)
     experiment1.add_argument("--manifest", type=Path)
 
+    hidden_extract = subcommands.add_parser("hidden-extract")
+    hidden_extract.add_argument("config", type=Path)
+    hidden_extract.add_argument("--progen-repo", type=Path, required=True)
+    hidden_extract.add_argument("--progen-checkpoint", type=Path, required=True)
+    hidden_extract.add_argument("--output-dir", type=Path)
+    hidden_extract.add_argument("--manifest", type=Path)
+
+    hidden_probe = subcommands.add_parser("hidden-probe")
+    hidden_probe.add_argument("config", type=Path)
+    hidden_probe.add_argument("--representations", type=Path)
+    hidden_probe.add_argument("--output-dir", type=Path)
+
     return parser
 
 
@@ -67,7 +79,7 @@ def main() -> None:
         return
 
     config_record = resolved_config_record(args.config)
-    if args.command == "experiment1" and args.manifest is not None:
+    if args.command in {"experiment1", "hidden-extract"} and args.manifest is not None:
         config["run"]["manifest"] = str(args.manifest.resolve())
         config_record["config"] = config
         config_record["resolved_sha256"] = canonical_json_sha256(config)
@@ -76,6 +88,24 @@ def main() -> None:
     output_dir = args.output_dir or Path(config["run"]["output_directory"])
     output_dir.mkdir(parents=True, exist_ok=True)
     write_json_atomic(output_dir / "resolved_config.json", config_record)
+
+    if args.command == "hidden-probe":
+        from .hidden_probe import run_hidden_probe
+
+        representation_index = args.representations or (
+            output_dir / "representations" / "index.json"
+        )
+        write_json_atomic(
+            output_dir / "probe_provenance.json",
+            {
+                "runtime": runtime_record(),
+                "project_commit": git_revision(Path(__file__).resolve().parent),
+                "representation_index_path": str(representation_index.resolve()),
+                "representation_index_sha256": sha256_file(representation_index),
+            },
+        )
+        run_hidden_probe(config, representation_index, output_dir)
+        return
 
     expected_progen_commit = config["model"]["progen2"]["upstream_commit"]
     actual_progen_commit = git_revision(args.progen_repo)
@@ -91,6 +121,22 @@ def main() -> None:
         "progen_checkpoint_path": str(args.progen_checkpoint.resolve()),
         "progen_checkpoint_tree_sha256": sha256_tree(args.progen_checkpoint),
     }
+    write_json_atomic(output_dir / "provenance.json", provenance)
+
+    from .models.progen2 import OfficialProGen2
+
+    progen = OfficialProGen2(
+        args.progen_repo,
+        args.progen_checkpoint,
+        device=config["run"]["device"],
+        fp16=config["run"]["precision"] == "float16",
+    )
+    if args.command == "hidden-extract":
+        from .hidden_probe import extract_hidden_representations
+
+        extract_hidden_representations(config, progen, output_dir)
+        return
+
     expected_esm_commit = config["model"]["esm2"]["upstream_commit"]
     actual_esm_commit = git_revision(args.esm_repo)
     if actual_esm_commit != expected_esm_commit:
@@ -103,14 +149,6 @@ def main() -> None:
     )
     write_json_atomic(output_dir / "provenance.json", provenance)
 
-    from .models.progen2 import OfficialProGen2
-
-    progen = OfficialProGen2(
-        args.progen_repo,
-        args.progen_checkpoint,
-        device=config["run"]["device"],
-        fp16=config["run"]["precision"] == "float16",
-    )
     from .models.esm2 import OfficialESM2
 
     esm = OfficialESM2(args.esm_repo, device=config["run"]["device"])

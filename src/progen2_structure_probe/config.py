@@ -72,6 +72,9 @@ def load_config(path: Path) -> dict[str, Any]:
         )
         if split_count != int(cohort["target_count"]):
             raise ValueError("probe split counts must equal cohort.target_count")
+        split_hash = split.get("content_sha256")
+        if not isinstance(split_hash, str) or len(split_hash) != 64:
+            raise ValueError("probe.split.content_sha256 must be a SHA-256 digest")
         bootstrap = probe.get("bootstrap", {})
         if int(bootstrap.get("replicates", 0)) <= 0:
             raise ValueError("probe.bootstrap.replicates must be positive")

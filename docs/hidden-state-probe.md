@@ -32,6 +32,9 @@ generating residue `j`.
 - Stratify the deterministic 90/30/30 train/validation/test split by the four original
   protein-length bins. Freeze and hash the resulting identifiers before fitting.
 
+The frozen split-record content SHA-256 is
+`1c4a1b025cf34c37f95eff729039814a378e0dff4a5ffe225416682d9afe2647`.
+
 No residue pair from a validation or test protein may enter feature scaling, model
 fitting, regularization selection, or layer selection.
 
@@ -100,3 +103,7 @@ independent.
 The five-chain pilot is an engineering test only: verify extraction shape, terminal
 removal, cache round-trip, deterministic pair recreation, and fitting on synthetic
 fixtures. It is not used to choose thresholds or estimate scientific performance.
+
+The 43,773 cohort residues require approximately 3.51 GiB for the uncompressed
+float16 hidden-state cache. Probe fitting is CPU work and must not keep an expensive
+GPU Pod running after extraction merely for convenience.

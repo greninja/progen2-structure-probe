@@ -19,6 +19,12 @@ class ProGenExtraction:
     hidden_states: np.ndarray  # [embedding+layers, residues, hidden]
 
 
+@dataclass(frozen=True)
+class ProGenHiddenExtraction:
+    token_ids: np.ndarray
+    hidden_states: np.ndarray  # [embedding+layers, residues, hidden]
+
+
 class OfficialProGen2:
     def __init__(
         self,
@@ -71,5 +77,26 @@ class OfficialProGen2:
         return ProGenExtraction(
             token_ids=input_ids[0].detach().cpu().numpy(),
             attentions=attention.detach().cpu().float().numpy(),
+            hidden_states=hidden.detach().cpu().float().numpy(),
+        )
+
+    def extract_hidden_states(self, sequence: str) -> ProGenHiddenExtraction:
+        """Extract hidden states without materializing the much larger attention tensor."""
+
+        seq = validate_protein_sequence(sequence)
+        input_ids = self._encode("1" + seq + "2")
+        if input_ids.shape[1] != len(seq) + 2:
+            raise ValueError("tokenizer did not produce one token per residue plus terminals")
+        with self.torch.inference_mode():
+            output = self.model(
+                input_ids=input_ids,
+                use_cache=False,
+                output_attentions=False,
+                output_hidden_states=True,
+                return_dict=True,
+            )
+        hidden = self.torch.stack(output.hidden_states, dim=0)[:, 0, 1:-1, :]
+        return ProGenHiddenExtraction(
+            token_ids=input_ids[0].detach().cpu().numpy(),
             hidden_states=hidden.detach().cpu().float().numpy(),
         )

@@ -39,6 +39,7 @@ probe:
     train_count: 90
     validation_count: 30
     test_count: 30
+    content_sha256: 1c4a1b025cf34c37f95eff729039814a378e0dff4a5ffe225416682d9afe2647
   bootstrap:
     unit: protein
     replicates: 10000

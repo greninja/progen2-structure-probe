@@ -104,6 +104,42 @@ progen2-probe experiment1 configs/experiment1_pilot.yaml \
 Do not launch the 150-chain run until the five pilot chains pass all methodology
 checks and measured memory/runtime have been reviewed.
 
+## Experiment 1 hidden-state follow-up
+
+First verify hidden-only extraction on the frozen five-chain engineering pilot:
+
+```bash
+progen2-probe hidden-extract configs/experiment1_hidden_probe.yaml \
+  --progen-repo /workspace/volume/upstream/progen \
+  --progen-checkpoint /workspace/volume/checkpoints/progen2-base \
+  --manifest /workspace/volume/data/experiment1-cohort/experiment1_pilot.csv \
+  --output-dir /workspace/volume/results/experiment1/hidden-probe-pilot
+```
+
+The pilot is a shape, cache, determinism, and resource check only. Do not fit or
+interpret a five-protein probe. After it passes, extract the frozen 150 proteins:
+
+```bash
+progen2-probe hidden-extract configs/experiment1_hidden_probe.yaml \
+  --progen-repo /workspace/volume/upstream/progen \
+  --progen-checkpoint /workspace/volume/checkpoints/progen2-base \
+  --manifest /workspace/volume/data/experiment1-cohort/experiment1_150.csv \
+  --output-dir /workspace/volume/results/experiment1/hidden-probe-full
+```
+
+The float16 hidden cache is approximately 3.51 GiB. Extraction is restartable at the
+protein-file level. Once extraction completes, release the GPU and fit on a CPU
+machine with sufficient RAM, mounting or copying the same result directory:
+
+```bash
+progen2-probe hidden-probe configs/experiment1_hidden_probe.yaml \
+  --representations /workspace/volume/results/experiment1/hidden-probe-full/representations/index.json \
+  --output-dir /workspace/volume/results/experiment1/hidden-probe-full
+```
+
+The probe refuses a representation hash mismatch or any 90/30/30 protein split that
+does not reproduce the hash frozen in the configuration.
+
 Terminate GPU compute when a batch completes. Retain only the persistent volume while
 reviewing results. Sync `resolved_config.json`, JSON summaries, per-chain NPZ files,
 bootstrap metadata, and logs back to the local repository's ignored `results/` tree.
