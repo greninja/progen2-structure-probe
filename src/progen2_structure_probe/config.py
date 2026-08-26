@@ -48,6 +48,33 @@ def load_config(path: Path) -> dict[str, Any]:
         raise ValueError("cohort.bidirectional_coverage must be in (0, 1]")
     if not 0 < float(cohort["minimum_coordinate_coverage"]) <= 1:
         raise ValueError("cohort.minimum_coordinate_coverage must be in (0, 1]")
+    probe = config.get("probe")
+    if probe is not None:
+        stages = probe.get("stages")
+        contextual = probe.get("contextual_stages")
+        alphas = probe.get("regularization_alpha")
+        split = probe.get("split", {})
+        if stages != list(range(28)):
+            raise ValueError("probe.stages must contain ProGen2 stages 0 through 27")
+        if contextual != list(range(1, 28)):
+            raise ValueError("probe.contextual_stages must contain stages 1 through 27")
+        if not isinstance(alphas, list) or not alphas or any(
+            float(value) <= 0 for value in alphas
+        ):
+            raise ValueError("probe.regularization_alpha must contain positive values")
+        if int(probe.get("max_training_matched_pairs_per_protein", 0)) <= 0:
+            raise ValueError(
+                "probe.max_training_matched_pairs_per_protein must be positive"
+            )
+        split_count = sum(
+            int(split.get(key, 0))
+            for key in ("train_count", "validation_count", "test_count")
+        )
+        if split_count != int(cohort["target_count"]):
+            raise ValueError("probe split counts must equal cohort.target_count")
+        bootstrap = probe.get("bootstrap", {})
+        if int(bootstrap.get("replicates", 0)) <= 0:
+            raise ValueError("probe.bootstrap.replicates must be positive")
     return config
 
 

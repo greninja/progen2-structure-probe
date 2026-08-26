@@ -7,8 +7,11 @@ from progen2_structure_probe.config import load_config
 
 class ConfigTests(unittest.TestCase):
     def test_repository_configs_validate(self):
-        path = Path("configs/experiment1_pilot.yaml")
-        self.assertEqual(load_config(path)["experiment"], 1)
+        for path in [
+            Path("configs/experiment1_pilot.yaml"),
+            Path("configs/experiment1_hidden_probe.yaml"),
+        ]:
+            self.assertEqual(load_config(path)["experiment"], 1)
 
     def test_missing_seed_is_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
