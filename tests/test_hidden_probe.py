@@ -9,6 +9,8 @@ import numpy as np
 
 from progen2_structure_probe.hidden_probe import (
     _fit_classifier,
+    _load_validation_checkpoint,
+    _write_validation_checkpoint,
     extract_hidden_representations,
     make_probe_splits,
     pair_features,
@@ -107,6 +109,27 @@ class HiddenProbeTests(unittest.TestCase):
         self.assertAlmostEqual(first["mean_auc_difference"], 0.2)
         self.assertAlmostEqual(first["lower"], 0.2)
         self.assertAlmostEqual(first["upper"], 0.2)
+
+    def test_validation_stage_checkpoint_is_fingerprint_bound(self):
+        results = [
+            {"stage": 3, "alpha": 0.00001, "validation": {"mean_per_protein_auc": 0.6}},
+            {"stage": 3, "alpha": 0.0001, "validation": {"mean_per_protein_auc": 0.61}},
+            {"stage": 3, "alpha": 0.001, "validation": {"mean_per_protein_auc": 0.59}},
+        ]
+        alphas = [0.00001, 0.0001, 0.001]
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "stage_03.json"
+            _write_validation_checkpoint(path, 3, "frozen-inputs", results)
+            self.assertEqual(
+                _load_validation_checkpoint(path, 3, alphas, "frozen-inputs"),
+                results,
+            )
+            self.assertIsNone(
+                _load_validation_checkpoint(path, 3, alphas, "different-inputs")
+            )
+            self.assertIsNone(
+                _load_validation_checkpoint(path, 4, alphas, "frozen-inputs")
+            )
 
     def test_hidden_extraction_cache_round_trip_avoids_attention(self):
         class FakeCuda:

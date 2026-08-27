@@ -134,8 +134,13 @@ machine with sufficient RAM, mounting or copying the same result directory:
 ```bash
 progen2-probe hidden-probe configs/experiment1_hidden_probe.yaml \
   --representations /workspace/volume/results/experiment1/hidden-probe-full/representations/index.json \
-  --output-dir /workspace/volume/results/experiment1/hidden-probe-full
+  --output-dir /workspace/volume/results/experiment1/hidden-probe-full \
+  --workers 8
 ```
+
+Validation stages are independent and may run in bounded parallel worker processes.
+Each completed stage is written atomically under `validation_stages/`; a restarted
+command reuses only checkpoints whose frozen inputs and alpha grid still match.
 
 The probe refuses a representation hash mismatch or any 90/30/30 protein split that
 does not reproduce the hash frozen in the configuration.

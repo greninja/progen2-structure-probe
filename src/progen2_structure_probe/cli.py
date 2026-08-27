@@ -50,6 +50,7 @@ def _parser() -> argparse.ArgumentParser:
     hidden_probe.add_argument("config", type=Path)
     hidden_probe.add_argument("--representations", type=Path)
     hidden_probe.add_argument("--output-dir", type=Path)
+    hidden_probe.add_argument("--workers", type=int, default=1)
 
     return parser
 
@@ -92,6 +93,8 @@ def main() -> None:
     if args.command == "hidden-probe":
         from .hidden_probe import run_hidden_probe
 
+        if args.workers < 1:
+            raise ValueError("--workers must be at least 1")
         representation_index = args.representations or (
             output_dir / "representations" / "index.json"
         )
@@ -102,9 +105,10 @@ def main() -> None:
                 "project_commit": git_revision(Path(__file__).resolve().parent),
                 "representation_index_path": str(representation_index.resolve()),
                 "representation_index_sha256": sha256_file(representation_index),
+                "validation_workers": args.workers,
             },
         )
-        run_hidden_probe(config, representation_index, output_dir)
+        run_hidden_probe(config, representation_index, output_dir, workers=args.workers)
         return
 
     expected_progen_commit = config["model"]["progen2"]["upstream_commit"]

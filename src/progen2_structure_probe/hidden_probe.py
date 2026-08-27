@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from concurrent.futures import ProcessPoolExecutor, as_completed
 import hashlib
 import json
 import os
@@ -365,6 +366,88 @@ def _fit_classifier(
     return scaler, classifier
 
 
+def _validate_stage(
+    root: Path,
+    train_entries: list[dict[str, Any]],
+    validation_entries: list[dict[str, Any]],
+    stage: int,
+    alphas: list[float],
+    max_pairs: int,
+    seed: int,
+    bins: list[list[int]],
+) -> list[dict[str, Any]]:
+    """Fit one stage's alpha grid; stage tasks are independent and parallel-safe."""
+
+    features, labels = _training_matrix(root, train_entries, stage, max_pairs, seed)
+    results: list[dict[str, Any]] = []
+    for alpha in alphas:
+        scaler, classifier = _fit_classifier(features, labels, alpha, seed)
+        evaluation = _evaluate_classifier(
+            root, validation_entries, stage, scaler, classifier, bins
+        )
+        results.append(
+            {
+                "stage": stage,
+                "alpha": alpha,
+                "classifier_iterations": int(classifier.n_iter_),
+                "validation": evaluation,
+            }
+        )
+    return results
+
+
+def _validation_checkpoint_fingerprint(
+    config: dict[str, Any], representation_index_sha256: str, split_sha256: str
+) -> str:
+    return canonical_json_sha256(
+        {
+            "algorithm": "stagewise-l2-sgd-logistic-regression-v1",
+            "representation_index_sha256": representation_index_sha256,
+            "split_sha256": split_sha256,
+            "seed": config["run"]["seed"],
+            "probe": config["probe"],
+            "distance_bins": config["distance_bins"],
+        }
+    )
+
+
+def _load_validation_checkpoint(
+    path: Path, stage: int, alphas: list[float], fingerprint: str
+) -> list[dict[str, Any]] | None:
+    if not path.exists():
+        return None
+    try:
+        with path.open("r", encoding="utf-8") as handle:
+            checkpoint = json.load(handle)
+        results = checkpoint["results"]
+        observed = [(int(row["stage"]), float(row["alpha"])) for row in results]
+    except (KeyError, OSError, TypeError, ValueError, json.JSONDecodeError):
+        return None
+    expected = [(stage, float(alpha)) for alpha in alphas]
+    if (
+        checkpoint.get("schema_version") != 1
+        or checkpoint.get("fingerprint") != fingerprint
+        or int(checkpoint.get("stage", -1)) != stage
+        or observed != expected
+    ):
+        return None
+    return results
+
+
+def _write_validation_checkpoint(
+    path: Path, stage: int, fingerprint: str, results: list[dict[str, Any]]
+) -> None:
+    write_json_atomic(
+        path,
+        {
+            "schema_version": 1,
+            "fingerprint": fingerprint,
+            "stage": stage,
+            "results": results,
+        },
+    )
+
+
 def _evaluate_classifier(
     root: Path,
     entries: Iterable[dict[str, Any]],
@@ -489,9 +572,15 @@ def _save_fitted_models(
 
 
 def run_hidden_probe(
-    config: dict[str, Any], representation_index: Path, output_dir: Path
+    config: dict[str, Any],
+    representation_index: Path,
+    output_dir: Path,
+    workers: int = 1,
 ) -> dict[str, Any]:
     """Select on validation proteins and evaluate once on held-out proteins."""
+
+    if workers < 1:
+        raise ValueError("workers must be at least 1")
 
     index_path = Path(representation_index)
     with index_path.open("r", encoding="utf-8") as handle:
@@ -529,23 +618,74 @@ def run_hidden_probe(
     test_entries = _split_entries(entries, split, "test")
     max_pairs = int(config["probe"]["max_training_matched_pairs_per_protein"])
     bins = config["distance_bins"]["intervals"]
+    stages = [int(stage) for stage in config["probe"]["stages"]]
+    alphas = [float(alpha) for alpha in config["probe"]["regularization_alpha"]]
+    representation_sha256 = sha256_file(index_path)
+    checkpoint_fingerprint = _validation_checkpoint_fingerprint(
+        config, representation_sha256, split["content_sha256"]
+    )
+    checkpoint_dir = output / "validation_stages"
+    checkpoint_dir.mkdir(parents=True, exist_ok=True)
+    results_by_stage: dict[int, list[dict[str, Any]]] = {}
+    pending_stages: list[int] = []
+    for stage in stages:
+        checkpoint_path = checkpoint_dir / f"stage_{stage:02d}.json"
+        checkpoint = _load_validation_checkpoint(
+            checkpoint_path, stage, alphas, checkpoint_fingerprint
+        )
+        if checkpoint is None:
+            pending_stages.append(stage)
+        else:
+            results_by_stage[stage] = checkpoint
 
-    validation_results: list[dict[str, Any]] = []
-    for stage in config["probe"]["stages"]:
-        features, labels = _training_matrix(root, train_entries, int(stage), max_pairs, seed)
-        for alpha in config["probe"]["regularization_alpha"]:
-            scaler, classifier = _fit_classifier(features, labels, float(alpha), seed)
-            evaluation = _evaluate_classifier(
-                root, validation_entries, int(stage), scaler, classifier, bins
+    def save_stage(stage: int, results: list[dict[str, Any]]) -> None:
+        _write_validation_checkpoint(
+            checkpoint_dir / f"stage_{stage:02d}.json",
+            stage,
+            checkpoint_fingerprint,
+            results,
+        )
+        results_by_stage[stage] = results
+
+    worker_count = min(workers, len(pending_stages))
+    if worker_count <= 1:
+        for stage in pending_stages:
+            save_stage(
+                stage,
+                _validate_stage(
+                    root,
+                    train_entries,
+                    validation_entries,
+                    stage,
+                    alphas,
+                    max_pairs,
+                    seed,
+                    bins,
+                ),
             )
-            validation_results.append(
-                {
-                    "stage": int(stage),
-                    "alpha": float(alpha),
-                    "classifier_iterations": int(classifier.n_iter_),
-                    "validation": evaluation,
-                }
-            )
+    else:
+        with ProcessPoolExecutor(max_workers=worker_count) as executor:
+            futures = {
+                executor.submit(
+                    _validate_stage,
+                    root,
+                    train_entries,
+                    validation_entries,
+                    stage,
+                    alphas,
+                    max_pairs,
+                    seed,
+                    bins,
+                ): stage
+                for stage in pending_stages
+            }
+            for future in as_completed(futures):
+                stage = futures[future]
+                save_stage(stage, future.result())
+
+    validation_results = [
+        row for stage in stages for row in results_by_stage[stage]
+    ]
 
     def selection_key(row: dict[str, Any]) -> tuple[float, float, int]:
         return (
@@ -611,9 +751,13 @@ def run_hidden_probe(
         "experiment": "experiment1-hidden-state-follow-up",
         "result_label": config["protocol"]["result_label"],
         "representation_index": str(index_path.resolve()),
-        "representation_index_sha256": sha256_file(index_path),
+        "representation_index_sha256": representation_sha256,
         "split_sha256": split["content_sha256"],
         "selection_metric": config["probe"]["selection_metric"],
+        "execution": {
+            "validation_workers": workers,
+            "validation_stage_checkpoints_reused": len(stages) - len(pending_stages),
+        },
         "selected_contextual": {
             "stage": contextual_stage,
             "alpha": contextual_alpha,
