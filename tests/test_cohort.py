@@ -1,5 +1,6 @@
 import io
 from http.client import RemoteDisconnected
+import hashlib
 import tempfile
 import unittest
 from pathlib import Path
@@ -9,6 +10,7 @@ from progen2_structure_probe.cohort import (
     _post_json,
     _resolve_mmseqs,
     fetch_candidates,
+    fetch_manifest_structures,
     read_clusters,
     rcsb_search_payload,
     select_five_chain_pilot,
@@ -102,6 +104,35 @@ class CohortTests(unittest.TestCase):
         ]
         pilot = select_five_chain_pilot(rows)
         self.assertEqual([row["length"] for row in pilot], [100, 137, 174, 212, 249])
+
+    def test_frozen_manifest_download_is_hash_checked_and_restartable(self):
+        payload = b"frozen mmcif fixture"
+        expected_hash = hashlib.sha256(payload).hexdigest()
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            manifest = root / "experiment1.csv"
+            manifest.write_text(
+                "structure_id,mmcif_path,mmcif_sha256\n"
+                f"TEST,mmcif/TEST.cif,{expected_hash}\n",
+                encoding="utf-8",
+            )
+
+            def write_download(_url, destination):
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                destination.write_bytes(payload)
+
+            with patch(
+                "progen2_structure_probe.cohort._download",
+                side_effect=write_download,
+            ) as download:
+                first = fetch_manifest_structures(manifest)
+            self.assertEqual(first["downloaded"], 1)
+            download.assert_called_once()
+
+            with patch("progen2_structure_probe.cohort._download") as download:
+                second = fetch_manifest_structures(manifest)
+            self.assertEqual(second["reused"], 1)
+            download.assert_not_called()
 
 
 if __name__ == "__main__":

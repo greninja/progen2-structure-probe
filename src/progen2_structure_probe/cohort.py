@@ -393,6 +393,55 @@ def _download(url: str, destination: Path, attempts: int = 5) -> None:
             time.sleep(2**attempt)
 
 
+def fetch_manifest_structures(manifest: Path) -> dict[str, Any]:
+    """Download the exact public mmCIF files named by a frozen manifest."""
+
+    manifest_path = Path(manifest).resolve()
+    with manifest_path.open("r", encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    required = {"structure_id", "mmcif_path", "mmcif_sha256"}
+    if not rows or not required.issubset(rows[0]):
+        raise ValueError(f"manifest must contain columns {sorted(required)}")
+
+    structures: dict[Path, tuple[str, str]] = {}
+    for row in rows:
+        destination = Path(row["mmcif_path"])
+        if not destination.is_absolute():
+            destination = (manifest_path.parent / destination).resolve()
+        record = (row["structure_id"].upper(), row["mmcif_sha256"])
+        previous = structures.get(destination)
+        if previous is not None and previous != record:
+            raise ValueError(f"conflicting manifest records for {destination}")
+        structures[destination] = record
+
+    downloaded = 0
+    reused = 0
+    for destination, (structure_id, expected_hash) in structures.items():
+        if destination.exists():
+            actual_hash = sha256_file(destination)
+            if actual_hash != expected_hash:
+                raise ValueError(
+                    f"existing mmCIF hash mismatch for {destination}: {actual_hash}"
+                )
+            reused += 1
+            continue
+        _download(
+            MMCIF_URL.format(structure_id=structure_id.lower()), destination
+        )
+        actual_hash = sha256_file(destination)
+        if actual_hash != expected_hash:
+            raise ValueError(
+                f"downloaded mmCIF hash mismatch for {destination}: {actual_hash}"
+            )
+        downloaded += 1
+    return {
+        "manifest": str(manifest_path),
+        "structures": len(structures),
+        "downloaded": downloaded,
+        "reused": reused,
+    }
+
+
 def _length_bin(length: int) -> int:
     for index, (lower, upper) in enumerate(((100, 199), (200, 299), (300, 399), (400, 500))):
         if lower <= length <= upper:

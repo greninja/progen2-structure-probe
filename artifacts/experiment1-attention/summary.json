@@ -1,0 +1,5606 @@
+{
+  "chains": [
+    {
+      "esm2": {
+        "auc": 0.5692869740488788,
+        "cohens_d_pooled": 0.20578419050666102,
+        "mann_whitney_pair_level_p": 0.05737489218948373,
+        "matched_concordance": 0.5634920634920635
+      },
+      "label_asym_id": "C",
+      "length": 102,
+      "matched_pairs": 126,
+      "progen2": {
+        "auc": 0.548689846308894,
+        "cohens_d_pooled": 0.09579911609577604,
+        "mann_whitney_pair_level_p": 0.1817988438454009,
+        "matched_concordance": 0.6031746031746031
+      },
+      "resources": {
+        "chain_wall_seconds": 3.365100365015678,
+        "esm2_extraction_seconds": 0.20119929499924183,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800815616,
+          "peak_allocated_bytes": 1821801984,
+          "peak_reserved_bytes": 1933574144
+        },
+        "progen2_extraction_seconds": 1.4650374309858307,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800569856,
+          "peak_allocated_bytes": 1846154752,
+          "peak_reserved_bytes": 1933574144
+        }
+      },
+      "structure_id": "4B6I",
+      "valid_backbone_residues": 102
+    },
+    {
+      "esm2": {
+        "auc": 0.5763911033163265,
+        "cohens_d_pooled": 0.22863357107739657,
+        "mann_whitney_pair_level_p": 0.005157014548520517,
+        "matched_concordance": 0.6116071428571429
+      },
+      "label_asym_id": "A",
+      "length": 105,
+      "matched_pairs": 224,
+      "progen2": {
+        "auc": 0.4962133290816326,
+        "cohens_d_pooled": -0.0033197169466120235,
+        "mann_whitney_pair_level_p": 0.8900016976265317,
+        "matched_concordance": 0.44642857142857145
+      },
+      "resources": {
+        "chain_wall_seconds": 0.24739463394507766,
+        "esm2_extraction_seconds": 0.005630161031149328,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800827904,
+          "peak_allocated_bytes": 1822827008,
+          "peak_reserved_bytes": 1937768448
+        },
+        "progen2_extraction_seconds": 0.05875337705947459,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800815616,
+          "peak_allocated_bytes": 1848553984,
+          "peak_reserved_bytes": 1937768448
+        }
+      },
+      "structure_id": "1KPT",
+      "valid_backbone_residues": 105
+    },
+    {
+      "esm2": {
+        "auc": 0.5527905039566847,
+        "cohens_d_pooled": 0.09426523676947929,
+        "mann_whitney_pair_level_p": 0.2021007215127526,
+        "matched_concordance": 0.6020408163265306
+      },
+      "label_asym_id": "A",
+      "length": 106,
+      "matched_pairs": 98,
+      "progen2": {
+        "auc": 0.5591420241566014,
+        "cohens_d_pooled": 0.1598227319571961,
+        "mann_whitney_pair_level_p": 0.15294269872742844,
+        "matched_concordance": 0.5510204081632653
+      },
+      "resources": {
+        "chain_wall_seconds": 0.20077305601444095,
+        "esm2_extraction_seconds": 0.005643220967613161,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800827904,
+          "peak_allocated_bytes": 1823242240,
+          "peak_reserved_bytes": 1939865600
+        },
+        "progen2_extraction_seconds": 0.024571105022914708,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800827904,
+          "peak_allocated_bytes": 1849285632,
+          "peak_reserved_bytes": 1939865600
+        }
+      },
+      "structure_id": "3AG7",
+      "valid_backbone_residues": 105
+    },
+    {
+      "esm2": {
+        "auc": 0.6366075842101546,
+        "cohens_d_pooled": 0.3114003744718776,
+        "mann_whitney_pair_level_p": 0.000270869931957561,
+        "matched_concordance": 0.6386554621848739
+      },
+      "label_asym_id": "A",
+      "length": 106,
+      "matched_pairs": 119,
+      "progen2": {
+        "auc": 0.5222088835534213,
+        "cohens_d_pooled": 0.22284425668861627,
+        "mann_whitney_pair_level_p": 0.5543500021147842,
+        "matched_concordance": 0.5630252100840336
+      },
+      "resources": {
+        "chain_wall_seconds": 0.21984341507777572,
+        "esm2_extraction_seconds": 0.005072131985798478,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800827904,
+          "peak_allocated_bytes": 1823242240,
+          "peak_reserved_bytes": 1939865600
+        },
+        "progen2_extraction_seconds": 0.022181076928973198,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800827904,
+          "peak_allocated_bytes": 1849285632,
+          "peak_reserved_bytes": 1939865600
+        }
+      },
+      "structure_id": "7QYO",
+      "valid_backbone_residues": 106
+    },
+    {
+      "esm2": {
+        "auc": 0.5964495846064494,
+        "cohens_d_pooled": 0.30934713613551024,
+        "mann_whitney_pair_level_p": 0.000874299143962085,
+        "matched_concordance": 0.628140703517588
+      },
+      "label_asym_id": "A",
+      "length": 108,
+      "matched_pairs": 199,
+      "progen2": {
+        "auc": 0.5409206838211156,
+        "cohens_d_pooled": 0.10576341317603728,
+        "mann_whitney_pair_level_p": 0.15801562218883836,
+        "matched_concordance": 0.5728643216080402
+      },
+      "resources": {
+        "chain_wall_seconds": 0.20883480098564178,
+        "esm2_extraction_seconds": 0.005732268909923732,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800827904,
+          "peak_allocated_bytes": 1824079360,
+          "peak_reserved_bytes": 1939865600
+        },
+        "progen2_extraction_seconds": 0.02225112693849951,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800827904,
+          "peak_allocated_bytes": 1850763776,
+          "peak_reserved_bytes": 1939865600
+        }
+      },
+      "structure_id": "6I0I",
+      "valid_backbone_residues": 108
+    },
+    {
+      "esm2": {
+        "auc": 0.5206766330638869,
+        "cohens_d_pooled": 0.21400950632207044,
+        "mann_whitney_pair_level_p": 0.49894017088761533,
+        "matched_concordance": 0.5642458100558659
+      },
+      "label_asym_id": "A",
+      "length": 109,
+      "matched_pairs": 179,
+      "progen2": {
+        "auc": 0.4368153303579788,
+        "cohens_d_pooled": -0.2270771243065368,
+        "mann_whitney_pair_level_p": 0.03870707262288891,
+        "matched_concordance": 0.4301675977653631
+      },
+      "resources": {
+        "chain_wall_seconds": 0.20176682306919247,
+        "esm2_extraction_seconds": 0.005713272024877369,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800827904,
+          "peak_allocated_bytes": 1824506368,
+          "peak_reserved_bytes": 1939865600
+        },
+        "progen2_extraction_seconds": 0.022126461029984057,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800827904,
+          "peak_allocated_bytes": 1852286464,
+          "peak_reserved_bytes": 1939865600
+        }
+      },
+      "structure_id": "3C5K",
+      "valid_backbone_residues": 108
+    },
+    {
+      "esm2": {
+        "auc": 0.5670167789668384,
+        "cohens_d_pooled": 0.2146163050055799,
+        "mann_whitney_pair_level_p": 0.030638140184486906,
+        "matched_concordance": 0.6149425287356322
+      },
+      "label_asym_id": "A",
+      "length": 109,
+      "matched_pairs": 174,
+      "progen2": {
+        "auc": 0.5290659268067116,
+        "cohens_d_pooled": 0.20469781101677342,
+        "mann_whitney_pair_level_p": 0.34861992508412154,
+        "matched_concordance": 0.5344827586206896
+      },
+      "resources": {
+        "chain_wall_seconds": 0.2201473630266264,
+        "esm2_extraction_seconds": 0.005065007950179279,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800827904,
+          "peak_allocated_bytes": 1824506368,
+          "peak_reserved_bytes": 1939865600
+        },
+        "progen2_extraction_seconds": 0.022309303982183337,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800827904,
+          "peak_allocated_bytes": 1852286464,
+          "peak_reserved_bytes": 1939865600
+        }
+      },
+      "structure_id": "5M2P",
+      "valid_backbone_residues": 106
+    },
+    {
+      "esm2": {
+        "auc": 0.6922105697132108,
+        "cohens_d_pooled": 0.614256748679565,
+        "mann_whitney_pair_level_p": 4.127403250751604e-11,
+        "matched_concordance": 0.6954314720812182
+      },
+      "label_asym_id": "A",
+      "length": 111,
+      "matched_pairs": 197,
+      "progen2": {
+        "auc": 0.5767476616248808,
+        "cohens_d_pooled": 0.3561139639395011,
+        "mann_whitney_pair_level_p": 0.008418252697892627,
+        "matched_concordance": 0.5786802030456852
+      },
+      "resources": {
+        "chain_wall_seconds": 0.23741184500977397,
+        "esm2_extraction_seconds": 0.005700211971998215,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800840192,
+          "peak_allocated_bytes": 1825379328,
+          "peak_reserved_bytes": 1939865600
+        },
+        "progen2_extraction_seconds": 0.022512332070618868,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800827904,
+          "peak_allocated_bytes": 1853225984,
+          "peak_reserved_bytes": 1939865600
+        }
+      },
+      "structure_id": "5YXK",
+      "valid_backbone_residues": 110
+    },
+    {
+      "esm2": {
+        "auc": 0.5004782654904878,
+        "cohens_d_pooled": 0.08242094494048094,
+        "mann_whitney_pair_level_p": 0.9918380475297719,
+        "matched_concordance": 0.4948453608247423
+      },
+      "label_asym_id": "A",
+      "length": 112,
+      "matched_pairs": 97,
+      "progen2": {
+        "auc": 0.4965458603464768,
+        "cohens_d_pooled": -0.05368527939999799,
+        "mann_whitney_pair_level_p": 0.9347760541466088,
+        "matched_concordance": 0.4536082474226804
+      },
+      "resources": {
+        "chain_wall_seconds": 0.216181791969575,
+        "esm2_extraction_seconds": 0.00584981101565063,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800840192,
+          "peak_allocated_bytes": 1825812480,
+          "peak_reserved_bytes": 1939865600
+        },
+        "progen2_extraction_seconds": 0.02251351997256279,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800840192,
+          "peak_allocated_bytes": 1854100992,
+          "peak_reserved_bytes": 1939865600
+        }
+      },
+      "structure_id": "1KX9",
+      "valid_backbone_residues": 108
+    },
+    {
+      "esm2": {
+        "auc": 0.6024332810047096,
+        "cohens_d_pooled": 0.44418401990144285,
+        "mann_whitney_pair_level_p": 0.0007253518987958877,
+        "matched_concordance": 0.6153846153846154
+      },
+      "label_asym_id": "A",
+      "length": 112,
+      "matched_pairs": 182,
+      "progen2": {
+        "auc": 0.5518959062915106,
+        "cohens_d_pooled": 0.3220840997531809,
+        "mann_whitney_pair_level_p": 0.08688317211580365,
+        "matched_concordance": 0.5769230769230769
+      },
+      "resources": {
+        "chain_wall_seconds": 0.21502773999236524,
+        "esm2_extraction_seconds": 0.005202734027989209,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800840192,
+          "peak_allocated_bytes": 1825812480,
+          "peak_reserved_bytes": 1939865600
+        },
+        "progen2_extraction_seconds": 0.02233898697886616,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800840192,
+          "peak_allocated_bytes": 1854100992,
+          "peak_reserved_bytes": 1939865600
+        }
+      },
+      "structure_id": "3B64",
+      "valid_backbone_residues": 112
+    },
+    {
+      "esm2": {
+        "auc": 0.7067901234567902,
+        "cohens_d_pooled": 0.7289464328891029,
+        "mann_whitney_pair_level_p": 1.0943171779872714e-12,
+        "matched_concordance": 0.7474747474747475
+      },
+      "label_asym_id": "A",
+      "length": 114,
+      "matched_pairs": 198,
+      "progen2": {
+        "auc": 0.5698398122640547,
+        "cohens_d_pooled": 0.39746067999432333,
+        "mann_whitney_pair_level_p": 0.01622909278432079,
+        "matched_concordance": 0.5808080808080808
+      },
+      "resources": {
+        "chain_wall_seconds": 0.2109992429614067,
+        "esm2_extraction_seconds": 0.005900864955037832,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800840192,
+          "peak_allocated_bytes": 1830224896,
+          "peak_reserved_bytes": 1952448512
+        },
+        "progen2_extraction_seconds": 0.02278659795410931,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800840192,
+          "peak_allocated_bytes": 1855292416,
+          "peak_reserved_bytes": 1952448512
+        }
+      },
+      "structure_id": "4DH4",
+      "valid_backbone_residues": 114
+    },
+    {
+      "esm2": {
+        "auc": 0.6166838134430727,
+        "cohens_d_pooled": 0.5103150213583342,
+        "mann_whitney_pair_level_p": 0.0030530608577312994,
+        "matched_concordance": 0.6481481481481481
+      },
+      "label_asym_id": "A",
+      "length": 123,
+      "matched_pairs": 108,
+      "progen2": {
+        "auc": 0.5251200274348422,
+        "cohens_d_pooled": 0.1507943119100667,
+        "mann_whitney_pair_level_p": 0.5241979861550863,
+        "matched_concordance": 0.5833333333333334
+      },
+      "resources": {
+        "chain_wall_seconds": 0.2889227099949494,
+        "esm2_extraction_seconds": 0.0061775039648637176,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800864768,
+          "peak_allocated_bytes": 1832333312,
+          "peak_reserved_bytes": 1956642816
+        },
+        "progen2_extraction_seconds": 0.042925524059683084,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800840192,
+          "peak_allocated_bytes": 1862439936,
+          "peak_reserved_bytes": 1956642816
+        }
+      },
+      "structure_id": "2VMB",
+      "valid_backbone_residues": 121
+    },
+    {
+      "esm2": {
+        "auc": 0.6797378656294955,
+        "cohens_d_pooled": 0.5914351835106356,
+        "mann_whitney_pair_level_p": 2.7032551277555495e-07,
+        "matched_concordance": 0.7007299270072993
+      },
+      "label_asym_id": "A",
+      "length": 127,
+      "matched_pairs": 137,
+      "progen2": {
+        "auc": 0.5656135116415366,
+        "cohens_d_pooled": 0.141881472083841,
+        "mann_whitney_pair_level_p": 0.06051958112260381,
+        "matched_concordance": 0.5474452554744526
+      },
+      "resources": {
+        "chain_wall_seconds": 0.26576211396604776,
+        "esm2_extraction_seconds": 0.0061347620794549584,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800877056,
+          "peak_allocated_bytes": 1834299904,
+          "peak_reserved_bytes": 1956642816
+        },
+        "progen2_extraction_seconds": 0.0232009639730677,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800864768,
+          "peak_allocated_bytes": 1865779712,
+          "peak_reserved_bytes": 1956642816
+        }
+      },
+      "structure_id": "9N0J",
+      "valid_backbone_residues": 126
+    },
+    {
+      "esm2": {
+        "auc": 0.6905280654073359,
+        "cohens_d_pooled": 0.5435772371521927,
+        "mann_whitney_pair_level_p": 1.2812375813038115e-11,
+        "matched_concordance": 0.6777251184834123
+      },
+      "label_asym_id": "A",
+      "length": 128,
+      "matched_pairs": 211,
+      "progen2": {
+        "auc": 0.5401271310168235,
+        "cohens_d_pooled": 0.15969862293652495,
+        "mann_whitney_pair_level_p": 0.15396321461717827,
+        "matched_concordance": 0.5687203791469194
+      },
+      "resources": {
+        "chain_wall_seconds": 0.2825599879724905,
+        "esm2_extraction_seconds": 0.006251116981729865,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800877056,
+          "peak_allocated_bytes": 1834671616,
+          "peak_reserved_bytes": 1956642816
+        },
+        "progen2_extraction_seconds": 0.02329238597303629,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800877056,
+          "peak_allocated_bytes": 1866629120,
+          "peak_reserved_bytes": 1956642816
+        }
+      },
+      "structure_id": "2EGJ",
+      "valid_backbone_residues": 126
+    },
+    {
+      "esm2": {
+        "auc": 0.7388662131519275,
+        "cohens_d_pooled": 0.6469836023766217,
+        "mann_whitney_pair_level_p": 2.2295338503763393e-09,
+        "matched_concordance": 0.7714285714285715
+      },
+      "label_asym_id": "A",
+      "length": 131,
+      "matched_pairs": 105,
+      "progen2": {
+        "auc": 0.5150113378684807,
+        "cohens_d_pooled": 0.16100445454741258,
+        "mann_whitney_pair_level_p": 0.7078448632269418,
+        "matched_concordance": 0.5619047619047619
+      },
+      "resources": {
+        "chain_wall_seconds": 0.26513522199820727,
+        "esm2_extraction_seconds": 0.006406653090380132,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800877056,
+          "peak_allocated_bytes": 1835807232,
+          "peak_reserved_bytes": 1956642816
+        },
+        "progen2_extraction_seconds": 0.023484728997573256,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800877056,
+          "peak_allocated_bytes": 1869176832,
+          "peak_reserved_bytes": 1956642816
+        }
+      },
+      "structure_id": "7JRQ",
+      "valid_backbone_residues": 127
+    },
+    {
+      "esm2": {
+        "auc": 0.5846848989298454,
+        "cohens_d_pooled": 0.31218727292343995,
+        "mann_whitney_pair_level_p": 0.012672240562483256,
+        "matched_concordance": 0.6275862068965518
+      },
+      "label_asym_id": "A",
+      "length": 136,
+      "matched_pairs": 145,
+      "progen2": {
+        "auc": 0.4761474435196195,
+        "cohens_d_pooled": -0.1027413285469443,
+        "mann_whitney_pair_level_p": 0.482904191184814,
+        "matched_concordance": 0.496551724137931
+      },
+      "resources": {
+        "chain_wall_seconds": 0.4036832459969446,
+        "esm2_extraction_seconds": 0.006400716956704855,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800889344,
+          "peak_allocated_bytes": 1841835520,
+          "peak_reserved_bytes": 1958739968
+        },
+        "progen2_extraction_seconds": 0.025700222933664918,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800877056,
+          "peak_allocated_bytes": 1874248704,
+          "peak_reserved_bytes": 1958739968
+        }
+      },
+      "structure_id": "9PVL",
+      "valid_backbone_residues": 136
+    },
+    {
+      "esm2": {
+        "auc": 0.6458274169337499,
+        "cohens_d_pooled": 0.4126236729783507,
+        "mann_whitney_pair_level_p": 2.5422564626871944e-10,
+        "matched_concordance": 0.6751592356687898
+      },
+      "label_asym_id": "A",
+      "length": 139,
+      "matched_pairs": 314,
+      "progen2": {
+        "auc": 0.5053044748265649,
+        "cohens_d_pooled": -0.07012543865163896,
+        "mann_whitney_pair_level_p": 0.8182176087908101,
+        "matched_concordance": 0.5127388535031847
+      },
+      "resources": {
+        "chain_wall_seconds": 0.3162269730819389,
+        "esm2_extraction_seconds": 0.006551502970978618,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800901632,
+          "peak_allocated_bytes": 1841944576,
+          "peak_reserved_bytes": 1960837120
+        },
+        "progen2_extraction_seconds": 0.0242861540755257,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800889344,
+          "peak_allocated_bytes": 1876675072,
+          "peak_reserved_bytes": 1960837120
+        }
+      },
+      "structure_id": "4W9Z",
+      "valid_backbone_residues": 138
+    },
+    {
+      "esm2": {
+        "auc": 0.5812051056244628,
+        "cohens_d_pooled": 0.3980876834192568,
+        "mann_whitney_pair_level_p": 0.000497420951040526,
+        "matched_concordance": 0.5798045602605864
+      },
+      "label_asym_id": "A",
+      "length": 140,
+      "matched_pairs": 307,
+      "progen2": {
+        "auc": 0.5025305308279133,
+        "cohens_d_pooled": 0.1472760159399238,
+        "mann_whitney_pair_level_p": 0.9137650034971254,
+        "matched_concordance": 0.5472312703583062
+      },
+      "resources": {
+        "chain_wall_seconds": 0.32078381802421063,
+        "esm2_extraction_seconds": 0.006526570068672299,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800901632,
+          "peak_allocated_bytes": 1842419200,
+          "peak_reserved_bytes": 1960837120
+        },
+        "progen2_extraction_seconds": 0.02530722797382623,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800901632,
+          "peak_allocated_bytes": 1877507072,
+          "peak_reserved_bytes": 1960837120
+        }
+      },
+      "structure_id": "4IZX",
+      "valid_backbone_residues": 139
+    },
+    {
+      "esm2": {
+        "auc": 0.5451839921571373,
+        "cohens_d_pooled": 0.2239931755254395,
+        "mann_whitney_pair_level_p": 0.15096532931958243,
+        "matched_concordance": 0.514792899408284
+      },
+      "label_asym_id": "A",
+      "length": 141,
+      "matched_pairs": 169,
+      "progen2": {
+        "auc": 0.48727285459192604,
+        "cohens_d_pooled": 0.037494749449601295,
+        "mann_whitney_pair_level_p": 0.6861242389904274,
+        "matched_concordance": 0.5325443786982249
+      },
+      "resources": {
+        "chain_wall_seconds": 0.4398530520265922,
+        "esm2_extraction_seconds": 0.006511135026812553,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800901632,
+          "peak_allocated_bytes": 1842899968,
+          "peak_reserved_bytes": 1960837120
+        },
+        "progen2_extraction_seconds": 0.024053442990407348,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800901632,
+          "peak_allocated_bytes": 1878331392,
+          "peak_reserved_bytes": 1960837120
+        }
+      },
+      "structure_id": "2W72",
+      "valid_backbone_residues": 141
+    },
+    {
+      "esm2": {
+        "auc": 0.667871581450654,
+        "cohens_d_pooled": 0.6030652945001723,
+        "mann_whitney_pair_level_p": 7.721223741554415e-07,
+        "matched_concordance": 0.6689655172413793
+      },
+      "label_asym_id": "A",
+      "length": 145,
+      "matched_pairs": 145,
+      "progen2": {
+        "auc": 0.5621878715814507,
+        "cohens_d_pooled": 0.2687077083334159,
+        "mann_whitney_pair_level_p": 0.06718655384526248,
+        "matched_concordance": 0.6
+      },
+      "resources": {
+        "chain_wall_seconds": 0.34010588307864964,
+        "esm2_extraction_seconds": 0.00656574999447912,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800913920,
+          "peak_allocated_bytes": 1845087232,
+          "peak_reserved_bytes": 1979711488
+        },
+        "progen2_extraction_seconds": 0.024610285996459424,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800901632,
+          "peak_allocated_bytes": 1882432000,
+          "peak_reserved_bytes": 1979711488
+        }
+      },
+      "structure_id": "4MZJ",
+      "valid_backbone_residues": 142
+    },
+    {
+      "esm2": {
+        "auc": 0.6444913903061225,
+        "cohens_d_pooled": 0.504679733743208,
+        "mann_whitney_pair_level_p": 1.217326515631465e-07,
+        "matched_concordance": 0.6607142857142857
+      },
+      "label_asym_id": "A",
+      "length": 145,
+      "matched_pairs": 224,
+      "progen2": {
+        "auc": 0.5167211415816326,
+        "cohens_d_pooled": 0.054485179048193604,
+        "mann_whitney_pair_level_p": 0.5405647213239588,
+        "matched_concordance": 0.5133928571428571
+      },
+      "resources": {
+        "chain_wall_seconds": 0.3180043559987098,
+        "esm2_extraction_seconds": 0.006002971902489662,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800913920,
+          "peak_allocated_bytes": 1845087232,
+          "peak_reserved_bytes": 1979711488
+        },
+        "progen2_extraction_seconds": 0.02438826102297753,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800913920,
+          "peak_allocated_bytes": 1881939456,
+          "peak_reserved_bytes": 1979711488
+        }
+      },
+      "structure_id": "7TBR",
+      "valid_backbone_residues": 142
+    },
+    {
+      "esm2": {
+        "auc": 0.5620923192160044,
+        "cohens_d_pooled": 0.0692975438060317,
+        "mann_whitney_pair_level_p": 0.04220035371434851,
+        "matched_concordance": 0.547486033519553
+      },
+      "label_asym_id": "A",
+      "length": 146,
+      "matched_pairs": 179,
+      "progen2": {
+        "auc": 0.5413688711338598,
+        "cohens_d_pooled": 0.1817882726832772,
+        "mann_whitney_pair_level_p": 0.17594770487869205,
+        "matched_concordance": 0.5363128491620112
+      },
+      "resources": {
+        "chain_wall_seconds": 0.3254213980399072,
+        "esm2_extraction_seconds": 0.006816270062699914,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800913920,
+          "peak_allocated_bytes": 1845356032,
+          "peak_reserved_bytes": 2002780160
+        },
+        "progen2_extraction_seconds": 0.024374013068154454,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800913920,
+          "peak_allocated_bytes": 1882662400,
+          "peak_reserved_bytes": 1979711488
+        }
+      },
+      "structure_id": "1DM1",
+      "valid_backbone_residues": 146
+    },
+    {
+      "esm2": {
+        "auc": 0.7743323543473807,
+        "cohens_d_pooled": 0.84619442516142,
+        "mann_whitney_pair_level_p": 1.6363857318755906e-13,
+        "matched_concordance": 0.7768595041322314
+      },
+      "label_asym_id": "A",
+      "length": 146,
+      "matched_pairs": 121,
+      "progen2": {
+        "auc": 0.5087767229014412,
+        "cohens_d_pooled": 0.10251890796348746,
+        "mann_whitney_pair_level_p": 0.8141481523979286,
+        "matched_concordance": 0.5867768595041323
+      },
+      "resources": {
+        "chain_wall_seconds": 0.4134618209209293,
+        "esm2_extraction_seconds": 0.005910363048315048,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800913920,
+          "peak_allocated_bytes": 1845356032,
+          "peak_reserved_bytes": 2002780160
+        },
+        "progen2_extraction_seconds": 0.024504616972990334,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800913920,
+          "peak_allocated_bytes": 1882662400,
+          "peak_reserved_bytes": 2002780160
+        }
+      },
+      "structure_id": "7O91",
+      "valid_backbone_residues": 146
+    },
+    {
+      "esm2": {
+        "auc": 0.7131676744771983,
+        "cohens_d_pooled": 0.4800737669650602,
+        "mann_whitney_pair_level_p": 1.227727550051594e-16,
+        "matched_concordance": 0.7103174603174603
+      },
+      "label_asym_id": "A",
+      "length": 157,
+      "matched_pairs": 252,
+      "progen2": {
+        "auc": 0.6099930713025951,
+        "cohens_d_pooled": 0.322450028223798,
+        "mann_whitney_pair_level_p": 1.933136569694839e-05,
+        "matched_concordance": 0.6150793650793651
+      },
+      "resources": {
+        "chain_wall_seconds": 0.38052739889826626,
+        "esm2_extraction_seconds": 0.0072021420346572995,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800938496,
+          "peak_allocated_bytes": 1851952640,
+          "peak_reserved_bytes": 2086666240
+        },
+        "progen2_extraction_seconds": 0.026000609970651567,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800913920,
+          "peak_allocated_bytes": 1893284864,
+          "peak_reserved_bytes": 2036334592
+        }
+      },
+      "structure_id": "1MK4",
+      "valid_backbone_residues": 157
+    },
+    {
+      "esm2": {
+        "auc": 0.6998224852071006,
+        "cohens_d_pooled": 0.5733905277812068,
+        "mann_whitney_pair_level_p": 3.158326637743141e-15,
+        "matched_concordance": 0.7269230769230769
+      },
+      "label_asym_id": "A",
+      "length": 159,
+      "matched_pairs": 260,
+      "progen2": {
+        "auc": 0.5501331360946745,
+        "cohens_d_pooled": 0.07585309790079661,
+        "mann_whitney_pair_level_p": 0.04793918068144012,
+        "matched_concordance": 0.5884615384615385
+      },
+      "resources": {
+        "chain_wall_seconds": 0.385303893010132,
+        "esm2_extraction_seconds": 0.007053729961626232,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800950784,
+          "peak_allocated_bytes": 1852426240,
+          "peak_reserved_bytes": 2086666240
+        },
+        "progen2_extraction_seconds": 0.02582489000633359,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800938496,
+          "peak_allocated_bytes": 1895978496,
+          "peak_reserved_bytes": 2086666240
+        }
+      },
+      "structure_id": "5WJE",
+      "valid_backbone_residues": 159
+    },
+    {
+      "esm2": {
+        "auc": 0.6279176311728395,
+        "cohens_d_pooled": 0.36695114236044296,
+        "mann_whitney_pair_level_p": 1.0808639858259737e-07,
+        "matched_concordance": 0.6145833333333334
+      },
+      "label_asym_id": "A",
+      "length": 160,
+      "matched_pairs": 288,
+      "progen2": {
+        "auc": 0.4914520640432099,
+        "cohens_d_pooled": 0.09805573400654087,
+        "mann_whitney_pair_level_p": 0.7227599492481045,
+        "matched_concordance": 0.4965277777777778
+      },
+      "resources": {
+        "chain_wall_seconds": 0.42395989899523556,
+        "esm2_extraction_seconds": 0.007152274949476123,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800950784,
+          "peak_allocated_bytes": 1862099456,
+          "peak_reserved_bytes": 2113929216
+        },
+        "progen2_extraction_seconds": 0.02532978798262775,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800950784,
+          "peak_allocated_bytes": 1897665024,
+          "peak_reserved_bytes": 2086666240
+        }
+      },
+      "structure_id": "1RYA",
+      "valid_backbone_residues": 160
+    },
+    {
+      "esm2": {
+        "auc": 0.5863973688649013,
+        "cohens_d_pooled": 0.26412927824431337,
+        "mann_whitney_pair_level_p": 0.00020656880917298788,
+        "matched_concordance": 0.6363636363636364
+      },
+      "label_asym_id": "B",
+      "length": 163,
+      "matched_pairs": 308,
+      "progen2": {
+        "auc": 0.4985558272895935,
+        "cohens_d_pooled": 0.04612596624585358,
+        "mann_whitney_pair_level_p": 0.9507174003052602,
+        "matched_concordance": 0.5032467532467533
+      },
+      "resources": {
+        "chain_wall_seconds": 0.4049275330035016,
+        "esm2_extraction_seconds": 0.007259131991304457,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800950784,
+          "peak_allocated_bytes": 1863041536,
+          "peak_reserved_bytes": 2141192192
+        },
+        "progen2_extraction_seconds": 0.02568122697994113,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800950784,
+          "peak_allocated_bytes": 1899479040,
+          "peak_reserved_bytes": 2113929216
+        }
+      },
+      "structure_id": "1N08",
+      "valid_backbone_residues": 155
+    },
+    {
+      "esm2": {
+        "auc": 0.5543320320022409,
+        "cohens_d_pooled": 0.3036136104573052,
+        "mann_whitney_pair_level_p": 0.03988132889701247,
+        "matched_concordance": 0.5899581589958159
+      },
+      "label_asym_id": "G",
+      "length": 169,
+      "matched_pairs": 239,
+      "progen2": {
+        "auc": 0.5382433780921202,
+        "cohens_d_pooled": 0.14465198255478157,
+        "mann_whitney_pair_level_p": 0.14807513759502644,
+        "matched_concordance": 0.5564853556485355
+      },
+      "resources": {
+        "chain_wall_seconds": 0.6632844780106097,
+        "esm2_extraction_seconds": 0.007611759006977081,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800975360,
+          "peak_allocated_bytes": 1865002496,
+          "peak_reserved_bytes": 2199912448
+        },
+        "progen2_extraction_seconds": 0.026347301085479558,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800950784,
+          "peak_allocated_bytes": 1906092544,
+          "peak_reserved_bytes": 2141192192
+        }
+      },
+      "structure_id": "7ZLS",
+      "valid_backbone_residues": 161
+    },
+    {
+      "esm2": {
+        "auc": 0.6042472057856674,
+        "cohens_d_pooled": 0.2616773548317139,
+        "mann_whitney_pair_level_p": 4.6694799278478815e-07,
+        "matched_concordance": 0.5717948717948718
+      },
+      "label_asym_id": "A",
+      "length": 170,
+      "matched_pairs": 390,
+      "progen2": {
+        "auc": 0.5808941485864563,
+        "cohens_d_pooled": 0.27257807949527285,
+        "mann_whitney_pair_level_p": 9.21159658180784e-05,
+        "matched_concordance": 0.5974358974358974
+      },
+      "resources": {
+        "chain_wall_seconds": 0.6046510180458426,
+        "esm2_extraction_seconds": 0.007159398985095322,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800975360,
+          "peak_allocated_bytes": 1866291200,
+          "peak_reserved_bytes": 2199912448
+        },
+        "progen2_extraction_seconds": 0.026263003004714847,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800975360,
+          "peak_allocated_bytes": 1906875392,
+          "peak_reserved_bytes": 2199912448
+        }
+      },
+      "structure_id": "5M26",
+      "valid_backbone_residues": 167
+    },
+    {
+      "esm2": {
+        "auc": 0.6596432818073722,
+        "cohens_d_pooled": 0.5041247430468997,
+        "mann_whitney_pair_level_p": 2.8665521823686433e-11,
+        "matched_concordance": 0.6793103448275862
+      },
+      "label_asym_id": "A",
+      "length": 171,
+      "matched_pairs": 290,
+      "progen2": {
+        "auc": 0.556076099881094,
+        "cohens_d_pooled": 0.24181390220741905,
+        "mann_whitney_pair_level_p": 0.01944657303509629,
+        "matched_concordance": 0.5827586206896552
+      },
+      "resources": {
+        "chain_wall_seconds": 0.5082092839293182,
+        "esm2_extraction_seconds": 0.007211639895103872,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800975360,
+          "peak_allocated_bytes": 1866291200,
+          "peak_reserved_bytes": 2199912448
+        },
+        "progen2_extraction_seconds": 0.02636629797052592,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800975360,
+          "peak_allocated_bytes": 1907749376,
+          "peak_reserved_bytes": 2199912448
+        }
+      },
+      "structure_id": "7MOD",
+      "valid_backbone_residues": 164
+    },
+    {
+      "esm2": {
+        "auc": 0.5926828549247747,
+        "cohens_d_pooled": 0.323934966902296,
+        "mann_whitney_pair_level_p": 5.090775657534151e-05,
+        "matched_concordance": 0.5893416927899686
+      },
+      "label_asym_id": "A",
+      "length": 172,
+      "matched_pairs": 319,
+      "progen2": {
+        "auc": 0.569884336828451,
+        "cohens_d_pooled": 0.27012319192168543,
+        "mann_whitney_pair_level_p": 0.0022522434257527244,
+        "matched_concordance": 0.6520376175548589
+      },
+      "resources": {
+        "chain_wall_seconds": 0.42616945796180516,
+        "esm2_extraction_seconds": 0.007384985918179154,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800975360,
+          "peak_allocated_bytes": 1866291200,
+          "peak_reserved_bytes": 2199912448
+        },
+        "progen2_extraction_seconds": 0.026203638059087098,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800975360,
+          "peak_allocated_bytes": 1908820992,
+          "peak_reserved_bytes": 2199912448
+        }
+      },
+      "structure_id": "7Z1K",
+      "valid_backbone_residues": 165
+    },
+    {
+      "esm2": {
+        "auc": 0.5437570189519634,
+        "cohens_d_pooled": 0.1338274298801738,
+        "mann_whitney_pair_level_p": 0.03283498239270753,
+        "matched_concordance": 0.5692695214105793
+      },
+      "label_asym_id": "B",
+      "length": 173,
+      "matched_pairs": 397,
+      "progen2": {
+        "auc": 0.5026870292940124,
+        "cohens_d_pooled": 0.10071336355076418,
+        "mann_whitney_pair_level_p": 0.8958502961290015,
+        "matched_concordance": 0.5138539042821159
+      },
+      "resources": {
+        "chain_wall_seconds": 0.4790504649281502,
+        "esm2_extraction_seconds": 0.007456222898326814,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800975360,
+          "peak_allocated_bytes": 1866331648,
+          "peak_reserved_bytes": 2231369728
+        },
+        "progen2_extraction_seconds": 0.02664293791167438,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800975360,
+          "peak_allocated_bytes": 1910700032,
+          "peak_reserved_bytes": 2199912448
+        }
+      },
+      "structure_id": "9HTH",
+      "valid_backbone_residues": 173
+    },
+    {
+      "esm2": {
+        "auc": 0.620529692064324,
+        "cohens_d_pooled": 0.3071297692574867,
+        "mann_whitney_pair_level_p": 1.2552321789907296e-07,
+        "matched_concordance": 0.6261682242990654
+      },
+      "label_asym_id": "C",
+      "length": 178,
+      "matched_pairs": 321,
+      "progen2": {
+        "auc": 0.5107093292961055,
+        "cohens_d_pooled": 0.02832550960642242,
+        "mann_whitney_pair_level_p": 0.6387740688180285,
+        "matched_concordance": 0.5389408099688473
+      },
+      "resources": {
+        "chain_wall_seconds": 0.6551360610174015,
+        "esm2_extraction_seconds": 0.0076628129463642836,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800987648,
+          "peak_allocated_bytes": 1870220288,
+          "peak_reserved_bytes": 2275409920
+        },
+        "progen2_extraction_seconds": 0.027469296008348465,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800975360,
+          "peak_allocated_bytes": 1915328000,
+          "peak_reserved_bytes": 2243952640
+        }
+      },
+      "structure_id": "4W78",
+      "valid_backbone_residues": 178
+    },
+    {
+      "esm2": {
+        "auc": 0.6522991689750692,
+        "cohens_d_pooled": 0.5666876655202339,
+        "mann_whitney_pair_level_p": 2.821560094281575e-07,
+        "matched_concordance": 0.6789473684210526
+      },
+      "label_asym_id": "A",
+      "length": 183,
+      "matched_pairs": 190,
+      "progen2": {
+        "auc": 0.49265927977839336,
+        "cohens_d_pooled": -0.010611526849363083,
+        "mann_whitney_pair_level_p": 0.8048627698548614,
+        "matched_concordance": 0.5263157894736842
+      },
+      "resources": {
+        "chain_wall_seconds": 0.49662126903422177,
+        "esm2_extraction_seconds": 0.007962011964991689,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800999936,
+          "peak_allocated_bytes": 1872330240,
+          "peak_reserved_bytes": 2342518784
+        },
+        "progen2_extraction_seconds": 0.026695179054513574,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800987648,
+          "peak_allocated_bytes": 1931900416,
+          "peak_reserved_bytes": 2275409920
+        }
+      },
+      "structure_id": "3LQH",
+      "valid_backbone_residues": 174
+    },
+    {
+      "esm2": {
+        "auc": 0.6258817469739512,
+        "cohens_d_pooled": 0.31073824380376996,
+        "mann_whitney_pair_level_p": 7.498357341484242e-10,
+        "matched_concordance": 0.631578947368421
+      },
+      "label_asym_id": "A",
+      "length": 184,
+      "matched_pairs": 399,
+      "progen2": {
+        "auc": 0.5253987098070992,
+        "cohens_d_pooled": 0.048788228536309104,
+        "mann_whitney_pair_level_p": 0.21431413682291856,
+        "matched_concordance": 0.5413533834586466
+      },
+      "resources": {
+        "chain_wall_seconds": 0.5151917759794742,
+        "esm2_extraction_seconds": 0.007599886041134596,
+        "esm2_memory": {
+          "allocated_after_bytes": 1800999936,
+          "peak_allocated_bytes": 1872330240,
+          "peak_reserved_bytes": 2342518784
+        },
+        "progen2_extraction_seconds": 0.027441988000646234,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800999936,
+          "peak_allocated_bytes": 1932422656,
+          "peak_reserved_bytes": 2342518784
+        }
+      },
+      "structure_id": "9IL3",
+      "valid_backbone_residues": 184
+    },
+    {
+      "esm2": {
+        "auc": 0.5762100046990474,
+        "cohens_d_pooled": 0.08696802583227,
+        "mann_whitney_pair_level_p": 0.0011039656894007844,
+        "matched_concordance": 0.5980392156862745
+      },
+      "label_asym_id": "A",
+      "length": 187,
+      "matched_pairs": 306,
+      "progen2": {
+        "auc": 0.5448545431244394,
+        "cohens_d_pooled": 0.10759016959820726,
+        "mann_whitney_pair_level_p": 0.05483818010204329,
+        "matched_concordance": 0.5882352941176471
+      },
+      "resources": {
+        "chain_wall_seconds": 0.5302906269207597,
+        "esm2_extraction_seconds": 0.008085490087978542,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801012224,
+          "peak_allocated_bytes": 1873080832,
+          "peak_reserved_bytes": 2413821952
+        },
+        "progen2_extraction_seconds": 0.027772055938839912,
+        "progen2_memory": {
+          "allocated_after_bytes": 1800999936,
+          "peak_allocated_bytes": 1935412224,
+          "peak_reserved_bytes": 2342518784
+        }
+      },
+      "structure_id": "27AF",
+      "valid_backbone_residues": 179
+    },
+    {
+      "esm2": {
+        "auc": 0.6781375101480922,
+        "cohens_d_pooled": 0.5323687664569079,
+        "mann_whitney_pair_level_p": 2.295627620688735e-17,
+        "matched_concordance": 0.6957671957671958
+      },
+      "label_asym_id": "A",
+      "length": 194,
+      "matched_pairs": 378,
+      "progen2": {
+        "auc": 0.525944122504969,
+        "cohens_d_pooled": 0.11190218481907192,
+        "mann_whitney_pair_level_p": 0.2169914600427334,
+        "matched_concordance": 0.5211640211640212
+      },
+      "resources": {
+        "chain_wall_seconds": 0.5666432779980823,
+        "esm2_extraction_seconds": 0.008305140072479844,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801024512,
+          "peak_allocated_bytes": 1876551168,
+          "peak_reserved_bytes": 2489319424
+        },
+        "progen2_extraction_seconds": 0.06027905293740332,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801012224,
+          "peak_allocated_bytes": 1942196736,
+          "peak_reserved_bytes": 2413821952
+        }
+      },
+      "structure_id": "1FR9",
+      "valid_backbone_residues": 185
+    },
+    {
+      "esm2": {
+        "auc": 0.7635166734745827,
+        "cohens_d_pooled": 0.7115414277996469,
+        "mann_whitney_pair_level_p": 4.40835728511701e-39,
+        "matched_concordance": 0.7737226277372263
+      },
+      "label_asym_id": "A",
+      "length": 194,
+      "matched_pairs": 411,
+      "progen2": {
+        "auc": 0.5688102722574457,
+        "cohens_d_pooled": 0.21668873420792578,
+        "mann_whitney_pair_level_p": 0.0006382545445332588,
+        "matched_concordance": 0.5742092457420924
+      },
+      "resources": {
+        "chain_wall_seconds": 0.5556002299999818,
+        "esm2_extraction_seconds": 0.00730781105812639,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801024512,
+          "peak_allocated_bytes": 1876551168,
+          "peak_reserved_bytes": 2489319424
+        },
+        "progen2_extraction_seconds": 0.028527177986688912,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801024512,
+          "peak_allocated_bytes": 1942209024,
+          "peak_reserved_bytes": 2489319424
+        }
+      },
+      "structure_id": "6MRO",
+      "valid_backbone_residues": 194
+    },
+    {
+      "esm2": {
+        "auc": 0.5783140101171961,
+        "cohens_d_pooled": 0.29979166669786284,
+        "mann_whitney_pair_level_p": 0.0007541343025218533,
+        "matched_concordance": 0.5922330097087378
+      },
+      "label_asym_id": "A",
+      "length": 201,
+      "matched_pairs": 309,
+      "progen2": {
+        "auc": 0.5723861291775327,
+        "cohens_d_pooled": 0.34308201018793577,
+        "mann_whitney_pair_level_p": 0.0018452865950057357,
+        "matched_concordance": 0.6375404530744336
+      },
+      "resources": {
+        "chain_wall_seconds": 0.5722900599939749,
+        "esm2_extraction_seconds": 0.008522414951585233,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801049088,
+          "peak_allocated_bytes": 1880486400,
+          "peak_reserved_bytes": 2569011200
+        },
+        "progen2_extraction_seconds": 0.02850699401460588,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801024512,
+          "peak_allocated_bytes": 1948475904,
+          "peak_reserved_bytes": 2489319424
+        }
+      },
+      "structure_id": "2OVJ",
+      "valid_backbone_residues": 201
+    },
+    {
+      "esm2": {
+        "auc": 0.6313411738620301,
+        "cohens_d_pooled": 0.37462626465392457,
+        "mann_whitney_pair_level_p": 5.515655406444493e-09,
+        "matched_concordance": 0.6838905775075987
+      },
+      "label_asym_id": "A",
+      "length": 202,
+      "matched_pairs": 329,
+      "progen2": {
+        "auc": 0.5056401917942369,
+        "cohens_d_pooled": 0.07142776599249788,
+        "mann_whitney_pair_level_p": 0.802435114371377,
+        "matched_concordance": 0.47416413373860183
+      },
+      "resources": {
+        "chain_wall_seconds": 0.5866088580805808,
+        "esm2_extraction_seconds": 0.00845355202909559,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801049088,
+          "peak_allocated_bytes": 1880985088,
+          "peak_reserved_bytes": 2610954240
+        },
+        "progen2_extraction_seconds": 0.02882756304461509,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801049088,
+          "peak_allocated_bytes": 1949041152,
+          "peak_reserved_bytes": 2569011200
+        }
+      },
+      "structure_id": "1JHF",
+      "valid_backbone_residues": 197
+    },
+    {
+      "esm2": {
+        "auc": 0.6052687958738345,
+        "cohens_d_pooled": 0.33172176988035074,
+        "mann_whitney_pair_level_p": 1.2053468824977906e-06,
+        "matched_concordance": 0.6197183098591549
+      },
+      "label_asym_id": "A",
+      "length": 202,
+      "matched_pairs": 355,
+      "progen2": {
+        "auc": 0.5048601467962706,
+        "cohens_d_pooled": -0.0013642547807693913,
+        "mann_whitney_pair_level_p": 0.8227850441284212,
+        "matched_concordance": 0.5098591549295775
+      },
+      "resources": {
+        "chain_wall_seconds": 0.5891722310334444,
+        "esm2_extraction_seconds": 0.007669936981983483,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801049088,
+          "peak_allocated_bytes": 1880985088,
+          "peak_reserved_bytes": 2610954240
+        },
+        "progen2_extraction_seconds": 0.028719519032165408,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801049088,
+          "peak_allocated_bytes": 1949041152,
+          "peak_reserved_bytes": 2610954240
+        }
+      },
+      "structure_id": "4JWJ",
+      "valid_backbone_residues": 193
+    },
+    {
+      "esm2": {
+        "auc": 0.671622258652351,
+        "cohens_d_pooled": 0.6003751555512854,
+        "mann_whitney_pair_level_p": 3.4383586911539306e-16,
+        "matched_concordance": 0.6710875331564987
+      },
+      "label_asym_id": "A",
+      "length": 204,
+      "matched_pairs": 377,
+      "progen2": {
+        "auc": 0.5016850888981137,
+        "cohens_d_pooled": 0.004647191783545566,
+        "mann_whitney_pair_level_p": 0.9362982158621276,
+        "matched_concordance": 0.47480106100795755
+      },
+      "resources": {
+        "chain_wall_seconds": 0.6314150600228459,
+        "esm2_extraction_seconds": 0.008510542917065322,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801049088,
+          "peak_allocated_bytes": 1882559488,
+          "peak_reserved_bytes": 2652897280
+        },
+        "progen2_extraction_seconds": 0.029091143049299717,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801049088,
+          "peak_allocated_bytes": 1950532096,
+          "peak_reserved_bytes": 2610954240
+        }
+      },
+      "structure_id": "6XLV",
+      "valid_backbone_residues": 203
+    },
+    {
+      "esm2": {
+        "auc": 0.6036786154370967,
+        "cohens_d_pooled": 0.33470282432281007,
+        "mann_whitney_pair_level_p": 7.786500334813792e-07,
+        "matched_concordance": 0.633245382585752
+      },
+      "label_asym_id": "A",
+      "length": 205,
+      "matched_pairs": 379,
+      "progen2": {
+        "auc": 0.5173731733975675,
+        "cohens_d_pooled": 0.013133806029471838,
+        "mann_whitney_pair_level_p": 0.407810060551802,
+        "matched_concordance": 0.5356200527704486
+      },
+      "resources": {
+        "chain_wall_seconds": 0.5852529660332948,
+        "esm2_extraction_seconds": 0.008451177971437573,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801049088,
+          "peak_allocated_bytes": 1884163072,
+          "peak_reserved_bytes": 2652897280
+        },
+        "progen2_extraction_seconds": 0.029213435016572475,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801049088,
+          "peak_allocated_bytes": 1952208384,
+          "peak_reserved_bytes": 2652897280
+        }
+      },
+      "structure_id": "2FBY",
+      "valid_backbone_residues": 196
+    },
+    {
+      "esm2": {
+        "auc": 0.5833543293860755,
+        "cohens_d_pooled": 0.2866612621302261,
+        "mann_whitney_pair_level_p": 7.283260803808215e-05,
+        "matched_concordance": 0.6084656084656085
+      },
+      "label_asym_id": "A",
+      "length": 206,
+      "matched_pairs": 378,
+      "progen2": {
+        "auc": 0.5234875843341452,
+        "cohens_d_pooled": 0.11617487548764394,
+        "mann_whitney_pair_level_p": 0.2637139716795017,
+        "matched_concordance": 0.5793650793650794
+      },
+      "resources": {
+        "chain_wall_seconds": 0.6248896779725328,
+        "esm2_extraction_seconds": 0.008461863966658711,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801049088,
+          "peak_allocated_bytes": 1884556288,
+          "peak_reserved_bytes": 2652897280
+        },
+        "progen2_extraction_seconds": 0.029042463982477784,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801049088,
+          "peak_allocated_bytes": 1953782272,
+          "peak_reserved_bytes": 2652897280
+        }
+      },
+      "structure_id": "5LS4",
+      "valid_backbone_residues": 206
+    },
+    {
+      "esm2": {
+        "auc": 0.6071741425394758,
+        "cohens_d_pooled": 0.3254288954510124,
+        "mann_whitney_pair_level_p": 0.0001398448674181382,
+        "matched_concordance": 0.6635071090047393
+      },
+      "label_asym_id": "A",
+      "length": 207,
+      "matched_pairs": 211,
+      "progen2": {
+        "auc": 0.5531546910446755,
+        "cohens_d_pooled": 0.2976565531244688,
+        "mann_whitney_pair_level_p": 0.05893801868052868,
+        "matched_concordance": 0.5924170616113744
+      },
+      "resources": {
+        "chain_wall_seconds": 0.6220140450168401,
+        "esm2_extraction_seconds": 0.008542600087821484,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801061376,
+          "peak_allocated_bytes": 1884977152,
+          "peak_reserved_bytes": 2652897280
+        },
+        "progen2_extraction_seconds": 0.02962186501827091,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801049088,
+          "peak_allocated_bytes": 1955021824,
+          "peak_reserved_bytes": 2652897280
+        }
+      },
+      "structure_id": "4GEH",
+      "valid_backbone_residues": 198
+    },
+    {
+      "esm2": {
+        "auc": 0.5427580089742252,
+        "cohens_d_pooled": 0.16075481895933172,
+        "mann_whitney_pair_level_p": 0.017196392311928776,
+        "matched_concordance": 0.555984555984556
+      },
+      "label_asym_id": "A",
+      "length": 211,
+      "matched_pairs": 518,
+      "progen2": {
+        "auc": 0.4847460532788718,
+        "cohens_d_pooled": -0.04688862262440331,
+        "mann_whitney_pair_level_p": 0.39538901619079425,
+        "matched_concordance": 0.49034749034749037
+      },
+      "resources": {
+        "chain_wall_seconds": 0.7272180300205946,
+        "esm2_extraction_seconds": 0.008838237030431628,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801061376,
+          "peak_allocated_bytes": 1889414144,
+          "peak_reserved_bytes": 2740977664
+        },
+        "progen2_extraction_seconds": 0.02960049395915121,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801061376,
+          "peak_allocated_bytes": 1958462464,
+          "peak_reserved_bytes": 2652897280
+        }
+      },
+      "structure_id": "6UBL",
+      "valid_backbone_residues": 211
+    },
+    {
+      "esm2": {
+        "auc": 0.6513799621928167,
+        "cohens_d_pooled": 0.44858118390508944,
+        "mann_whitney_pair_level_p": 1.942309563627707e-08,
+        "matched_concordance": 0.7086956521739131
+      },
+      "label_asym_id": "B",
+      "length": 217,
+      "matched_pairs": 230,
+      "progen2": {
+        "auc": 0.47117202268431,
+        "cohens_d_pooled": -0.10151326896729931,
+        "mann_whitney_pair_level_p": 0.28488994063117945,
+        "matched_concordance": 0.4652173913043478
+      },
+      "resources": {
+        "chain_wall_seconds": 0.6902325500268489,
+        "esm2_extraction_seconds": 0.009106566081754863,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801085952,
+          "peak_allocated_bytes": 1893391872,
+          "peak_reserved_bytes": 2833252352
+        },
+        "progen2_extraction_seconds": 0.029969742987304926,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801061376,
+          "peak_allocated_bytes": 1966723072,
+          "peak_reserved_bytes": 2740977664
+        }
+      },
+      "structure_id": "7DG2",
+      "valid_backbone_residues": 207
+    },
+    {
+      "esm2": {
+        "auc": 0.6550197006516125,
+        "cohens_d_pooled": 0.5383093171338492,
+        "mann_whitney_pair_level_p": 4.001786038458511e-14,
+        "matched_concordance": 0.6876574307304786
+      },
+      "label_asym_id": "A",
+      "length": 217,
+      "matched_pairs": 397,
+      "progen2": {
+        "auc": 0.5089620516594865,
+        "cohens_d_pooled": 0.04353945619555374,
+        "mann_whitney_pair_level_p": 0.6621333770779797,
+        "matched_concordance": 0.5163727959697733
+      },
+      "resources": {
+        "chain_wall_seconds": 0.9085087339626625,
+        "esm2_extraction_seconds": 0.00814485503360629,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801085952,
+          "peak_allocated_bytes": 1893391872,
+          "peak_reserved_bytes": 2833252352
+        },
+        "progen2_extraction_seconds": 0.030208389973267913,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801085952,
+          "peak_allocated_bytes": 1966747648,
+          "peak_reserved_bytes": 2833252352
+        }
+      },
+      "structure_id": "8RS8",
+      "valid_backbone_residues": 210
+    },
+    {
+      "esm2": {
+        "auc": 0.6567329229692904,
+        "cohens_d_pooled": 0.3902047638263975,
+        "mann_whitney_pair_level_p": 3.4769027012424556e-15,
+        "matched_concordance": 0.6579572446555819
+      },
+      "label_asym_id": "A",
+      "length": 219,
+      "matched_pairs": 421,
+      "progen2": {
+        "auc": 0.517797800734593,
+        "cohens_d_pooled": 0.12526100124406514,
+        "mann_whitney_pair_level_p": 0.3714112011688214,
+        "matched_concordance": 0.5154394299287411
+      },
+      "resources": {
+        "chain_wall_seconds": 0.6768517170567065,
+        "esm2_extraction_seconds": 0.00917899003252387,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801085952,
+          "peak_allocated_bytes": 1896707072,
+          "peak_reserved_bytes": 2881486848
+        },
+        "progen2_extraction_seconds": 0.030242820968851447,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801085952,
+          "peak_allocated_bytes": 1968625664,
+          "peak_reserved_bytes": 2833252352
+        }
+      },
+      "structure_id": "2D3Y",
+      "valid_backbone_residues": 219
+    },
+    {
+      "esm2": {
+        "auc": 0.6684765625,
+        "cohens_d_pooled": 0.49069595989119213,
+        "mann_whitney_pair_level_p": 1.6275070739496255e-13,
+        "matched_concordance": 0.678125
+      },
+      "label_asym_id": "G",
+      "length": 221,
+      "matched_pairs": 320,
+      "progen2": {
+        "auc": 0.533271484375,
+        "cohens_d_pooled": 0.038486834613755544,
+        "mann_whitney_pair_level_p": 0.14524561692666138,
+        "matched_concordance": 0.546875
+      },
+      "resources": {
+        "chain_wall_seconds": 0.8337636590003967,
+        "esm2_extraction_seconds": 0.009133872925303876,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801085952,
+          "peak_allocated_bytes": 1898552832,
+          "peak_reserved_bytes": 2929721344
+        },
+        "progen2_extraction_seconds": 0.030640564975328743,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801085952,
+          "peak_allocated_bytes": 1971274240,
+          "peak_reserved_bytes": 2881486848
+        }
+      },
+      "structure_id": "1EKJ",
+      "valid_backbone_residues": 220
+    },
+    {
+      "esm2": {
+        "auc": 0.552490809689886,
+        "cohens_d_pooled": 0.14333413697936323,
+        "mann_whitney_pair_level_p": 0.009105349920690248,
+        "matched_concordance": 0.6140776699029126
+      },
+      "label_asym_id": "A",
+      "length": 221,
+      "matched_pairs": 412,
+      "progen2": {
+        "auc": 0.5332913092657178,
+        "cohens_d_pooled": 0.12444105739764051,
+        "mann_whitney_pair_level_p": 0.09811373403017834,
+        "matched_concordance": 0.558252427184466
+      },
+      "resources": {
+        "chain_wall_seconds": 0.7196739460341632,
+        "esm2_extraction_seconds": 0.008290893048979342,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801085952,
+          "peak_allocated_bytes": 1898552832,
+          "peak_reserved_bytes": 2929721344
+        },
+        "progen2_extraction_seconds": 0.030566953006200492,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801085952,
+          "peak_allocated_bytes": 1971274240,
+          "peak_reserved_bytes": 2929721344
+        }
+      },
+      "structure_id": "1XTA",
+      "valid_backbone_residues": 220
+    },
+    {
+      "esm2": {
+        "auc": 0.6002969547193877,
+        "cohens_d_pooled": 0.39084634632180487,
+        "mann_whitney_pair_level_p": 2.0257391901208678e-07,
+        "matched_concordance": 0.6495535714285714
+      },
+      "label_asym_id": "B",
+      "length": 222,
+      "matched_pairs": 448,
+      "progen2": {
+        "auc": 0.5084253427933674,
+        "cohens_d_pooled": 0.10037699795141175,
+        "mann_whitney_pair_level_p": 0.6625124084649157,
+        "matched_concordance": 0.5223214285714286
+      },
+      "resources": {
+        "chain_wall_seconds": 0.7911017150618136,
+        "esm2_extraction_seconds": 0.009036515024490654,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801085952,
+          "peak_allocated_bytes": 1898800128,
+          "peak_reserved_bytes": 2929721344
+        },
+        "progen2_extraction_seconds": 0.0304327888879925,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801085952,
+          "peak_allocated_bytes": 1973164544,
+          "peak_reserved_bytes": 2929721344
+        }
+      },
+      "structure_id": "2BO9",
+      "valid_backbone_residues": 217
+    },
+    {
+      "esm2": {
+        "auc": 0.6179940064873601,
+        "cohens_d_pooled": 0.23808027975458118,
+        "mann_whitney_pair_level_p": 5.0835732663941347e-11,
+        "matched_concordance": 0.620889748549323
+      },
+      "label_asym_id": "A",
+      "length": 224,
+      "matched_pairs": 517,
+      "progen2": {
+        "auc": 0.5476394464418662,
+        "cohens_d_pooled": 0.14080805127359056,
+        "mann_whitney_pair_level_p": 0.008003517637328239,
+        "matched_concordance": 0.5880077369439072
+      },
+      "resources": {
+        "chain_wall_seconds": 0.7544605520088226,
+        "esm2_extraction_seconds": 0.009360646945424378,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801098240,
+          "peak_allocated_bytes": 1900116992,
+          "peak_reserved_bytes": 2980052992
+        },
+        "progen2_extraction_seconds": 0.030987256090156734,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801085952,
+          "peak_allocated_bytes": 1975612928,
+          "peak_reserved_bytes": 2929721344
+        }
+      },
+      "structure_id": "2JIG",
+      "valid_backbone_residues": 216
+    },
+    {
+      "esm2": {
+        "auc": 0.5480637176930657,
+        "cohens_d_pooled": 0.20655379456233125,
+        "mann_whitney_pair_level_p": 0.02581634251582655,
+        "matched_concordance": 0.6155988857938719
+      },
+      "label_asym_id": "A",
+      "length": 227,
+      "matched_pairs": 359,
+      "progen2": {
+        "auc": 0.5620145715815364,
+        "cohens_d_pooled": 0.1917448509358028,
+        "mann_whitney_pair_level_p": 0.004027638840998406,
+        "matched_concordance": 0.6044568245125348
+      },
+      "resources": {
+        "chain_wall_seconds": 0.7236027109902352,
+        "esm2_extraction_seconds": 0.0093250279314816,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801098240,
+          "peak_allocated_bytes": 1902194176,
+          "peak_reserved_bytes": 3032481792
+        },
+        "progen2_extraction_seconds": 0.03173643990885466,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801098240,
+          "peak_allocated_bytes": 1980291072,
+          "peak_reserved_bytes": 2980052992
+        }
+      },
+      "structure_id": "5IMU",
+      "valid_backbone_residues": 217
+    },
+    {
+      "esm2": {
+        "auc": 0.6912996219281663,
+        "cohens_d_pooled": 0.6287741767762685,
+        "mann_whitney_pair_level_p": 9.71603808783032e-24,
+        "matched_concordance": 0.7108695652173913
+      },
+      "label_asym_id": "A",
+      "length": 230,
+      "matched_pairs": 460,
+      "progen2": {
+        "auc": 0.591195652173913,
+        "cohens_d_pooled": 0.4013117175698965,
+        "mann_whitney_pair_level_p": 1.6819852766442682e-06,
+        "matched_concordance": 0.6391304347826087
+      },
+      "resources": {
+        "chain_wall_seconds": 0.827348694903776,
+        "esm2_extraction_seconds": 0.009613540954887867,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801110528,
+          "peak_allocated_bytes": 1905397760,
+          "peak_reserved_bytes": 3084910592
+        },
+        "progen2_extraction_seconds": 0.031585652963258326,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801098240,
+          "peak_allocated_bytes": 1984333824,
+          "peak_reserved_bytes": 3032481792
+        }
+      },
+      "structure_id": "6DQ3",
+      "valid_backbone_residues": 227
+    },
+    {
+      "esm2": {
+        "auc": 0.6038781163434903,
+        "cohens_d_pooled": 0.25573578543578773,
+        "mann_whitney_pair_level_p": 2.981166021766036e-08,
+        "matched_concordance": 0.6252631578947369
+      },
+      "label_asym_id": "A",
+      "length": 233,
+      "matched_pairs": 475,
+      "progen2": {
+        "auc": 0.5270160664819945,
+        "cohens_d_pooled": 0.11014487843540113,
+        "mann_whitney_pair_level_p": 0.1494755082341394,
+        "matched_concordance": 0.5452631578947369
+      },
+      "resources": {
+        "chain_wall_seconds": 0.8077974800253287,
+        "esm2_extraction_seconds": 0.009733458049595356,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801122816,
+          "peak_allocated_bytes": 1907189760,
+          "peak_reserved_bytes": 3139436544
+        },
+        "progen2_extraction_seconds": 0.03174475103151053,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801110528,
+          "peak_allocated_bytes": 1987716096,
+          "peak_reserved_bytes": 3084910592
+        }
+      },
+      "structure_id": "7Q5V",
+      "valid_backbone_residues": 223
+    },
+    {
+      "esm2": {
+        "auc": 0.6020937786879458,
+        "cohens_d_pooled": 0.3724435152392344,
+        "mann_whitney_pair_level_p": 4.9507766611685585e-08,
+        "matched_concordance": 0.5861344537815126
+      },
+      "label_asym_id": "A",
+      "length": 244,
+      "matched_pairs": 476,
+      "progen2": {
+        "auc": 0.5261060306475531,
+        "cohens_d_pooled": 0.1289345881454613,
+        "mann_whitney_pair_level_p": 0.16322797216319707,
+        "matched_concordance": 0.5273109243697479
+      },
+      "resources": {
+        "chain_wall_seconds": 0.8911468950100243,
+        "esm2_extraction_seconds": 0.010209564003162086,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801147392,
+          "peak_allocated_bytes": 1918001152,
+          "peak_reserved_bytes": 3256877056
+        },
+        "progen2_extraction_seconds": 0.03287149593234062,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801122816,
+          "peak_allocated_bytes": 2003815936,
+          "peak_reserved_bytes": 3139436544
+        }
+      },
+      "structure_id": "9GK0",
+      "valid_backbone_residues": 244
+    },
+    {
+      "esm2": {
+        "auc": 0.4803215377207378,
+        "cohens_d_pooled": -0.0030583177491751426,
+        "mann_whitney_pair_level_p": 0.3897725239127714,
+        "matched_concordance": 0.4827586206896552
+      },
+      "label_asym_id": "A",
+      "length": 245,
+      "matched_pairs": 319,
+      "progen2": {
+        "auc": 0.4971157909218659,
+        "cohens_d_pooled": -0.07530329007255378,
+        "mann_whitney_pair_level_p": 0.8998360005728373,
+        "matched_concordance": 0.5109717868338558
+      },
+      "resources": {
+        "chain_wall_seconds": 0.8917856599437073,
+        "esm2_extraction_seconds": 0.009967355988919735,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801147392,
+          "peak_allocated_bytes": 1918474240,
+          "peak_reserved_bytes": 3256877056
+        },
+        "progen2_extraction_seconds": 0.03288099402561784,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801147392,
+          "peak_allocated_bytes": 2004533760,
+          "peak_reserved_bytes": 3256877056
+        }
+      },
+      "structure_id": "3OV9",
+      "valid_backbone_residues": 245
+    },
+    {
+      "esm2": {
+        "auc": 0.6227757631978411,
+        "cohens_d_pooled": 0.3821531683561159,
+        "mann_whitney_pair_level_p": 8.585998416171962e-14,
+        "matched_concordance": 0.6493506493506493
+      },
+      "label_asym_id": "A",
+      "length": 248,
+      "matched_pairs": 616,
+      "progen2": {
+        "auc": 0.5419495277449823,
+        "cohens_d_pooled": 0.13686867489057564,
+        "mann_whitney_pair_level_p": 0.01079715943934576,
+        "matched_concordance": 0.5616883116883117
+      },
+      "resources": {
+        "chain_wall_seconds": 1.0269332670141011,
+        "esm2_extraction_seconds": 0.010361538035795093,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801147392,
+          "peak_allocated_bytes": 1922003456,
+          "peak_reserved_bytes": 3378511872
+        },
+        "progen2_extraction_seconds": 0.03383676800876856,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801147392,
+          "peak_allocated_bytes": 2008289280,
+          "peak_reserved_bytes": 3256877056
+        }
+      },
+      "structure_id": "8Q29",
+      "valid_backbone_residues": 242
+    },
+    {
+      "esm2": {
+        "auc": 0.5600298197998812,
+        "cohens_d_pooled": 0.31314063205860776,
+        "mann_whitney_pair_level_p": 0.00037380824500371897,
+        "matched_concordance": 0.5819112627986348
+      },
+      "label_asym_id": "A",
+      "length": 251,
+      "matched_pairs": 586,
+      "progen2": {
+        "auc": 0.5164678680007921,
+        "cohens_d_pooled": 0.08510378668078096,
+        "mann_whitney_pair_level_p": 0.3290773921498049,
+        "matched_concordance": 0.5290102389078498
+      },
+      "resources": {
+        "chain_wall_seconds": 0.8956194409402087,
+        "esm2_extraction_seconds": 0.01042565202806145,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801159680,
+          "peak_allocated_bytes": 1924097536,
+          "peak_reserved_bytes": 3441426432
+        },
+        "progen2_extraction_seconds": 0.03409203700721264,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801147392,
+          "peak_allocated_bytes": 2011691520,
+          "peak_reserved_bytes": 3378511872
+        }
+      },
+      "structure_id": "1E2W",
+      "valid_backbone_residues": 251
+    },
+    {
+      "esm2": {
+        "auc": 0.5939552291504837,
+        "cohens_d_pooled": 0.3331353831569022,
+        "mann_whitney_pair_level_p": 1.3915599785117932e-05,
+        "matched_concordance": 0.5938375350140056
+      },
+      "label_asym_id": "A",
+      "length": 251,
+      "matched_pairs": 357,
+      "progen2": {
+        "auc": 0.5406947092562515,
+        "cohens_d_pooled": 0.14145428477122465,
+        "mann_whitney_pair_level_p": 0.059846442614671654,
+        "matched_concordance": 0.5742296918767507
+      },
+      "resources": {
+        "chain_wall_seconds": 0.8992810640484095,
+        "esm2_extraction_seconds": 0.009552988922223449,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801159680,
+          "peak_allocated_bytes": 1924097536,
+          "peak_reserved_bytes": 3441426432
+        },
+        "progen2_extraction_seconds": 0.03333572892006487,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801159680,
+          "peak_allocated_bytes": 2011703808,
+          "peak_reserved_bytes": 3441426432
+        }
+      },
+      "structure_id": "6JBO",
+      "valid_backbone_residues": 251
+    },
+    {
+      "esm2": {
+        "auc": 0.7325776546432948,
+        "cohens_d_pooled": 0.6404424544587064,
+        "mann_whitney_pair_level_p": 1.5473231622571256e-40,
+        "matched_concordance": 0.7536496350364964
+      },
+      "label_asym_id": "A",
+      "length": 253,
+      "matched_pairs": 548,
+      "progen2": {
+        "auc": 0.5934120091640471,
+        "cohens_d_pooled": 0.2694943072417903,
+        "mann_whitney_pair_level_p": 8.612196364668428e-08,
+        "matched_concordance": 0.6605839416058394
+      },
+      "resources": {
+        "chain_wall_seconds": 0.9224131649825722,
+        "esm2_extraction_seconds": 0.010343729052692652,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801159680,
+          "peak_allocated_bytes": 1926540288,
+          "peak_reserved_bytes": 3504340992
+        },
+        "progen2_extraction_seconds": 0.03368242003489286,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801159680,
+          "peak_allocated_bytes": 2014214144,
+          "peak_reserved_bytes": 3441426432
+        }
+      },
+      "structure_id": "1XQ6",
+      "valid_backbone_residues": 253
+    },
+    {
+      "esm2": {
+        "auc": 0.7094780466986492,
+        "cohens_d_pooled": 0.6009423445559233,
+        "mann_whitney_pair_level_p": 4.8134476826184826e-27,
+        "matched_concordance": 0.7165532879818595
+      },
+      "label_asym_id": "A",
+      "length": 257,
+      "matched_pairs": 441,
+      "progen2": {
+        "auc": 0.5775268535229663,
+        "cohens_d_pooled": 0.27782927404127045,
+        "mann_whitney_pair_level_p": 6.732827947834222e-05,
+        "matched_concordance": 0.5918367346938775
+      },
+      "resources": {
+        "chain_wall_seconds": 1.1282441060757264,
+        "esm2_extraction_seconds": 0.010733162052929401,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801171968,
+          "peak_allocated_bytes": 1930622976,
+          "peak_reserved_bytes": 3634364416
+        },
+        "progen2_extraction_seconds": 0.034184645977802575,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801159680,
+          "peak_allocated_bytes": 2034635264,
+          "peak_reserved_bytes": 3504340992
+        }
+      },
+      "structure_id": "5MLD",
+      "valid_backbone_residues": 252
+    },
+    {
+      "esm2": {
+        "auc": 0.6564444444444445,
+        "cohens_d_pooled": 0.5986132572039066,
+        "mann_whitney_pair_level_p": 4.493912363924264e-16,
+        "matched_concordance": 0.6933333333333334
+      },
+      "label_asym_id": "A",
+      "length": 264,
+      "matched_pairs": 450,
+      "progen2": {
+        "auc": 0.5729530864197531,
+        "cohens_d_pooled": 0.3762269102826425,
+        "mann_whitney_pair_level_p": 0.00015154671293018037,
+        "matched_concordance": 0.6044444444444445
+      },
+      "resources": {
+        "chain_wall_seconds": 1.0270092540886253,
+        "esm2_extraction_seconds": 0.01104779599700123,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801184256,
+          "peak_allocated_bytes": 1937077248,
+          "peak_reserved_bytes": 3770679296
+        },
+        "progen2_extraction_seconds": 0.03495282703079283,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801171968,
+          "peak_allocated_bytes": 2043290624,
+          "peak_reserved_bytes": 3634364416
+        }
+      },
+      "structure_id": "1NBA",
+      "valid_backbone_residues": 253
+    },
+    {
+      "esm2": {
+        "auc": 0.6640968322753906,
+        "cohens_d_pooled": 0.49690151749998274,
+        "mann_whitney_pair_level_p": 9.847025340848461e-20,
+        "matched_concordance": 0.7265625
+      },
+      "label_asym_id": "A",
+      "length": 265,
+      "matched_pairs": 512,
+      "progen2": {
+        "auc": 0.5322418212890625,
+        "cohens_d_pooled": 0.11163147849208312,
+        "mann_whitney_pair_level_p": 0.07409188688982372,
+        "matched_concordance": 0.546875
+      },
+      "resources": {
+        "chain_wall_seconds": 1.0605836290633306,
+        "esm2_extraction_seconds": 0.010917193023487926,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801196544,
+          "peak_allocated_bytes": 1938879488,
+          "peak_reserved_bytes": 3839885312
+        },
+        "progen2_extraction_seconds": 0.03517841303255409,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801184256,
+          "peak_allocated_bytes": 2043899392,
+          "peak_reserved_bytes": 3770679296
+        }
+      },
+      "structure_id": "4N13",
+      "valid_backbone_residues": 253
+    },
+    {
+      "esm2": {
+        "auc": 0.5779304861174349,
+        "cohens_d_pooled": 0.30646869046720204,
+        "mann_whitney_pair_level_p": 7.699365509959736e-07,
+        "matched_concordance": 0.587183308494784
+      },
+      "label_asym_id": "A",
+      "length": 266,
+      "matched_pairs": 671,
+      "progen2": {
+        "auc": 0.5092383856645664,
+        "cohens_d_pooled": 0.08499770100811789,
+        "mann_whitney_pair_level_p": 0.5579467800935933,
+        "matched_concordance": 0.5216095380029806
+      },
+      "resources": {
+        "chain_wall_seconds": 1.0141959490720183,
+        "esm2_extraction_seconds": 0.01069279306102544,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801196544,
+          "peak_allocated_bytes": 1939396096,
+          "peak_reserved_bytes": 3839885312
+        },
+        "progen2_extraction_seconds": 0.03512735990807414,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801196544,
+          "peak_allocated_bytes": 2045684736,
+          "peak_reserved_bytes": 3839885312
+        }
+      },
+      "structure_id": "4ATE",
+      "valid_backbone_residues": 255
+    },
+    {
+      "esm2": {
+        "auc": 0.689170675461218,
+        "cohens_d_pooled": 0.5589589131155795,
+        "mann_whitney_pair_level_p": 2.492337868862074e-28,
+        "matched_concordance": 0.704225352112676
+      },
+      "label_asym_id": "B",
+      "length": 267,
+      "matched_pairs": 568,
+      "progen2": {
+        "auc": 0.6151309264034913,
+        "cohens_d_pooled": 0.4067357172638774,
+        "mann_whitney_pair_level_p": 1.8414029952318034e-11,
+        "matched_concordance": 0.6672535211267606
+      },
+      "resources": {
+        "chain_wall_seconds": 1.0408555070171133,
+        "esm2_extraction_seconds": 0.010935002006590366,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801196544,
+          "peak_allocated_bytes": 1940172800,
+          "peak_reserved_bytes": 3911188480
+        },
+        "progen2_extraction_seconds": 0.03531495202332735,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801196544,
+          "peak_allocated_bytes": 2047357952,
+          "peak_reserved_bytes": 3839885312
+        }
+      },
+      "structure_id": "2YXO",
+      "valid_backbone_residues": 265
+    },
+    {
+      "esm2": {
+        "auc": 0.6337084130140196,
+        "cohens_d_pooled": 0.39947750170436086,
+        "mann_whitney_pair_level_p": 8.442174587605535e-15,
+        "matched_concordance": 0.6637010676156584
+      },
+      "label_asym_id": "A",
+      "length": 267,
+      "matched_pairs": 562,
+      "progen2": {
+        "auc": 0.5535010954775142,
+        "cohens_d_pooled": 0.20935762010581102,
+        "mann_whitney_pair_level_p": 0.001901001940926417,
+        "matched_concordance": 0.5640569395017794
+      },
+      "resources": {
+        "chain_wall_seconds": 1.0136438549961895,
+        "esm2_extraction_seconds": 0.010151386959478259,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801196544,
+          "peak_allocated_bytes": 1940172800,
+          "peak_reserved_bytes": 3911188480
+        },
+        "progen2_extraction_seconds": 0.035057308967225254,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801196544,
+          "peak_allocated_bytes": 2047357952,
+          "peak_reserved_bytes": 3911188480
+        }
+      },
+      "structure_id": "3CSS",
+      "valid_backbone_residues": 264
+    },
+    {
+      "esm2": {
+        "auc": 0.7121115853967742,
+        "cohens_d_pooled": 0.7121870482351157,
+        "mann_whitney_pair_level_p": 7.799925493296287e-36,
+        "matched_concordance": 0.768566493955095
+      },
+      "label_asym_id": "B",
+      "length": 268,
+      "matched_pairs": 579,
+      "progen2": {
+        "auc": 0.5801766490375581,
+        "cohens_d_pooled": 0.34021461187937235,
+        "mann_whitney_pair_level_p": 2.3177814720484573e-06,
+        "matched_concordance": 0.613126079447323
+      },
+      "resources": {
+        "chain_wall_seconds": 1.1038225999800488,
+        "esm2_extraction_seconds": 0.010882760980166495,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801196544,
+          "peak_allocated_bytes": 1941206528,
+          "peak_reserved_bytes": 3911188480
+        },
+        "progen2_extraction_seconds": 0.0356663929997012,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801196544,
+          "peak_allocated_bytes": 2048888320,
+          "peak_reserved_bytes": 3911188480
+        }
+      },
+      "structure_id": "6UVQ",
+      "valid_backbone_residues": 257
+    },
+    {
+      "esm2": {
+        "auc": 0.6458663137498258,
+        "cohens_d_pooled": 0.41628929168524553,
+        "mann_whitney_pair_level_p": 2.5300127459606696e-17,
+        "matched_concordance": 0.6868327402135231
+      },
+      "label_asym_id": "A",
+      "length": 272,
+      "matched_pairs": 562,
+      "progen2": {
+        "auc": 0.5557680373855448,
+        "cohens_d_pooled": 0.1809042107007154,
+        "mann_whitney_pair_level_p": 0.0012085333498452232,
+        "matched_concordance": 0.5907473309608541
+      },
+      "resources": {
+        "chain_wall_seconds": 1.1150698610581458,
+        "esm2_extraction_seconds": 0.011206893948838115,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801208832,
+          "peak_allocated_bytes": 1946252800,
+          "peak_reserved_bytes": 3984588800
+        },
+        "progen2_extraction_seconds": 0.03583617601543665,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801196544,
+          "peak_allocated_bytes": 2052818432,
+          "peak_reserved_bytes": 3911188480
+        }
+      },
+      "structure_id": "3W5H",
+      "valid_backbone_residues": 272
+    },
+    {
+      "esm2": {
+        "auc": 0.5661445648218135,
+        "cohens_d_pooled": 0.23769389255350679,
+        "mann_whitney_pair_level_p": 0.0016451016505211686,
+        "matched_concordance": 0.6111111111111112
+      },
+      "label_asym_id": "A",
+      "length": 275,
+      "matched_pairs": 378,
+      "progen2": {
+        "auc": 0.507705551356345,
+        "cohens_d_pooled": 0.03814586761237301,
+        "mann_whitney_pair_level_p": 0.713949857488965,
+        "matched_concordance": 0.5079365079365079
+      },
+      "resources": {
+        "chain_wall_seconds": 1.2309630780946463,
+        "esm2_extraction_seconds": 0.011434855055995286,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801208832,
+          "peak_allocated_bytes": 1949028864,
+          "peak_reserved_bytes": 4060086272
+        },
+        "progen2_extraction_seconds": 0.03602495603263378,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801208832,
+          "peak_allocated_bytes": 2056957440,
+          "peak_reserved_bytes": 3984588800
+        }
+      },
+      "structure_id": "8UUC",
+      "valid_backbone_residues": 274
+    },
+    {
+      "esm2": {
+        "auc": 0.7024640661899726,
+        "cohens_d_pooled": 0.6492766804172114,
+        "mann_whitney_pair_level_p": 8.884129190448104e-37,
+        "matched_concordance": 0.7580398162327718
+      },
+      "label_asym_id": "A",
+      "length": 283,
+      "matched_pairs": 653,
+      "progen2": {
+        "auc": 0.593641316201112,
+        "cohens_d_pooled": 0.29228860798459977,
+        "mann_whitney_pair_level_p": 4.654893546029629e-09,
+        "matched_concordance": 0.6003062787136294
+      },
+      "resources": {
+        "chain_wall_seconds": 1.159440326038748,
+        "esm2_extraction_seconds": 0.012029689969494939,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801233408,
+          "peak_allocated_bytes": 1957230592,
+          "peak_reserved_bytes": 4217372672
+        },
+        "progen2_extraction_seconds": 0.03695817093830556,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801208832,
+          "peak_allocated_bytes": 2068699136,
+          "peak_reserved_bytes": 4060086272
+        }
+      },
+      "structure_id": "2RHW",
+      "valid_backbone_residues": 283
+    },
+    {
+      "esm2": {
+        "auc": 0.6459286979184069,
+        "cohens_d_pooled": 0.4819620218382147,
+        "mann_whitney_pair_level_p": 5.47702359885562e-21,
+        "matched_concordance": 0.6763005780346821
+      },
+      "label_asym_id": "A",
+      "length": 294,
+      "matched_pairs": 692,
+      "progen2": {
+        "auc": 0.5708071602793278,
+        "cohens_d_pooled": 0.2753309850308199,
+        "mann_whitney_pair_level_p": 5.0955083828424665e-06,
+        "matched_concordance": 0.5982658959537572
+      },
+      "resources": {
+        "chain_wall_seconds": 1.2581723560579121,
+        "esm2_extraction_seconds": 0.01243930694181472,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801257984,
+          "peak_allocated_bytes": 1969523712,
+          "peak_reserved_bytes": 4387241984
+        },
+        "progen2_extraction_seconds": 0.059875371982343495,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801233408,
+          "peak_allocated_bytes": 2083893760,
+          "peak_reserved_bytes": 4217372672
+        }
+      },
+      "structure_id": "2WHL",
+      "valid_backbone_residues": 294
+    },
+    {
+      "esm2": {
+        "auc": 0.6540914926011803,
+        "cohens_d_pooled": 0.4360497949120578,
+        "mann_whitney_pair_level_p": 2.0986293939699833e-21,
+        "matched_concordance": 0.6750788643533123
+      },
+      "label_asym_id": "A",
+      "length": 294,
+      "matched_pairs": 634,
+      "progen2": {
+        "auc": 0.5149742757913801,
+        "cohens_d_pooled": 0.05538213840019299,
+        "mann_whitney_pair_level_p": 0.3559439436369729,
+        "matched_concordance": 0.5378548895899053
+      },
+      "resources": {
+        "chain_wall_seconds": 1.2773970640264452,
+        "esm2_extraction_seconds": 0.01133986993227154,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801257984,
+          "peak_allocated_bytes": 1969523712,
+          "peak_reserved_bytes": 4387241984
+        },
+        "progen2_extraction_seconds": 0.03836630505975336,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801257984,
+          "peak_allocated_bytes": 2083918336,
+          "peak_reserved_bytes": 4387241984
+        }
+      },
+      "structure_id": "5TQI",
+      "valid_backbone_residues": 288
+    },
+    {
+      "esm2": {
+        "auc": 0.5377478414782361,
+        "cohens_d_pooled": 0.15401882611774012,
+        "mann_whitney_pair_level_p": 0.012334598464363461,
+        "matched_concordance": 0.5402455661664393
+      },
+      "label_asym_id": "A",
+      "length": 295,
+      "matched_pairs": 733,
+      "progen2": {
+        "auc": 0.5151454803653155,
+        "cohens_d_pooled": 0.08576033878896365,
+        "mann_whitney_pair_level_p": 0.3153761680953612,
+        "matched_concordance": 0.5266030013642565
+      },
+      "resources": {
+        "chain_wall_seconds": 1.2657888639951125,
+        "esm2_extraction_seconds": 0.012052248930558562,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801257984,
+          "peak_allocated_bytes": 1970664448,
+          "peak_reserved_bytes": 4387241984
+        },
+        "progen2_extraction_seconds": 0.03861919906921685,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801257984,
+          "peak_allocated_bytes": 2084817920,
+          "peak_reserved_bytes": 4387241984
+        }
+      },
+      "structure_id": "9T47",
+      "valid_backbone_residues": 282
+    },
+    {
+      "esm2": {
+        "auc": 0.6410916826703732,
+        "cohens_d_pooled": 0.4322920502087714,
+        "mann_whitney_pair_level_p": 1.127398795867051e-17,
+        "matched_concordance": 0.6710097719869706
+      },
+      "label_asym_id": "A",
+      "length": 296,
+      "matched_pairs": 614,
+      "progen2": {
+        "auc": 0.5809929017814512,
+        "cohens_d_pooled": 0.3117236468654417,
+        "mann_whitney_pair_level_p": 8.929990389829301e-07,
+        "matched_concordance": 0.6237785016286646
+      },
+      "resources": {
+        "chain_wall_seconds": 1.5244022650877014,
+        "esm2_extraction_seconds": 0.012121111969463527,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801257984,
+          "peak_allocated_bytes": 1972538368,
+          "peak_reserved_bytes": 4473225216
+        },
+        "progen2_extraction_seconds": 0.038753362954594195,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801257984,
+          "peak_allocated_bytes": 2086782976,
+          "peak_reserved_bytes": 4387241984
+        }
+      },
+      "structure_id": "9EP6",
+      "valid_backbone_residues": 287
+    },
+    {
+      "esm2": {
+        "auc": 0.6645435194824509,
+        "cohens_d_pooled": 0.6389902276386075,
+        "mann_whitney_pair_level_p": 5.779072620681437e-25,
+        "matched_concordance": 0.7210365853658537
+      },
+      "label_asym_id": "A",
+      "length": 300,
+      "matched_pairs": 656,
+      "progen2": {
+        "auc": 0.5572738511302796,
+        "cohens_d_pooled": 0.18619843930912955,
+        "mann_whitney_pair_level_p": 0.00032842760195433003,
+        "matched_concordance": 0.5579268292682927
+      },
+      "resources": {
+        "chain_wall_seconds": 1.6822901639388874,
+        "esm2_extraction_seconds": 0.012626899988390505,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801270272,
+          "peak_allocated_bytes": 1976952320,
+          "peak_reserved_bytes": 4649385984
+        },
+        "progen2_extraction_seconds": 0.03908343205694109,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801257984,
+          "peak_allocated_bytes": 2093921280,
+          "peak_reserved_bytes": 4473225216
+        }
+      },
+      "structure_id": "9PCS",
+      "valid_backbone_residues": 295
+    },
+    {
+      "esm2": {
+        "auc": 0.6859519600012032,
+        "cohens_d_pooled": 0.5084211265739453,
+        "mann_whitney_pair_level_p": 1.7816525324830834e-26,
+        "matched_concordance": 0.7422303473491774
+      },
+      "label_asym_id": "B",
+      "length": 305,
+      "matched_pairs": 547,
+      "progen2": {
+        "auc": 0.5707381796670554,
+        "cohens_d_pooled": 0.16261396915140733,
+        "mann_whitney_pair_level_p": 5.109634575984074e-05,
+        "matched_concordance": 0.6069469835466179
+      },
+      "resources": {
+        "chain_wall_seconds": 1.3323890840401873,
+        "esm2_extraction_seconds": 0.012761063990183175,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801282560,
+          "peak_allocated_bytes": 1982288896,
+          "peak_reserved_bytes": 4831838208
+        },
+        "progen2_extraction_seconds": 0.039756629965268075,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801270272,
+          "peak_allocated_bytes": 2101203968,
+          "peak_reserved_bytes": 4649385984
+        }
+      },
+      "structure_id": "3FXQ",
+      "valid_backbone_residues": 296
+    },
+    {
+      "esm2": {
+        "auc": 0.6837292417475844,
+        "cohens_d_pooled": 0.6652022847231942,
+        "mann_whitney_pair_level_p": 2.9229242794039003e-27,
+        "matched_concordance": 0.740484429065744
+      },
+      "label_asym_id": "A",
+      "length": 307,
+      "matched_pairs": 578,
+      "progen2": {
+        "auc": 0.5873522826594509,
+        "cohens_d_pooled": 0.3973544063270176,
+        "mann_whitney_pair_level_p": 2.720600655188002e-07,
+        "matched_concordance": 0.6089965397923875
+      },
+      "resources": {
+        "chain_wall_seconds": 1.3132261149585247,
+        "esm2_extraction_seconds": 0.01267083000857383,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801282560,
+          "peak_allocated_bytes": 1985264128,
+          "peak_reserved_bytes": 4924112896
+        },
+        "progen2_extraction_seconds": 0.040157935000024736,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801282560,
+          "peak_allocated_bytes": 2103668736,
+          "peak_reserved_bytes": 4831838208
+        }
+      },
+      "structure_id": "3M0J",
+      "valid_backbone_residues": 297
+    },
+    {
+      "esm2": {
+        "auc": 0.6364646848671819,
+        "cohens_d_pooled": 0.4720095621189981,
+        "mann_whitney_pair_level_p": 5.718902232572773e-16,
+        "matched_concordance": 0.6916524701873935
+      },
+      "label_asym_id": "A",
+      "length": 308,
+      "matched_pairs": 587,
+      "progen2": {
+        "auc": 0.5395348972194248,
+        "cohens_d_pooled": 0.231299536734702,
+        "mann_whitney_pair_level_p": 0.019018368858591282,
+        "matched_concordance": 0.5724020442930153
+      },
+      "resources": {
+        "chain_wall_seconds": 1.3657746789976954,
+        "esm2_extraction_seconds": 0.012780062039382756,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801294848,
+          "peak_allocated_bytes": 1985872384,
+          "peak_reserved_bytes": 4924112896
+        },
+        "progen2_extraction_seconds": 0.04016980901360512,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801282560,
+          "peak_allocated_bytes": 2105757184,
+          "peak_reserved_bytes": 4924112896
+        }
+      },
+      "structure_id": "2X26",
+      "valid_backbone_residues": 308
+    },
+    {
+      "esm2": {
+        "auc": 0.6343533863476896,
+        "cohens_d_pooled": 0.3281944023843202,
+        "mann_whitney_pair_level_p": 4.9723628735320655e-18,
+        "matched_concordance": 0.6445086705202312
+      },
+      "label_asym_id": "A",
+      "length": 309,
+      "matched_pairs": 692,
+      "progen2": {
+        "auc": 0.5635566674462895,
+        "cohens_d_pooled": 0.16427979209071544,
+        "mann_whitney_pair_level_p": 4.2437434777788364e-05,
+        "matched_concordance": 0.5722543352601156
+      },
+      "resources": {
+        "chain_wall_seconds": 1.4405589359812438,
+        "esm2_extraction_seconds": 0.01292609900701791,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801294848,
+          "peak_allocated_bytes": 1987046400,
+          "peak_reserved_bytes": 5018484736
+        },
+        "progen2_extraction_seconds": 0.04018761799670756,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801294848,
+          "peak_allocated_bytes": 2106468864,
+          "peak_reserved_bytes": 4924112896
+        }
+      },
+      "structure_id": "6K5G",
+      "valid_backbone_residues": 302
+    },
+    {
+      "esm2": {
+        "auc": 0.6725455234153417,
+        "cohens_d_pooled": 0.5269848106588364,
+        "mann_whitney_pair_level_p": 2.289263238106627e-27,
+        "matched_concordance": 0.6930091185410334
+      },
+      "label_asym_id": "A",
+      "length": 311,
+      "matched_pairs": 658,
+      "progen2": {
+        "auc": 0.5430035753549949,
+        "cohens_d_pooled": 0.10503757690959392,
+        "mann_whitney_pair_level_p": 0.006914174958106692,
+        "matched_concordance": 0.5638297872340425
+      },
+      "resources": {
+        "chain_wall_seconds": 1.3940275920322165,
+        "esm2_extraction_seconds": 0.013106567901559174,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801294848,
+          "peak_allocated_bytes": 1989764096,
+          "peak_reserved_bytes": 5112856576
+        },
+        "progen2_extraction_seconds": 0.04038827202748507,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801294848,
+          "peak_allocated_bytes": 2108950528,
+          "peak_reserved_bytes": 5018484736
+        }
+      },
+      "structure_id": "2DSK",
+      "valid_backbone_residues": 300
+    },
+    {
+      "esm2": {
+        "auc": 0.5815211600877158,
+        "cohens_d_pooled": 0.3484189825689295,
+        "mann_whitney_pair_level_p": 1.8945910050184483e-08,
+        "matched_concordance": 0.6317780580075663
+      },
+      "label_asym_id": "B",
+      "length": 312,
+      "matched_pairs": 793,
+      "progen2": {
+        "auc": 0.570957415850228,
+        "cohens_d_pooled": 0.22939055312852355,
+        "mann_whitney_pair_level_p": 9.934990918662605e-07,
+        "matched_concordance": 0.6002522068095839
+      },
+      "resources": {
+        "chain_wall_seconds": 1.622649876982905,
+        "esm2_extraction_seconds": 0.013046015985310078,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801294848,
+          "peak_allocated_bytes": 1990646784,
+          "peak_reserved_bytes": 5209325568
+        },
+        "progen2_extraction_seconds": 0.0407337750075385,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801294848,
+          "peak_allocated_bytes": 2112858624,
+          "peak_reserved_bytes": 5112856576
+        }
+      },
+      "structure_id": "1NVM",
+      "valid_backbone_residues": 312
+    },
+    {
+      "esm2": {
+        "auc": 0.6025781438803791,
+        "cohens_d_pooled": 0.24629160826284618,
+        "mann_whitney_pair_level_p": 1.3390064906287324e-07,
+        "matched_concordance": 0.63718820861678
+      },
+      "label_asym_id": "B",
+      "length": 315,
+      "matched_pairs": 441,
+      "progen2": {
+        "auc": 0.5548151233282429,
+        "cohens_d_pooled": 0.2783732310172847,
+        "mann_whitney_pair_level_p": 0.00483356297482191,
+        "matched_concordance": 0.6303854875283447
+      },
+      "resources": {
+        "chain_wall_seconds": 1.437365107005462,
+        "esm2_extraction_seconds": 0.013383208075538278,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801307136,
+          "peak_allocated_bytes": 1994295296,
+          "peak_reserved_bytes": 5307891712
+        },
+        "progen2_extraction_seconds": 0.04142003203742206,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801294848,
+          "peak_allocated_bytes": 2116064768,
+          "peak_reserved_bytes": 5209325568
+        }
+      },
+      "structure_id": "3TC1",
+      "valid_backbone_residues": 305
+    },
+    {
+      "esm2": {
+        "auc": 0.6330764993790329,
+        "cohens_d_pooled": 0.46764301791404755,
+        "mann_whitney_pair_level_p": 1.0755608750750788e-17,
+        "matched_concordance": 0.658465991316932
+      },
+      "label_asym_id": "A",
+      "length": 315,
+      "matched_pairs": 691,
+      "progen2": {
+        "auc": 0.5034294558317504,
+        "cohens_d_pooled": 0.052054900808088195,
+        "mann_whitney_pair_level_p": 0.8253466739393291,
+        "matched_concordance": 0.5195369030390738
+      },
+      "resources": {
+        "chain_wall_seconds": 1.4847964229993522,
+        "esm2_extraction_seconds": 0.012476114090532064,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801307136,
+          "peak_allocated_bytes": 1994295296,
+          "peak_reserved_bytes": 5307891712
+        },
+        "progen2_extraction_seconds": 0.041243124986067414,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801307136,
+          "peak_allocated_bytes": 2116077056,
+          "peak_reserved_bytes": 5307891712
+        }
+      },
+      "structure_id": "9BHS",
+      "valid_backbone_residues": 303
+    },
+    {
+      "esm2": {
+        "auc": 0.6478857421875,
+        "cohens_d_pooled": 0.5382447464295309,
+        "mann_whitney_pair_level_p": 5.1661715322542237e-20,
+        "matched_concordance": 0.6875
+      },
+      "label_asym_id": "A",
+      "length": 316,
+      "matched_pairs": 640,
+      "progen2": {
+        "auc": 0.54011474609375,
+        "cohens_d_pooled": 0.14397748135296756,
+        "mann_whitney_pair_level_p": 0.012963376668729553,
+        "matched_concordance": 0.5578125
+      },
+      "resources": {
+        "chain_wall_seconds": 1.4679308729246259,
+        "esm2_extraction_seconds": 0.013436635956168175,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801307136,
+          "peak_allocated_bytes": 1995513344,
+          "peak_reserved_bytes": 5307891712
+        },
+        "progen2_extraction_seconds": 0.040941552026197314,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801307136,
+          "peak_allocated_bytes": 2118624768,
+          "peak_reserved_bytes": 5307891712
+        }
+      },
+      "structure_id": "8BPL",
+      "valid_backbone_residues": 316
+    },
+    {
+      "esm2": {
+        "auc": 0.6224765868886577,
+        "cohens_d_pooled": 0.3907930466015603,
+        "mann_whitney_pair_level_p": 6.881993838074492e-17,
+        "matched_concordance": 0.672258064516129
+      },
+      "label_asym_id": "A",
+      "length": 321,
+      "matched_pairs": 775,
+      "progen2": {
+        "auc": 0.5503300728407908,
+        "cohens_d_pooled": 0.12823984322518964,
+        "mann_whitney_pair_level_p": 0.0006016043569290064,
+        "matched_concordance": 0.6051612903225806
+      },
+      "resources": {
+        "chain_wall_seconds": 1.4432291649281979,
+        "esm2_extraction_seconds": 0.013729898957535625,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801319424,
+          "peak_allocated_bytes": 2002189312,
+          "peak_reserved_bytes": 5509218304
+        },
+        "progen2_extraction_seconds": 0.04375188203994185,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801307136,
+          "peak_allocated_bytes": 2128147456,
+          "peak_reserved_bytes": 5307891712
+        }
+      },
+      "structure_id": "4R75",
+      "valid_backbone_residues": 318
+    },
+    {
+      "esm2": {
+        "auc": 0.6825946406495372,
+        "cohens_d_pooled": 0.6307223930723077,
+        "mann_whitney_pair_level_p": 6.173519199726924e-32,
+        "matched_concordance": 0.7312138728323699
+      },
+      "label_asym_id": "C",
+      "length": 322,
+      "matched_pairs": 692,
+      "progen2": {
+        "auc": 0.5748124728524174,
+        "cohens_d_pooled": 0.2875911347706017,
+        "mann_whitney_pair_level_p": 1.4441718806410796e-06,
+        "matched_concordance": 0.6098265895953757
+      },
+      "resources": {
+        "chain_wall_seconds": 1.6211301389848813,
+        "esm2_extraction_seconds": 0.013752456987276673,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801319424,
+          "peak_allocated_bytes": 2002923520,
+          "peak_reserved_bytes": 5611978752
+        },
+        "progen2_extraction_seconds": 0.04291958804242313,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801319424,
+          "peak_allocated_bytes": 2130310656,
+          "peak_reserved_bytes": 5509218304
+        }
+      },
+      "structure_id": "8Q03",
+      "valid_backbone_residues": 316
+    },
+    {
+      "esm2": {
+        "auc": 0.6689288968485877,
+        "cohens_d_pooled": 0.45312675100572547,
+        "mann_whitney_pair_level_p": 3.657834202778482e-13,
+        "matched_concordance": 0.7152103559870551
+      },
+      "label_asym_id": "A",
+      "length": 323,
+      "matched_pairs": 309,
+      "progen2": {
+        "auc": 0.6178506718614174,
+        "cohens_d_pooled": 0.3815947143106876,
+        "mann_whitney_pair_level_p": 3.9760630963465646e-07,
+        "matched_concordance": 0.6472491909385113
+      },
+      "resources": {
+        "chain_wall_seconds": 1.5240199558902532,
+        "esm2_extraction_seconds": 0.03887209401000291,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801319424,
+          "peak_allocated_bytes": 2004167168,
+          "peak_reserved_bytes": 5611978752
+        },
+        "progen2_extraction_seconds": 0.043227097019553185,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801319424,
+          "peak_allocated_bytes": 2132373504,
+          "peak_reserved_bytes": 5611978752
+        }
+      },
+      "structure_id": "3EDV",
+      "valid_backbone_residues": 322
+    },
+    {
+      "esm2": {
+        "auc": 0.5323096282692242,
+        "cohens_d_pooled": 0.0830641898299113,
+        "mann_whitney_pair_level_p": 0.053859530487534286,
+        "matched_concordance": 0.5286195286195287
+      },
+      "label_asym_id": "B",
+      "length": 323,
+      "matched_pairs": 594,
+      "progen2": {
+        "auc": 0.46858313777505695,
+        "cohens_d_pooled": -0.058991927963326946,
+        "mann_whitney_pair_level_p": 0.060835445402710506,
+        "matched_concordance": 0.47474747474747475
+      },
+      "resources": {
+        "chain_wall_seconds": 1.575528446934186,
+        "esm2_extraction_seconds": 0.01293559791520238,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801319424,
+          "peak_allocated_bytes": 2004167168,
+          "peak_reserved_bytes": 5611978752
+        },
+        "progen2_extraction_seconds": 0.04277355002705008,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801319424,
+          "peak_allocated_bytes": 2132373504,
+          "peak_reserved_bytes": 5611978752
+        }
+      },
+      "structure_id": "6PGU",
+      "valid_backbone_residues": 315
+    },
+    {
+      "esm2": {
+        "auc": 0.585843323692732,
+        "cohens_d_pooled": 0.32359273480745343,
+        "mann_whitney_pair_level_p": 1.4169535141219742e-07,
+        "matched_concordance": 0.6012759170653907
+      },
+      "label_asym_id": "A",
+      "length": 324,
+      "matched_pairs": 627,
+      "progen2": {
+        "auc": 0.5388205906966924,
+        "cohens_d_pooled": 0.09722723732597467,
+        "mann_whitney_pair_level_p": 0.01731077029918376,
+        "matched_concordance": 0.580542264752791
+      },
+      "resources": {
+        "chain_wall_seconds": 1.477090867003426,
+        "esm2_extraction_seconds": 0.03938144398853183,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801331712,
+          "peak_allocated_bytes": 2006167040,
+          "peak_reserved_bytes": 5714739200
+        },
+        "progen2_extraction_seconds": 0.04330664698500186,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801319424,
+          "peak_allocated_bytes": 2133384192,
+          "peak_reserved_bytes": 5611978752
+        }
+      },
+      "structure_id": "1Z2N",
+      "valid_backbone_residues": 311
+    },
+    {
+      "esm2": {
+        "auc": 0.5338729528242437,
+        "cohens_d_pooled": 0.08899434893845275,
+        "mann_whitney_pair_level_p": 0.03271714606913862,
+        "matched_concordance": 0.5490196078431373
+      },
+      "label_asym_id": "A",
+      "length": 331,
+      "matched_pairs": 663,
+      "progen2": {
+        "auc": 0.4923231620064199,
+        "cohens_d_pooled": 0.035126249925432736,
+        "mann_whitney_pair_level_p": 0.6284322543970222,
+        "matched_concordance": 0.5007541478129713
+      },
+      "resources": {
+        "chain_wall_seconds": 1.6754216540139169,
+        "esm2_extraction_seconds": 0.014208378968760371,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801344000,
+          "peak_allocated_bytes": 2014803968,
+          "peak_reserved_bytes": 5928648704
+        },
+        "progen2_extraction_seconds": 0.04439302301034331,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801331712,
+          "peak_allocated_bytes": 2146325504,
+          "peak_reserved_bytes": 5714739200
+        }
+      },
+      "structure_id": "9IHS",
+      "valid_backbone_residues": 331
+    },
+    {
+      "esm2": {
+        "auc": 0.6830124206545364,
+        "cohens_d_pooled": 0.5816405674775809,
+        "mann_whitney_pair_level_p": 4.8437697535922086e-33,
+        "matched_concordance": 0.7170868347338936
+      },
+      "label_asym_id": "A",
+      "length": 332,
+      "matched_pairs": 714,
+      "progen2": {
+        "auc": 0.553941184316864,
+        "cohens_d_pooled": 0.1956771438373008,
+        "mann_whitney_pair_level_p": 0.00041670241474531163,
+        "matched_concordance": 0.5896358543417367
+      },
+      "resources": {
+        "chain_wall_seconds": 1.5503233260242268,
+        "esm2_extraction_seconds": 0.014222626923583448,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801344000,
+          "peak_allocated_bytes": 2015582720,
+          "peak_reserved_bytes": 6037700608
+        },
+        "progen2_extraction_seconds": 0.04436215304303914,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801344000,
+          "peak_allocated_bytes": 2148601344,
+          "peak_reserved_bytes": 5928648704
+        }
+      },
+      "structure_id": "3LZW",
+      "valid_backbone_residues": 329
+    },
+    {
+      "esm2": {
+        "auc": 0.5815692577773218,
+        "cohens_d_pooled": 0.33435136841934643,
+        "mann_whitney_pair_level_p": 6.093151629805771e-06,
+        "matched_concordance": 0.631578947368421
+      },
+      "label_asym_id": "A",
+      "length": 333,
+      "matched_pairs": 513,
+      "progen2": {
+        "auc": 0.49681003461653916,
+        "cohens_d_pooled": 0.0691140290823118,
+        "mann_whitney_pair_level_p": 0.8596758059576834,
+        "matched_concordance": 0.4678362573099415
+      },
+      "resources": {
+        "chain_wall_seconds": 1.578624917077832,
+        "esm2_extraction_seconds": 0.014058779925107956,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801344000,
+          "peak_allocated_bytes": 2016869888,
+          "peak_reserved_bytes": 6037700608
+        },
+        "progen2_extraction_seconds": 0.04436334106139839,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801344000,
+          "peak_allocated_bytes": 2150889472,
+          "peak_reserved_bytes": 6037700608
+        }
+      },
+      "structure_id": "4J7Q",
+      "valid_backbone_residues": 322
+    },
+    {
+      "esm2": {
+        "auc": 0.6500682591077734,
+        "cohens_d_pooled": 0.5196490604070394,
+        "mann_whitney_pair_level_p": 1.395303198705955e-19,
+        "matched_concordance": 0.6721581548599671
+      },
+      "label_asym_id": "A",
+      "length": 333,
+      "matched_pairs": 607,
+      "progen2": {
+        "auc": 0.5598413891746212,
+        "cohens_d_pooled": 0.1664854014195317,
+        "mann_whitney_pair_level_p": 0.000306434631962124,
+        "matched_concordance": 0.5815485996705108
+      },
+      "resources": {
+        "chain_wall_seconds": 1.5879499450093135,
+        "esm2_extraction_seconds": 0.01332503103185445,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801344000,
+          "peak_allocated_bytes": 2016869888,
+          "peak_reserved_bytes": 6037700608
+        },
+        "progen2_extraction_seconds": 0.044435765012167394,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801344000,
+          "peak_allocated_bytes": 2150889472,
+          "peak_reserved_bytes": 6037700608
+        }
+      },
+      "structure_id": "5UGR",
+      "valid_backbone_residues": 323
+    },
+    {
+      "esm2": {
+        "auc": 0.5597861439073291,
+        "cohens_d_pooled": 0.15084891801555847,
+        "mann_whitney_pair_level_p": 0.00015115464653583948,
+        "matched_concordance": 0.5522388059701493
+      },
+      "label_asym_id": "B",
+      "length": 341,
+      "matched_pairs": 670,
+      "progen2": {
+        "auc": 0.5180975718422811,
+        "cohens_d_pooled": 0.0006704772878033318,
+        "mann_whitney_pair_level_p": 0.25140214380367476,
+        "matched_concordance": 0.5134328358208955
+      },
+      "resources": {
+        "chain_wall_seconds": 1.7807966079562902,
+        "esm2_extraction_seconds": 0.014619184075854719,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801368576,
+          "peak_allocated_bytes": 2027609600,
+          "peak_reserved_bytes": 6264193024
+        },
+        "progen2_extraction_seconds": 0.04589732794556767,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801344000,
+          "peak_allocated_bytes": 2176509440,
+          "peak_reserved_bytes": 6037700608
+        }
+      },
+      "structure_id": "5M26",
+      "valid_backbone_residues": 332
+    },
+    {
+      "esm2": {
+        "auc": 0.6100791760734625,
+        "cohens_d_pooled": 0.48333719774489026,
+        "mann_whitney_pair_level_p": 6.66903481013291e-14,
+        "matched_concordance": 0.6468305304010349
+      },
+      "label_asym_id": "A",
+      "length": 345,
+      "matched_pairs": 773,
+      "progen2": {
+        "auc": 0.5594088320399512,
+        "cohens_d_pooled": 0.15292803422835688,
+        "mann_whitney_pair_level_p": 5.2424451914354366e-05,
+        "matched_concordance": 0.6041397153945667
+      },
+      "resources": {
+        "chain_wall_seconds": 1.6620906859170645,
+        "esm2_extraction_seconds": 0.014878014102578163,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801380864,
+          "peak_allocated_bytes": 2032616960,
+          "peak_reserved_bytes": 6496976896
+        },
+        "progen2_extraction_seconds": 0.04579165892209858,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801368576,
+          "peak_allocated_bytes": 2186739200,
+          "peak_reserved_bytes": 6264193024
+        }
+      },
+      "structure_id": "6G1H",
+      "valid_backbone_residues": 342
+    },
+    {
+      "esm2": {
+        "auc": 0.7001679581321757,
+        "cohens_d_pooled": 0.6108455314580096,
+        "mann_whitney_pair_level_p": 6.442245416794788e-43,
+        "matched_concordance": 0.7617834394904459
+      },
+      "label_asym_id": "A",
+      "length": 347,
+      "matched_pairs": 785,
+      "progen2": {
+        "auc": 0.6104474826564972,
+        "cohens_d_pooled": 0.4245492061362569,
+        "mann_whitney_pair_level_p": 3.5233037550613654e-14,
+        "matched_concordance": 0.6687898089171974
+      },
+      "resources": {
+        "chain_wall_seconds": 1.8210946450708434,
+        "esm2_extraction_seconds": 0.044445264036767185,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801380864,
+          "peak_allocated_bytes": 2035804160,
+          "peak_reserved_bytes": 6614417408
+        },
+        "progen2_extraction_seconds": 0.04634137696120888,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801380864,
+          "peak_allocated_bytes": 2189864960,
+          "peak_reserved_bytes": 6496976896
+        }
+      },
+      "structure_id": "1ORR",
+      "valid_backbone_residues": 338
+    },
+    {
+      "esm2": {
+        "auc": 0.6206831773067409,
+        "cohens_d_pooled": 0.3995786760881037,
+        "mann_whitney_pair_level_p": 1.6106375190198137e-16,
+        "matched_concordance": 0.6456996148908858
+      },
+      "label_asym_id": "A",
+      "length": 347,
+      "matched_pairs": 779,
+      "progen2": {
+        "auc": 0.5518562522967301,
+        "cohens_d_pooled": 0.16317281169566555,
+        "mann_whitney_pair_level_p": 0.0003940377209986065,
+        "matched_concordance": 0.5507060333761232
+      },
+      "resources": {
+        "chain_wall_seconds": 1.825396221014671,
+        "esm2_extraction_seconds": 0.044410831993445754,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801380864,
+          "peak_allocated_bytes": 2035804160,
+          "peak_reserved_bytes": 6614417408
+        },
+        "progen2_extraction_seconds": 0.045993498992174864,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801380864,
+          "peak_allocated_bytes": 2189864960,
+          "peak_reserved_bytes": 6614417408
+        }
+      },
+      "structure_id": "7U9U",
+      "valid_backbone_residues": 340
+    },
+    {
+      "esm2": {
+        "auc": 0.5642598308288332,
+        "cohens_d_pooled": 0.1935335469962723,
+        "mann_whitney_pair_level_p": 1.1243450600689769e-05,
+        "matched_concordance": 0.5917843388960206
+      },
+      "label_asym_id": "A",
+      "length": 348,
+      "matched_pairs": 779,
+      "progen2": {
+        "auc": 0.48864035225042474,
+        "cohens_d_pooled": -0.038881089420942705,
+        "mann_whitney_pair_level_p": 0.4375625874398741,
+        "matched_concordance": 0.49165596919127086
+      },
+      "resources": {
+        "chain_wall_seconds": 1.733839025022462,
+        "esm2_extraction_seconds": 0.015067982021719217,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801380864,
+          "peak_allocated_bytes": 2036634112,
+          "peak_reserved_bytes": 6733955072
+        },
+        "progen2_extraction_seconds": 0.04874802695121616,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801380864,
+          "peak_allocated_bytes": 2191611904,
+          "peak_reserved_bytes": 6614417408
+        }
+      },
+      "structure_id": "9GDK",
+      "valid_backbone_residues": 341
+    },
+    {
+      "esm2": {
+        "auc": 0.6352223681741415,
+        "cohens_d_pooled": 0.43848318266110975,
+        "mann_whitney_pair_level_p": 3.68253094997228e-19,
+        "matched_concordance": 0.6657534246575343
+      },
+      "label_asym_id": "A",
+      "length": 349,
+      "matched_pairs": 730,
+      "progen2": {
+        "auc": 0.5436798648902234,
+        "cohens_d_pooled": 0.20711011358082043,
+        "mann_whitney_pair_level_p": 0.0038554781485719575,
+        "matched_concordance": 0.5506849315068493
+      },
+      "resources": {
+        "chain_wall_seconds": 1.786616737022996,
+        "esm2_extraction_seconds": 0.04509352799504995,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801380864,
+          "peak_allocated_bytes": 2037982720,
+          "peak_reserved_bytes": 6733955072
+        },
+        "progen2_extraction_seconds": 0.05080561200156808,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801380864,
+          "peak_allocated_bytes": 2193515008,
+          "peak_reserved_bytes": 6733955072
+        }
+      },
+      "structure_id": "3ELF",
+      "valid_backbone_residues": 332
+    },
+    {
+      "esm2": {
+        "auc": 0.706147660392751,
+        "cohens_d_pooled": 0.633079198666996,
+        "mann_whitney_pair_level_p": 3.5473611186280544e-38,
+        "matched_concordance": 0.7251908396946565
+      },
+      "label_asym_id": "A",
+      "length": 352,
+      "matched_pairs": 655,
+      "progen2": {
+        "auc": 0.533766097546763,
+        "cohens_d_pooled": 0.1779314823093472,
+        "mann_whitney_pair_level_p": 0.0343527665795601,
+        "matched_concordance": 0.5465648854961832
+      },
+      "resources": {
+        "chain_wall_seconds": 1.8289224919863045,
+        "esm2_extraction_seconds": 0.015253201010636985,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801393152,
+          "peak_allocated_bytes": 2042974208,
+          "peak_reserved_bytes": 6855589888
+        },
+        "progen2_extraction_seconds": 0.04741825500968844,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801380864,
+          "peak_allocated_bytes": 2201740288,
+          "peak_reserved_bytes": 6733955072
+        }
+      },
+      "structure_id": "5HJM",
+      "valid_backbone_residues": 349
+    },
+    {
+      "esm2": {
+        "auc": 0.6387762377273828,
+        "cohens_d_pooled": 0.4936657516768207,
+        "mann_whitney_pair_level_p": 2.0427096081342146e-21,
+        "matched_concordance": 0.6585677749360613
+      },
+      "label_asym_id": "A",
+      "length": 355,
+      "matched_pairs": 782,
+      "progen2": {
+        "auc": 0.5857791354059694,
+        "cohens_d_pooled": 0.337236027031639,
+        "mann_whitney_pair_level_p": 4.2596672217168564e-09,
+        "matched_concordance": 0.6086956521739131
+      },
+      "resources": {
+        "chain_wall_seconds": 1.8789468629984185,
+        "esm2_extraction_seconds": 0.04540459904819727,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801393152,
+          "peak_allocated_bytes": 2046727168,
+          "peak_reserved_bytes": 6979321856
+        },
+        "progen2_extraction_seconds": 0.07970322610344738,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801393152,
+          "peak_allocated_bytes": 2205642240,
+          "peak_reserved_bytes": 6855589888
+        }
+      },
+      "structure_id": "7PUL",
+      "valid_backbone_residues": 347
+    },
+    {
+      "esm2": {
+        "auc": 0.6335709101466105,
+        "cohens_d_pooled": 0.44490324550664156,
+        "mann_whitney_pair_level_p": 4.379966631427823e-21,
+        "matched_concordance": 0.6855421686746987
+      },
+      "label_asym_id": "A",
+      "length": 362,
+      "matched_pairs": 830,
+      "progen2": {
+        "auc": 0.534846857308753,
+        "cohens_d_pooled": 0.2259781298181876,
+        "mann_whitney_pair_level_p": 0.013958860865422376,
+        "matched_concordance": 0.5626506024096386
+      },
+      "resources": {
+        "chain_wall_seconds": 2.0365498119499534,
+        "esm2_extraction_seconds": 0.01577086199540645,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801417728,
+          "peak_allocated_bytes": 2056595456,
+          "peak_reserved_bytes": 7233077248
+        },
+        "progen2_extraction_seconds": 0.04860198905225843,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801393152,
+          "peak_allocated_bytes": 2219023872,
+          "peak_reserved_bytes": 6979321856
+        }
+      },
+      "structure_id": "2C0C",
+      "valid_backbone_residues": 353
+    },
+    {
+      "esm2": {
+        "auc": 0.6104559199349731,
+        "cohens_d_pooled": 0.4075186180918198,
+        "mann_whitney_pair_level_p": 1.6619244527884866e-15,
+        "matched_concordance": 0.6747404844290658
+      },
+      "label_asym_id": "A",
+      "length": 362,
+      "matched_pairs": 867,
+      "progen2": {
+        "auc": 0.547511005216253,
+        "cohens_d_pooled": 0.22361555547089654,
+        "mann_whitney_pair_level_p": 0.000613238791043941,
+        "matched_concordance": 0.580161476355248
+      },
+      "resources": {
+        "chain_wall_seconds": 1.92913864296861,
+        "esm2_extraction_seconds": 0.04686972300987691,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801417728,
+          "peak_allocated_bytes": 2056595456,
+          "peak_reserved_bytes": 7233077248
+        },
+        "progen2_extraction_seconds": 0.049272811971604824,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801417728,
+          "peak_allocated_bytes": 2219048448,
+          "peak_reserved_bytes": 7233077248
+        }
+      },
+      "structure_id": "8PBG",
+      "valid_backbone_residues": 362
+    },
+    {
+      "esm2": {
+        "auc": 0.6709421055278909,
+        "cohens_d_pooled": 0.5461270825615171,
+        "mann_whitney_pair_level_p": 1.0748136342238228e-28,
+        "matched_concordance": 0.6879432624113475
+      },
+      "label_asym_id": "A",
+      "length": 367,
+      "matched_pairs": 705,
+      "progen2": {
+        "auc": 0.5532719682108546,
+        "cohens_d_pooled": 0.18133539887728983,
+        "mann_whitney_pair_level_p": 0.0005333296503916217,
+        "matched_concordance": 0.5645390070921986
+      },
+      "resources": {
+        "chain_wall_seconds": 2.00745748099871,
+        "esm2_extraction_seconds": 0.05146099999547005,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801430016,
+          "peak_allocated_bytes": 2062917632,
+          "peak_reserved_bytes": 7495221248
+        },
+        "progen2_extraction_seconds": 0.05594185704831034,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801417728,
+          "peak_allocated_bytes": 2228714496,
+          "peak_reserved_bytes": 7233077248
+        }
+      },
+      "structure_id": "4P7Q",
+      "valid_backbone_residues": 359
+    },
+    {
+      "esm2": {
+        "auc": 0.7400045172006531,
+        "cohens_d_pooled": 0.7852668898179009,
+        "mann_whitney_pair_level_p": 3.103072664298734e-71,
+        "matched_concordance": 0.7874186550976139
+      },
+      "label_asym_id": "A",
+      "length": 368,
+      "matched_pairs": 922,
+      "progen2": {
+        "auc": 0.5841528601879343,
+        "cohens_d_pooled": 0.34514488539285704,
+        "mann_whitney_pair_level_p": 3.916189186601804e-10,
+        "matched_concordance": 0.6171366594360087
+      },
+      "resources": {
+        "chain_wall_seconds": 1.9985468189697713,
+        "esm2_extraction_seconds": 0.049380855984054506,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801430016,
+          "peak_allocated_bytes": 2065030144,
+          "peak_reserved_bytes": 7495221248
+        },
+        "progen2_extraction_seconds": 0.0500801739981398,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801430016,
+          "peak_allocated_bytes": 2230784512,
+          "peak_reserved_bytes": 7495221248
+        }
+      },
+      "structure_id": "1FNF",
+      "valid_backbone_residues": 368
+    },
+    {
+      "esm2": {
+        "auc": 0.6080113309514127,
+        "cohens_d_pooled": 0.2967269410728658,
+        "mann_whitney_pair_level_p": 1.5146820906060093e-17,
+        "matched_concordance": 0.631376323387873
+      },
+      "label_asym_id": "A",
+      "length": 372,
+      "matched_pairs": 1039,
+      "progen2": {
+        "auc": 0.5382331608185482,
+        "cohens_d_pooled": 0.2025504452411717,
+        "mann_whitney_pair_level_p": 0.002544802226656469,
+        "matched_concordance": 0.5640038498556305
+      },
+      "resources": {
+        "chain_wall_seconds": 2.1189600749639794,
+        "esm2_extraction_seconds": 0.051329210051335394,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801442304,
+          "peak_allocated_bytes": 2070748672,
+          "peak_reserved_bytes": 7765753856
+        },
+        "progen2_extraction_seconds": 0.05322650994639844,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801430016,
+          "peak_allocated_bytes": 2241088512,
+          "peak_reserved_bytes": 7495221248
+        }
+      },
+      "structure_id": "1GA6",
+      "valid_backbone_residues": 369
+    },
+    {
+      "esm2": {
+        "auc": 0.5424548649103611,
+        "cohens_d_pooled": 0.11216566290411864,
+        "mann_whitney_pair_level_p": 0.0021410055460256484,
+        "matched_concordance": 0.5619266055045872
+      },
+      "label_asym_id": "A",
+      "length": 391,
+      "matched_pairs": 872,
+      "progen2": {
+        "auc": 0.5129224181466207,
+        "cohens_d_pooled": 0.0512130633139011,
+        "mann_whitney_pair_level_p": 0.3500995362840801,
+        "matched_concordance": 0.5149082568807339
+      },
+      "resources": {
+        "chain_wall_seconds": 2.523089743917808,
+        "esm2_extraction_seconds": 0.05784984398633242,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801479168,
+          "peak_allocated_bytes": 2099614208,
+          "peak_reserved_bytes": 8061452288
+        },
+        "progen2_extraction_seconds": 0.0536693719914183,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801442304,
+          "peak_allocated_bytes": 2278706176,
+          "peak_reserved_bytes": 7765753856
+        }
+      },
+      "structure_id": "5JXZ",
+      "valid_backbone_residues": 373
+    },
+    {
+      "esm2": {
+        "auc": 0.6130126379494482,
+        "cohens_d_pooled": 0.48791289997841664,
+        "mann_whitney_pair_level_p": 2.0501962177204371e-19,
+        "matched_concordance": 0.680188679245283
+      },
+      "label_asym_id": "A",
+      "length": 394,
+      "matched_pairs": 1060,
+      "progen2": {
+        "auc": 0.5026797792808829,
+        "cohens_d_pooled": 0.017271714175527315,
+        "mann_whitney_pair_level_p": 0.8308391265443704,
+        "matched_concordance": 0.5018867924528302
+      },
+      "resources": {
+        "chain_wall_seconds": 2.477616280899383,
+        "esm2_extraction_seconds": 0.05846961203496903,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801491456,
+          "peak_allocated_bytes": 2103239680,
+          "peak_reserved_bytes": 8363442176
+        },
+        "progen2_extraction_seconds": 0.0956450590165332,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801479168,
+          "peak_allocated_bytes": 2285624832,
+          "peak_reserved_bytes": 8061452288
+        }
+      },
+      "structure_id": "4OZU",
+      "valid_backbone_residues": 390
+    },
+    {
+      "esm2": {
+        "auc": 0.6181792104413927,
+        "cohens_d_pooled": 0.43367523229050436,
+        "mann_whitney_pair_level_p": 6.149135103543804e-17,
+        "matched_concordance": 0.6431137724550898
+      },
+      "label_asym_id": "A",
+      "length": 397,
+      "matched_pairs": 835,
+      "progen2": {
+        "auc": 0.559713148553193,
+        "cohens_d_pooled": 0.21412198285922274,
+        "mann_whitney_pair_level_p": 2.3866309508223987e-05,
+        "matched_concordance": 0.5916167664670658
+      },
+      "resources": {
+        "chain_wall_seconds": 2.333345487015322,
+        "esm2_extraction_seconds": 0.0589053500443697,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801491456,
+          "peak_allocated_bytes": 2107479040,
+          "peak_reserved_bytes": 8669626368
+        },
+        "progen2_extraction_seconds": 0.09763853007461876,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801491456,
+          "peak_allocated_bytes": 2290439680,
+          "peak_reserved_bytes": 8363442176
+        }
+      },
+      "structure_id": "3Q27",
+      "valid_backbone_residues": 390
+    },
+    {
+      "esm2": {
+        "auc": 0.5678389919077906,
+        "cohens_d_pooled": 0.3185871094073482,
+        "mann_whitney_pair_level_p": 5.032188625192234e-07,
+        "matched_concordance": 0.6
+      },
+      "label_asym_id": "A",
+      "length": 397,
+      "matched_pairs": 915,
+      "progen2": {
+        "auc": 0.5126554988205082,
+        "cohens_d_pooled": 0.06865223781453149,
+        "mann_whitney_pair_level_p": 0.34855132191718496,
+        "matched_concordance": 0.5420765027322404
+      },
+      "resources": {
+        "chain_wall_seconds": 2.5492791339056566,
+        "esm2_extraction_seconds": 0.05832832399755716,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801491456,
+          "peak_allocated_bytes": 2107479040,
+          "peak_reserved_bytes": 8669626368
+        },
+        "progen2_extraction_seconds": 0.09561418904922903,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801491456,
+          "peak_allocated_bytes": 2290439680,
+          "peak_reserved_bytes": 8669626368
+        }
+      },
+      "structure_id": "9HPX",
+      "valid_backbone_residues": 397
+    },
+    {
+      "esm2": {
+        "auc": 0.6170252057840763,
+        "cohens_d_pooled": 0.3197850322555166,
+        "mann_whitney_pair_level_p": 1.4228171805447073e-14,
+        "matched_concordance": 0.6574202496532594
+      },
+      "label_asym_id": "C",
+      "length": 398,
+      "matched_pairs": 721,
+      "progen2": {
+        "auc": 0.5118738229574042,
+        "cohens_d_pooled": 0.05816476759485054,
+        "mann_whitney_pair_level_p": 0.43501710407666627,
+        "matched_concordance": 0.5325936199722607
+      },
+      "resources": {
+        "chain_wall_seconds": 2.589245915063657,
+        "esm2_extraction_seconds": 0.05839243798982352,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801491456,
+          "peak_allocated_bytes": 2108749312,
+          "peak_reserved_bytes": 8824815616
+        },
+        "progen2_extraction_seconds": 0.05516892799641937,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801491456,
+          "peak_allocated_bytes": 2291466240,
+          "peak_reserved_bytes": 8669626368
+        }
+      },
+      "structure_id": "8OI4",
+      "valid_backbone_residues": 391
+    },
+    {
+      "esm2": {
+        "auc": 0.6017018206587917,
+        "cohens_d_pooled": 0.33101182972980736,
+        "mann_whitney_pair_level_p": 1.2896118181267642e-11,
+        "matched_concordance": 0.6346414073071719
+      },
+      "label_asym_id": "A",
+      "length": 400,
+      "matched_pairs": 739,
+      "progen2": {
+        "auc": 0.5493269806508082,
+        "cohens_d_pooled": 0.18219411591688056,
+        "mann_whitney_pair_level_p": 0.0010255297810897125,
+        "matched_concordance": 0.584573748308525
+      },
+      "resources": {
+        "chain_wall_seconds": 2.4878721500281245,
+        "esm2_extraction_seconds": 0.01796023698989302,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801503744,
+          "peak_allocated_bytes": 2111892992,
+          "peak_reserved_bytes": 8980004864
+        },
+        "progen2_extraction_seconds": 0.09521763201337308,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801491456,
+          "peak_allocated_bytes": 2296312320,
+          "peak_reserved_bytes": 8824815616
+        }
+      },
+      "structure_id": "6F8A",
+      "valid_backbone_residues": 394
+    },
+    {
+      "esm2": {
+        "auc": 0.6504214068258292,
+        "cohens_d_pooled": 0.493292625227977,
+        "mann_whitney_pair_level_p": 4.0629218163858896e-25,
+        "matched_concordance": 0.6734177215189874
+      },
+      "label_asym_id": "B",
+      "length": 401,
+      "matched_pairs": 790,
+      "progen2": {
+        "auc": 0.5758388078833521,
+        "cohens_d_pooled": 0.2684215640564163,
+        "mann_whitney_pair_level_p": 1.7929291222945444e-07,
+        "matched_concordance": 0.6443037974683544
+      },
+      "resources": {
+        "chain_wall_seconds": 2.4204740659333766,
+        "esm2_extraction_seconds": 0.058413809980265796,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801503744,
+          "peak_allocated_bytes": 2113390592,
+          "peak_reserved_bytes": 9137291264
+        },
+        "progen2_extraction_seconds": 0.055487122968770564,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801503744,
+          "peak_allocated_bytes": 2301805056,
+          "peak_reserved_bytes": 8980004864
+        }
+      },
+      "structure_id": "8V1X",
+      "valid_backbone_residues": 389
+    },
+    {
+      "esm2": {
+        "auc": 0.6321063213431046,
+        "cohens_d_pooled": 0.36352802438372317,
+        "mann_whitney_pair_level_p": 7.253030353282265e-23,
+        "matched_concordance": 0.6652267818574514
+      },
+      "label_asym_id": "A",
+      "length": 402,
+      "matched_pairs": 926,
+      "progen2": {
+        "auc": 0.5553204987661462,
+        "cohens_d_pooled": 0.15459384293671946,
+        "mann_whitney_pair_level_p": 3.750183496048572e-05,
+        "matched_concordance": 0.562634989200864
+      },
+      "resources": {
+        "chain_wall_seconds": 2.3681035969639197,
+        "esm2_extraction_seconds": 0.018131206976249814,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801503744,
+          "peak_allocated_bytes": 2115538944,
+          "peak_reserved_bytes": 9137291264
+        },
+        "progen2_extraction_seconds": 0.05535177094861865,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801503744,
+          "peak_allocated_bytes": 2303416832,
+          "peak_reserved_bytes": 9137291264
+        }
+      },
+      "structure_id": "8VKT",
+      "valid_backbone_residues": 383
+    },
+    {
+      "esm2": {
+        "auc": 0.6243157987834239,
+        "cohens_d_pooled": 0.4279444740751358,
+        "mann_whitney_pair_level_p": 4.612923521296273e-21,
+        "matched_concordance": 0.6781609195402298
+      },
+      "label_asym_id": "A",
+      "length": 406,
+      "matched_pairs": 957,
+      "progen2": {
+        "auc": 0.5472801739151323,
+        "cohens_d_pooled": 0.1934168442741653,
+        "mann_whitney_pair_level_p": 0.0003413331605579747,
+        "matched_concordance": 0.5851619644723093
+      },
+      "resources": {
+        "chain_wall_seconds": 2.3642104510217905,
+        "esm2_extraction_seconds": 0.05886735604144633,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801516032,
+          "peak_allocated_bytes": 2121814528,
+          "peak_reserved_bytes": 9458155520
+        },
+        "progen2_extraction_seconds": 0.05667916894890368,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801503744,
+          "peak_allocated_bytes": 2309658624,
+          "peak_reserved_bytes": 9137291264
+        }
+      },
+      "structure_id": "1P1M",
+      "valid_backbone_residues": 404
+    },
+    {
+      "esm2": {
+        "auc": 0.6080806582171322,
+        "cohens_d_pooled": 0.40799491259820375,
+        "mann_whitney_pair_level_p": 5.747112102194331e-12,
+        "matched_concordance": 0.6440177252584933
+      },
+      "label_asym_id": "A",
+      "length": 407,
+      "matched_pairs": 677,
+      "progen2": {
+        "auc": 0.5249722361011413,
+        "cohens_d_pooled": 0.16228445022347981,
+        "mann_whitney_pair_level_p": 0.11162777699290062,
+        "matched_concordance": 0.5081240768094535
+      },
+      "resources": {
+        "chain_wall_seconds": 2.4494773499900475,
+        "esm2_extraction_seconds": 0.0183698539622128,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801516032,
+          "peak_allocated_bytes": 2124145152,
+          "peak_reserved_bytes": 9458155520
+        },
+        "progen2_extraction_seconds": 0.05587418202776462,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801516032,
+          "peak_allocated_bytes": 2313445376,
+          "peak_reserved_bytes": 9458155520
+        }
+      },
+      "structure_id": "2AU3",
+      "valid_backbone_residues": 403
+    },
+    {
+      "esm2": {
+        "auc": 0.6970863545801508,
+        "cohens_d_pooled": 0.6207248466215144,
+        "mann_whitney_pair_level_p": 8.501154344279873e-47,
+        "matched_concordance": 0.7302483069977427
+      },
+      "label_asym_id": "A",
+      "length": 409,
+      "matched_pairs": 886,
+      "progen2": {
+        "auc": 0.5934425143567611,
+        "cohens_d_pooled": 0.3174355150421321,
+        "mann_whitney_pair_level_p": 9.691573755204901e-12,
+        "matched_concordance": 0.6433408577878104
+      },
+      "resources": {
+        "chain_wall_seconds": 2.609196061035618,
+        "esm2_extraction_seconds": 0.06181303900666535,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801528320,
+          "peak_allocated_bytes": 2126151680,
+          "peak_reserved_bytes": 9621733376
+        },
+        "progen2_extraction_seconds": 0.056943935924209654,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801516032,
+          "peak_allocated_bytes": 2316511744,
+          "peak_reserved_bytes": 9458155520
+        }
+      },
+      "structure_id": "6VT2",
+      "valid_backbone_residues": 409
+    },
+    {
+      "esm2": {
+        "auc": 0.617796237023489,
+        "cohens_d_pooled": 0.5004599199571191,
+        "mann_whitney_pair_level_p": 2.3957868781707915e-19,
+        "matched_concordance": 0.676954732510288
+      },
+      "label_asym_id": "A",
+      "length": 409,
+      "matched_pairs": 972,
+      "progen2": {
+        "auc": 0.5114354180426426,
+        "cohens_d_pooled": 0.017914818287837357,
+        "mann_whitney_pair_level_p": 0.3826468752223495,
+        "matched_concordance": 0.5133744855967078
+      },
+      "resources": {
+        "chain_wall_seconds": 2.342847421998158,
+        "esm2_extraction_seconds": 0.018070655991323292,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801528320,
+          "peak_allocated_bytes": 2126151680,
+          "peak_reserved_bytes": 9621733376
+        },
+        "progen2_extraction_seconds": 0.05575901397969574,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801528320,
+          "peak_allocated_bytes": 2316524032,
+          "peak_reserved_bytes": 9621733376
+        }
+      },
+      "structure_id": "7KYX",
+      "valid_backbone_residues": 397
+    },
+    {
+      "esm2": {
+        "auc": 0.5175749543473295,
+        "cohens_d_pooled": 0.16168155020052066,
+        "mann_whitney_pair_level_p": 0.21980311440583822,
+        "matched_concordance": 0.5571955719557196
+      },
+      "label_asym_id": "A",
+      "length": 412,
+      "matched_pairs": 813,
+      "progen2": {
+        "auc": 0.5207823664952517,
+        "cohens_d_pooled": 0.0994416905583491,
+        "mann_whitney_pair_level_p": 0.14678063176219125,
+        "matched_concordance": 0.5399753997539976
+      },
+      "resources": {
+        "chain_wall_seconds": 2.429943945026025,
+        "esm2_extraction_seconds": 0.06357142596971244,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801528320,
+          "peak_allocated_bytes": 2130670592,
+          "peak_reserved_bytes": 9787408384
+        },
+        "progen2_extraction_seconds": 0.05808967805933207,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801528320,
+          "peak_allocated_bytes": 2324208640,
+          "peak_reserved_bytes": 9621733376
+        }
+      },
+      "structure_id": "3VCA",
+      "valid_backbone_residues": 397
+    },
+    {
+      "esm2": {
+        "auc": 0.6066580024723879,
+        "cohens_d_pooled": 0.2832106450883477,
+        "mann_whitney_pair_level_p": 2.0761569219333102e-18,
+        "matched_concordance": 0.6260017809439002
+      },
+      "label_asym_id": "B",
+      "length": 415,
+      "matched_pairs": 1123,
+      "progen2": {
+        "auc": 0.5468671325455208,
+        "cohens_d_pooled": 0.19325478051503306,
+        "mann_whitney_pair_level_p": 0.00011995653486946622,
+        "matched_concordance": 0.585040071237756
+      },
+      "resources": {
+        "chain_wall_seconds": 2.7446488029090688,
+        "esm2_extraction_seconds": 0.06453313597012311,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801540608,
+          "peak_allocated_bytes": 2136311296,
+          "peak_reserved_bytes": 9955180544
+        },
+        "progen2_extraction_seconds": 0.05788308696355671,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801528320,
+          "peak_allocated_bytes": 2332923904,
+          "peak_reserved_bytes": 9787408384
+        }
+      },
+      "structure_id": "1TQY",
+      "valid_backbone_residues": 402
+    },
+    {
+      "esm2": {
+        "auc": 0.5790471046641719,
+        "cohens_d_pooled": 0.38335105990035184,
+        "mann_whitney_pair_level_p": 3.9769403300576275e-08,
+        "matched_concordance": 0.631055900621118
+      },
+      "label_asym_id": "A",
+      "length": 415,
+      "matched_pairs": 805,
+      "progen2": {
+        "auc": 0.5396936846572278,
+        "cohens_d_pooled": 0.15314609874825458,
+        "mann_whitney_pair_level_p": 0.005820429312833614,
+        "matched_concordance": 0.5602484472049689
+      },
+      "resources": {
+        "chain_wall_seconds": 2.5529003890696913,
+        "esm2_extraction_seconds": 0.018424469977617264,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801540608,
+          "peak_allocated_bytes": 2136311296,
+          "peak_reserved_bytes": 9955180544
+        },
+        "progen2_extraction_seconds": 0.0572965630562976,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801540608,
+          "peak_allocated_bytes": 2332936192,
+          "peak_reserved_bytes": 9955180544
+        }
+      },
+      "structure_id": "1ZZG",
+      "valid_backbone_residues": 415
+    },
+    {
+      "esm2": {
+        "auc": 0.5904526303841249,
+        "cohens_d_pooled": 0.25601058284518224,
+        "mann_whitney_pair_level_p": 7.182300442146427e-10,
+        "matched_concordance": 0.624031007751938
+      },
+      "label_asym_id": "A",
+      "length": 415,
+      "matched_pairs": 774,
+      "progen2": {
+        "auc": 0.5681115584667054,
+        "cohens_d_pooled": 0.20944446788369844,
+        "mann_whitney_pair_level_p": 3.4834811872689616e-06,
+        "matched_concordance": 0.6124031007751938
+      },
+      "resources": {
+        "chain_wall_seconds": 2.4870814100140706,
+        "esm2_extraction_seconds": 0.06431704806163907,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801540608,
+          "peak_allocated_bytes": 2136311296,
+          "peak_reserved_bytes": 9955180544
+        },
+        "progen2_extraction_seconds": 0.10627611295785755,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801540608,
+          "peak_allocated_bytes": 2332936192,
+          "peak_reserved_bytes": 9955180544
+        }
+      },
+      "structure_id": "4L4E",
+      "valid_backbone_residues": 405
+    },
+    {
+      "esm2": {
+        "auc": 0.5946818662966395,
+        "cohens_d_pooled": 0.31655113691563086,
+        "mann_whitney_pair_level_p": 1.2397971424142461e-11,
+        "matched_concordance": 0.6135831381733021
+      },
+      "label_asym_id": "A",
+      "length": 420,
+      "matched_pairs": 854,
+      "progen2": {
+        "auc": 0.5412509803706487,
+        "cohens_d_pooled": 0.11980819610070458,
+        "mann_whitney_pair_level_p": 0.0031580518724565808,
+        "matched_concordance": 0.563231850117096
+      },
+      "resources": {
+        "chain_wall_seconds": 2.5712346240179613,
+        "esm2_extraction_seconds": 0.06389911996666342,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801552896,
+          "peak_allocated_bytes": 2145409024,
+          "peak_reserved_bytes": 10297016320
+        },
+        "progen2_extraction_seconds": 0.0594989990349859,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801540608,
+          "peak_allocated_bytes": 2342610944,
+          "peak_reserved_bytes": 9955180544
+        }
+      },
+      "structure_id": "5K2X",
+      "valid_backbone_residues": 414
+    },
+    {
+      "esm2": {
+        "auc": 0.6179449024829007,
+        "cohens_d_pooled": 0.42171215847781524,
+        "mann_whitney_pair_level_p": 2.1154466198633146e-18,
+        "matched_concordance": 0.6917211328976035
+      },
+      "label_asym_id": "A",
+      "length": 424,
+      "matched_pairs": 918,
+      "progen2": {
+        "auc": 0.5556979509305537,
+        "cohens_d_pooled": 0.2527005124186532,
+        "mann_whitney_pair_level_p": 3.588319940997947e-05,
+        "matched_concordance": 0.579520697167756
+      },
+      "resources": {
+        "chain_wall_seconds": 2.829000295023434,
+        "esm2_extraction_seconds": 0.06619891303125769,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801552896,
+          "peak_allocated_bytes": 2150373888,
+          "peak_reserved_bytes": 10647240704
+        },
+        "progen2_extraction_seconds": 0.10610514192376286,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801552896,
+          "peak_allocated_bytes": 2353156608,
+          "peak_reserved_bytes": 10297016320
+        }
+      },
+      "structure_id": "7U6U",
+      "valid_backbone_residues": 403
+    },
+    {
+      "esm2": {
+        "auc": 0.6332915185513478,
+        "cohens_d_pooled": 0.43539557122061456,
+        "mann_whitney_pair_level_p": 2.708360975942837e-28,
+        "matched_concordance": 0.670753064798599
+      },
+      "label_asym_id": "D",
+      "length": 426,
+      "matched_pairs": 1142,
+      "progen2": {
+        "auc": 0.5421856453636199,
+        "cohens_d_pooled": 0.159573135998975,
+        "mann_whitney_pair_level_p": 0.0004808612674090381,
+        "matched_concordance": 0.5525394045534151
+      },
+      "resources": {
+        "chain_wall_seconds": 3.0072717040311545,
+        "esm2_extraction_seconds": 0.06601013289764524,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801565184,
+          "peak_allocated_bytes": 2153697280,
+          "peak_reserved_bytes": 10823401472
+        },
+        "progen2_extraction_seconds": 0.10457352991215885,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801552896,
+          "peak_allocated_bytes": 2357620224,
+          "peak_reserved_bytes": 10647240704
+        }
+      },
+      "structure_id": "6HWR",
+      "valid_backbone_residues": 426
+    },
+    {
+      "esm2": {
+        "auc": 0.5624791753436068,
+        "cohens_d_pooled": 0.21945608331441643,
+        "mann_whitney_pair_level_p": 1.6701928515927908e-06,
+        "matched_concordance": 0.5836734693877551
+      },
+      "label_asym_id": "A",
+      "length": 427,
+      "matched_pairs": 980,
+      "progen2": {
+        "auc": 0.5219169096209912,
+        "cohens_d_pooled": 0.1189202865084274,
+        "mann_whitney_pair_level_p": 0.09292900318775937,
+        "matched_concordance": 0.5387755102040817
+      },
+      "resources": {
+        "chain_wall_seconds": 2.836420900071971,
+        "esm2_extraction_seconds": 0.02000832394696772,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801565184,
+          "peak_allocated_bytes": 2154989056,
+          "peak_reserved_bytes": 11001659392
+        },
+        "progen2_extraction_seconds": 0.10516361601185054,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801565184,
+          "peak_allocated_bytes": 2359440384,
+          "peak_reserved_bytes": 10823401472
+        }
+      },
+      "structure_id": "5KJV",
+      "valid_backbone_residues": 427
+    },
+    {
+      "esm2": {
+        "auc": 0.5470442141147708,
+        "cohens_d_pooled": 0.2507888247923515,
+        "mann_whitney_pair_level_p": 0.0003477369626578737,
+        "matched_concordance": 0.5871369294605809
+      },
+      "label_asym_id": "A",
+      "length": 432,
+      "matched_pairs": 964,
+      "progen2": {
+        "auc": 0.5085860694547271,
+        "cohens_d_pooled": 0.15087889319573713,
+        "mann_whitney_pair_level_p": 0.5138962924793543,
+        "matched_concordance": 0.5404564315352697
+      },
+      "resources": {
+        "chain_wall_seconds": 2.7438794339541346,
+        "esm2_extraction_seconds": 0.06893325701821595,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801577472,
+          "peak_allocated_bytes": 2163285504,
+          "peak_reserved_bytes": 11364466688
+        },
+        "progen2_extraction_seconds": 0.11497662297915667,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801565184,
+          "peak_allocated_bytes": 2371139584,
+          "peak_reserved_bytes": 11001659392
+        }
+      },
+      "structure_id": "7QSS",
+      "valid_backbone_residues": 432
+    },
+    {
+      "esm2": {
+        "auc": 0.586985457724094,
+        "cohens_d_pooled": 0.34366331521122134,
+        "mann_whitney_pair_level_p": 5.801197439617708e-13,
+        "matched_concordance": 0.6206293706293706
+      },
+      "label_asym_id": "B",
+      "length": 437,
+      "matched_pairs": 1144,
+      "progen2": {
+        "auc": 0.503165649909531,
+        "cohens_d_pooled": 0.03725577153410213,
+        "mann_whitney_pair_level_p": 0.7931805030301364,
+        "matched_concordance": 0.5008741258741258
+      },
+      "resources": {
+        "chain_wall_seconds": 2.8560825319727883,
+        "esm2_extraction_seconds": 0.06797392200678587,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801589760,
+          "peak_allocated_bytes": 2171679232,
+          "peak_reserved_bytes": 11735662592
+        },
+        "progen2_extraction_seconds": 0.06270470004528761,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801577472,
+          "peak_allocated_bytes": 2382863872,
+          "peak_reserved_bytes": 11364466688
+        }
+      },
+      "structure_id": "4MZA",
+      "valid_backbone_residues": 437
+    },
+    {
+      "esm2": {
+        "auc": 0.6031435328176779,
+        "cohens_d_pooled": 0.38760019644242144,
+        "mann_whitney_pair_level_p": 5.0412738191558907e-14,
+        "matched_concordance": 0.655793025871766
+      },
+      "label_asym_id": "A",
+      "length": 445,
+      "matched_pairs": 889,
+      "progen2": {
+        "auc": 0.5320281252807404,
+        "cohens_d_pooled": 0.13397454696322866,
+        "mann_whitney_pair_level_p": 0.01936412263640821,
+        "matched_concordance": 0.5826771653543307
+      },
+      "resources": {
+        "chain_wall_seconds": 3.316383208031766,
+        "esm2_extraction_seconds": 0.07179108099080622,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801602048,
+          "peak_allocated_bytes": 2185304576,
+          "peak_reserved_bytes": 12119441408
+        },
+        "progen2_extraction_seconds": 0.11493862909264863,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801589760,
+          "peak_allocated_bytes": 2402646528,
+          "peak_reserved_bytes": 11735662592
+        }
+      },
+      "structure_id": "2YCL",
+      "valid_backbone_residues": 442
+    },
+    {
+      "esm2": {
+        "auc": 0.6684563018653393,
+        "cohens_d_pooled": 0.45812365555317147,
+        "mann_whitney_pair_level_p": 1.577251036627216e-39,
+        "matched_concordance": 0.7197640117994101
+      },
+      "label_asym_id": "A",
+      "length": 445,
+      "matched_pairs": 1017,
+      "progen2": {
+        "auc": 0.57062097730905,
+        "cohens_d_pooled": 0.23490094743763662,
+        "mann_whitney_pair_level_p": 3.484123866793276e-08,
+        "matched_concordance": 0.6027531956735497
+      },
+      "resources": {
+        "chain_wall_seconds": 2.8199424089398235,
+        "esm2_extraction_seconds": 0.07170084700919688,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801602048,
+          "peak_allocated_bytes": 2185304576,
+          "peak_reserved_bytes": 12119441408
+        },
+        "progen2_extraction_seconds": 0.11456106998957694,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801602048,
+          "peak_allocated_bytes": 2402658816,
+          "peak_reserved_bytes": 12119441408
+        }
+      },
+      "structure_id": "9BN8",
+      "valid_backbone_residues": 438
+    },
+    {
+      "esm2": {
+        "auc": 0.5281838944997408,
+        "cohens_d_pooled": 0.1133175940273723,
+        "mann_whitney_pair_level_p": 0.03405841750296771,
+        "matched_concordance": 0.5652173913043478
+      },
+      "label_asym_id": "A",
+      "length": 447,
+      "matched_pairs": 943,
+      "progen2": {
+        "auc": 0.5136536560625876,
+        "cohens_d_pooled": 0.08358310064060835,
+        "mann_whitney_pair_level_p": 0.30455743182078854,
+        "matched_concordance": 0.5217391304347826
+      },
+      "resources": {
+        "chain_wall_seconds": 3.2053151649888605,
+        "esm2_extraction_seconds": 0.0734402360394597,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801614336,
+          "peak_allocated_bytes": 2188758016,
+          "peak_reserved_bytes": 12314476544
+        },
+        "progen2_extraction_seconds": 0.11650704906787723,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801602048,
+          "peak_allocated_bytes": 2405743104,
+          "peak_reserved_bytes": 12119441408
+        }
+      },
+      "structure_id": "2BMO",
+      "valid_backbone_residues": 437
+    },
+    {
+      "esm2": {
+        "auc": 0.5715508643173732,
+        "cohens_d_pooled": 0.38655954652928987,
+        "mann_whitney_pair_level_p": 2.521664145741895e-07,
+        "matched_concordance": 0.6374133949191686
+      },
+      "label_asym_id": "A",
+      "length": 451,
+      "matched_pairs": 866,
+      "progen2": {
+        "auc": 0.48722858407693254,
+        "cohens_d_pooled": 0.014132412944002255,
+        "mann_whitney_pair_level_p": 0.35742022889174707,
+        "matched_concordance": 0.47344110854503463
+      },
+      "resources": {
+        "chain_wall_seconds": 3.3264360489556566,
+        "esm2_extraction_seconds": 0.07466552604455501,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801614336,
+          "peak_allocated_bytes": 2195812864,
+          "peak_reserved_bytes": 12708741120
+        },
+        "progen2_extraction_seconds": 0.11855276103597134,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801614336,
+          "peak_allocated_bytes": 2419945472,
+          "peak_reserved_bytes": 12314476544
+        }
+      },
+      "structure_id": "4C5E",
+      "valid_backbone_residues": 440
+    },
+    {
+      "esm2": {
+        "auc": 0.6317091110179416,
+        "cohens_d_pooled": 0.44464042060195047,
+        "mann_whitney_pair_level_p": 1.2976205820377448e-25,
+        "matched_concordance": 0.655893536121673
+      },
+      "label_asym_id": "A",
+      "length": 451,
+      "matched_pairs": 1052,
+      "progen2": {
+        "auc": 0.5316579681649294,
+        "cohens_d_pooled": 0.13982738052110347,
+        "mann_whitney_pair_level_p": 0.011919051266688891,
+        "matched_concordance": 0.5674904942965779
+      },
+      "resources": {
+        "chain_wall_seconds": 3.020076699904166,
+        "esm2_extraction_seconds": 0.07513688295148313,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801614336,
+          "peak_allocated_bytes": 2195812864,
+          "peak_reserved_bytes": 12708741120
+        },
+        "progen2_extraction_seconds": 0.11993596097454429,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801614336,
+          "peak_allocated_bytes": 2419945472,
+          "peak_reserved_bytes": 12708741120
+        }
+      },
+      "structure_id": "6T8I",
+      "valid_backbone_residues": 434
+    },
+    {
+      "esm2": {
+        "auc": 0.5398753250125563,
+        "cohens_d_pooled": 0.17716347116900075,
+        "mann_whitney_pair_level_p": 0.0013177033107023418,
+        "matched_concordance": 0.5582255083179297
+      },
+      "label_asym_id": "A",
+      "length": 458,
+      "matched_pairs": 1082,
+      "progen2": {
+        "auc": 0.5226936493998585,
+        "cohens_d_pooled": 0.0833875721204249,
+        "mann_whitney_pair_level_p": 0.06754392341614901,
+        "matched_concordance": 0.5471349353049908
+      },
+      "resources": {
+        "chain_wall_seconds": 3.1935597410192713,
+        "esm2_extraction_seconds": 0.07748891797382385,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801638912,
+          "peak_allocated_bytes": 2208267776,
+          "peak_reserved_bytes": 13115588608
+        },
+        "progen2_extraction_seconds": 0.12136665405705571,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801614336,
+          "peak_allocated_bytes": 2434058752,
+          "peak_reserved_bytes": 12708741120
+        }
+      },
+      "structure_id": "2EX2",
+      "valid_backbone_residues": 456
+    },
+    {
+      "esm2": {
+        "auc": 0.6439119017141952,
+        "cohens_d_pooled": 0.5083286573153077,
+        "mann_whitney_pair_level_p": 1.7726288375361055e-26,
+        "matched_concordance": 0.660460021905805
+      },
+      "label_asym_id": "B",
+      "length": 464,
+      "matched_pairs": 913,
+      "progen2": {
+        "auc": 0.5312841528415764,
+        "cohens_d_pooled": 0.20974756158702237,
+        "mann_whitney_pair_level_p": 0.020625419347292718,
+        "matched_concordance": 0.524644030668127
+      },
+      "resources": {
+        "chain_wall_seconds": 4.093643417931162,
+        "esm2_extraction_seconds": 0.08092258009128273,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801651200,
+          "peak_allocated_bytes": 2218660352,
+          "peak_reserved_bytes": 13532921856
+        },
+        "progen2_extraction_seconds": 0.12229155795648694,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801638912,
+          "peak_allocated_bytes": 2448566272,
+          "peak_reserved_bytes": 13115588608
+        }
+      },
+      "structure_id": "1ZCZ",
+      "valid_backbone_residues": 454
+    },
+    {
+      "esm2": {
+        "auc": 0.6810202134971735,
+        "cohens_d_pooled": 0.6277403660424403,
+        "mann_whitney_pair_level_p": 1.4588937840584665e-47,
+        "matched_concordance": 0.7368913857677902
+      },
+      "label_asym_id": "A",
+      "length": 464,
+      "matched_pairs": 1068,
+      "progen2": {
+        "auc": 0.5542667873023889,
+        "cohens_d_pooled": 0.17706610041191248,
+        "mann_whitney_pair_level_p": 1.4054764841480043e-05,
+        "matched_concordance": 0.5842696629213483
+      },
+      "resources": {
+        "chain_wall_seconds": 3.5541832980234176,
+        "esm2_extraction_seconds": 0.08014252595603466,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801651200,
+          "peak_allocated_bytes": 2218660352,
+          "peak_reserved_bytes": 13532921856
+        },
+        "progen2_extraction_seconds": 0.12875876296311617,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801651200,
+          "peak_allocated_bytes": 2448578560,
+          "peak_reserved_bytes": 13532921856
+        }
+      },
+      "structure_id": "4XYM",
+      "valid_backbone_residues": 464
+    },
+    {
+      "esm2": {
+        "auc": 0.6119897113085778,
+        "cohens_d_pooled": 0.30892501814480844,
+        "mann_whitney_pair_level_p": 2.3374353221386384e-19,
+        "matched_concordance": 0.6319702602230484
+      },
+      "label_asym_id": "B",
+      "length": 469,
+      "matched_pairs": 1076,
+      "progen2": {
+        "auc": 0.5453922002183497,
+        "cohens_d_pooled": 0.10076568740244886,
+        "mann_whitney_pair_level_p": 0.000265994851324659,
+        "matched_concordance": 0.578996282527881
+      },
+      "resources": {
+        "chain_wall_seconds": 3.438766157021746,
+        "esm2_extraction_seconds": 0.08495582593604922,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801663488,
+          "peak_allocated_bytes": 2228610048,
+          "peak_reserved_bytes": 13958643712
+        },
+        "progen2_extraction_seconds": 0.1268780849641189,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801651200,
+          "peak_allocated_bytes": 2462358016,
+          "peak_reserved_bytes": 13532921856
+        }
+      },
+      "structure_id": "6PSM",
+      "valid_backbone_residues": 447
+    },
+    {
+      "esm2": {
+        "auc": 0.5745808812184531,
+        "cohens_d_pooled": 0.3492772208355169,
+        "mann_whitney_pair_level_p": 2.516625999780102e-09,
+        "matched_concordance": 0.6291079812206573
+      },
+      "label_asym_id": "A",
+      "length": 472,
+      "matched_pairs": 1065,
+      "progen2": {
+        "auc": 0.5305155502655998,
+        "cohens_d_pooled": 0.18224996455440354,
+        "mann_whitney_pair_level_p": 0.014739040822188538,
+        "matched_concordance": 0.5370892018779343
+      },
+      "resources": {
+        "chain_wall_seconds": 3.2390226220013574,
+        "esm2_extraction_seconds": 0.08154247107449919,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801663488,
+          "peak_allocated_bytes": 2233429504,
+          "peak_reserved_bytes": 14174650368
+        },
+        "progen2_extraction_seconds": 0.130216958001256,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801663488,
+          "peak_allocated_bytes": 2469583360,
+          "peak_reserved_bytes": 13958643712
+        }
+      },
+      "structure_id": "9KL6",
+      "valid_backbone_residues": 449
+    },
+    {
+      "esm2": {
+        "auc": 0.6516286358889454,
+        "cohens_d_pooled": 0.4811623394530841,
+        "mann_whitney_pair_level_p": 1.6067985342814205e-27,
+        "matched_concordance": 0.6861143523920653
+      },
+      "label_asym_id": "A",
+      "length": 475,
+      "matched_pairs": 857,
+      "progen2": {
+        "auc": 0.569825814998727,
+        "cohens_d_pooled": 0.2148635862783493,
+        "mann_whitney_pair_level_p": 5.570489079559391e-07,
+        "matched_concordance": 0.5974329054842473
+      },
+      "resources": {
+        "chain_wall_seconds": 3.364175753085874,
+        "esm2_extraction_seconds": 0.08548073994461447,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801675776,
+          "peak_allocated_bytes": 2238603264,
+          "peak_reserved_bytes": 14612955136
+        },
+        "progen2_extraction_seconds": 0.1284027670044452,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801663488,
+          "peak_allocated_bytes": 2476686848,
+          "peak_reserved_bytes": 14174650368
+        }
+      },
+      "structure_id": "7JJ9",
+      "valid_backbone_residues": 461
+    },
+    {
+      "esm2": {
+        "auc": 0.6034282624120804,
+        "cohens_d_pooled": 0.3082671288628127,
+        "mann_whitney_pair_level_p": 2.727151312769446e-12,
+        "matched_concordance": 0.6351706036745407
+      },
+      "label_asym_id": "A",
+      "length": 476,
+      "matched_pairs": 762,
+      "progen2": {
+        "auc": 0.5153639751723947,
+        "cohens_d_pooled": 0.059130584693769785,
+        "mann_whitney_pair_level_p": 0.29905577637942937,
+        "matched_concordance": 0.5223097112860893
+      },
+      "resources": {
+        "chain_wall_seconds": 3.432038170984015,
+        "esm2_extraction_seconds": 0.08444422797765583,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801675776,
+          "peak_allocated_bytes": 2241292288,
+          "peak_reserved_bytes": 14612955136
+        },
+        "progen2_extraction_seconds": 0.1303618090460077,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801675776,
+          "peak_allocated_bytes": 2478419456,
+          "peak_reserved_bytes": 14612955136
+        }
+      },
+      "structure_id": "3MHS",
+      "valid_backbone_residues": 455
+    },
+    {
+      "esm2": {
+        "auc": 0.6256187611663853,
+        "cohens_d_pooled": 0.45523103976092305,
+        "mann_whitney_pair_level_p": 4.069821714938176e-22,
+        "matched_concordance": 0.6993927125506073
+      },
+      "label_asym_id": "A",
+      "length": 480,
+      "matched_pairs": 988,
+      "progen2": {
+        "auc": 0.5748578078644134,
+        "cohens_d_pooled": 0.25786207796175087,
+        "mann_whitney_pair_level_p": 8.30895909944709e-09,
+        "matched_concordance": 0.6275303643724697
+      },
+      "resources": {
+        "chain_wall_seconds": 3.9990479859989136,
+        "esm2_extraction_seconds": 0.08800731098745018,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801688064,
+          "peak_allocated_bytes": 2247821824,
+          "peak_reserved_bytes": 15059648512
+        },
+        "progen2_extraction_seconds": 0.1367803440662101,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801675776,
+          "peak_allocated_bytes": 2489602560,
+          "peak_reserved_bytes": 14612955136
+        }
+      },
+      "structure_id": "2VCH",
+      "valid_backbone_residues": 462
+    },
+    {
+      "esm2": {
+        "auc": 0.5904808145720027,
+        "cohens_d_pooled": 0.41100624351828935,
+        "mann_whitney_pair_level_p": 4.143482769003235e-11,
+        "matched_concordance": 0.6482525366403608
+      },
+      "label_asym_id": "A",
+      "length": 480,
+      "matched_pairs": 887,
+      "progen2": {
+        "auc": 0.5004264275791243,
+        "cohens_d_pooled": 0.00012204624537259737,
+        "mann_whitney_pair_level_p": 0.9752267550385952,
+        "matched_concordance": 0.5152198421645998
+      },
+      "resources": {
+        "chain_wall_seconds": 3.6474687280133367,
+        "esm2_extraction_seconds": 0.08297079103067517,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801688064,
+          "peak_allocated_bytes": 2247821824,
+          "peak_reserved_bytes": 15059648512
+        },
+        "progen2_extraction_seconds": 0.13462420995347202,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801688064,
+          "peak_allocated_bytes": 2489614848,
+          "peak_reserved_bytes": 15059648512
+        }
+      },
+      "structure_id": "8OR9",
+      "valid_backbone_residues": 465
+    },
+    {
+      "esm2": {
+        "auc": 0.549963094613756,
+        "cohens_d_pooled": 0.2545219847549324,
+        "mann_whitney_pair_level_p": 0.0006036342626371928,
+        "matched_concordance": 0.5534351145038168
+      },
+      "label_asym_id": "B",
+      "length": 480,
+      "matched_pairs": 786,
+      "progen2": {
+        "auc": 0.5432262429669341,
+        "cohens_d_pooled": 0.13156921517363546,
+        "mann_whitney_pair_level_p": 0.0030024937347899986,
+        "matched_concordance": 0.5814249363867684
+      },
+      "resources": {
+        "chain_wall_seconds": 3.5258786800550297,
+        "esm2_extraction_seconds": 0.08632965805009007,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801688064,
+          "peak_allocated_bytes": 2247821824,
+          "peak_reserved_bytes": 15059648512
+        },
+        "progen2_extraction_seconds": 0.1322757350280881,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801688064,
+          "peak_allocated_bytes": 2489614848,
+          "peak_reserved_bytes": 15059648512
+        }
+      },
+      "structure_id": "9C9Q",
+      "valid_backbone_residues": 456
+    },
+    {
+      "esm2": {
+        "auc": 0.5952337784449063,
+        "cohens_d_pooled": 0.3512047579716888,
+        "mann_whitney_pair_level_p": 3.3795554145130694e-13,
+        "matched_concordance": 0.6262833675564682
+      },
+      "label_asym_id": "A",
+      "length": 481,
+      "matched_pairs": 974,
+      "progen2": {
+        "auc": 0.5470550535693957,
+        "cohens_d_pooled": 0.20915136111718238,
+        "mann_whitney_pair_level_p": 0.00032288692822602863,
+        "matched_concordance": 0.5944558521560575
+      },
+      "resources": {
+        "chain_wall_seconds": 3.4560738410800695,
+        "esm2_extraction_seconds": 0.08479329396504909,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801688064,
+          "peak_allocated_bytes": 2250113536,
+          "peak_reserved_bytes": 15059648512
+        },
+        "progen2_extraction_seconds": 0.13329324801452458,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801688064,
+          "peak_allocated_bytes": 2491929600,
+          "peak_reserved_bytes": 15059648512
+        }
+      },
+      "structure_id": "5T3B",
+      "valid_backbone_residues": 458
+    },
+    {
+      "esm2": {
+        "auc": 0.6534883611501923,
+        "cohens_d_pooled": 0.5149230495483973,
+        "mann_whitney_pair_level_p": 2.0876408001696457e-44,
+        "matched_concordance": 0.6854663774403471
+      },
+      "label_asym_id": "A",
+      "length": 487,
+      "matched_pairs": 1383,
+      "progen2": {
+        "auc": 0.5437371156523617,
+        "cohens_d_pooled": 0.18247721550704316,
+        "mann_whitney_pair_level_p": 6.793141843101049e-05,
+        "matched_concordance": 0.579175704989154
+      },
+      "resources": {
+        "chain_wall_seconds": 3.9997520529432222,
+        "esm2_extraction_seconds": 0.08821152697782964,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801700352,
+          "peak_allocated_bytes": 2260884992,
+          "peak_reserved_bytes": 15518924800
+        },
+        "progen2_extraction_seconds": 0.13364231504965574,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801688064,
+          "peak_allocated_bytes": 2512931840,
+          "peak_reserved_bytes": 15059648512
+        }
+      },
+      "structure_id": "3C7F",
+      "valid_backbone_residues": 487
+    },
+    {
+      "esm2": {
+        "auc": 0.6318103921886901,
+        "cohens_d_pooled": 0.39549132004479615,
+        "mann_whitney_pair_level_p": 1.7770046664735463e-27,
+        "matched_concordance": 0.6395759717314488
+      },
+      "label_asym_id": "A",
+      "length": 489,
+      "matched_pairs": 1132,
+      "progen2": {
+        "auc": 0.5470320518423254,
+        "cohens_d_pooled": 0.2281220328579797,
+        "mann_whitney_pair_level_p": 0.00010654048668868616,
+        "matched_concordance": 0.5918727915194346
+      },
+      "resources": {
+        "chain_wall_seconds": 3.811756403069012,
+        "esm2_extraction_seconds": 0.09152052807621658,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801712640,
+          "peak_allocated_bytes": 2264658944,
+          "peak_reserved_bytes": 15751708672
+        },
+        "progen2_extraction_seconds": 0.13961680000647902,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801700352,
+          "peak_allocated_bytes": 2516249600,
+          "peak_reserved_bytes": 15518924800
+        }
+      },
+      "structure_id": "4HA4",
+      "valid_backbone_residues": 489
+    },
+    {
+      "esm2": {
+        "auc": 0.590416974852071,
+        "cohens_d_pooled": 0.37705040710248783,
+        "mann_whitney_pair_level_p": 9.2913632467315e-13,
+        "matched_concordance": 0.6134615384615385
+      },
+      "label_asym_id": "A",
+      "length": 495,
+      "matched_pairs": 1040,
+      "progen2": {
+        "auc": 0.548696375739645,
+        "cohens_d_pooled": 0.20122322603526457,
+        "mann_whitney_pair_level_p": 0.00012018690041319625,
+        "matched_concordance": 0.5701923076923077
+      },
+      "resources": {
+        "chain_wall_seconds": 4.508889378979802,
+        "esm2_extraction_seconds": 0.09649055800400674,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801724928,
+          "peak_allocated_bytes": 2276058624,
+          "peak_reserved_bytes": 16227762176
+        },
+        "progen2_extraction_seconds": 0.14057495002634823,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801712640,
+          "peak_allocated_bytes": 2532460032,
+          "peak_reserved_bytes": 15751708672
+        }
+      },
+      "structure_id": "1WDP",
+      "valid_backbone_residues": 493
+    },
+    {
+      "esm2": {
+        "auc": 0.6531878938398765,
+        "cohens_d_pooled": 0.4968523578693455,
+        "mann_whitney_pair_level_p": 4.970571222000234e-38,
+        "matched_concordance": 0.6841659610499576
+      },
+      "label_asym_id": "A",
+      "length": 496,
+      "matched_pairs": 1181,
+      "progen2": {
+        "auc": 0.5553180795849612,
+        "cohens_d_pooled": 0.2307848914573999,
+        "mann_whitney_pair_level_p": 3.2308427885500503e-06,
+        "matched_concordance": 0.5817104149026249
+      },
+      "resources": {
+        "chain_wall_seconds": 4.051368666929193,
+        "esm2_extraction_seconds": 0.09209992899559438,
+        "esm2_memory": {
+          "allocated_after_bytes": 1801724928,
+          "peak_allocated_bytes": 2278957568,
+          "peak_reserved_bytes": 16227762176
+        },
+        "progen2_extraction_seconds": 0.14642477000597864,
+        "progen2_memory": {
+          "allocated_after_bytes": 1801724928,
+          "peak_allocated_bytes": 2534878208,
+          "peak_reserved_bytes": 16227762176
+        }
+      },
+      "structure_id": "7EYO",
+      "valid_backbone_residues": 486
+    }
+  ],
+  "distance_bins": [
+    {
+      "esm2": {
+        "auc": 0.6208860336992158,
+        "cohens_d_pooled": 0.37827850853930894,
+        "count_per_class": 14255,
+        "mann_whitney_pair_level_p": 8.978343762972463e-274,
+        "matched_concordance": 0.6383023500526132,
+        "status": "ok"
+      },
+      "label": "(10,20]",
+      "lower_exclusive": 10,
+      "progen2": {
+        "auc": 0.5696615474937197,
+        "cohens_d_pooled": 0.20906360658810924,
+        "count_per_class": 14255,
+        "mann_whitney_pair_level_p": 2.932041800998857e-92,
+        "matched_concordance": 0.5866011925640127,
+        "status": "ok"
+      },
+      "upper_inclusive": 20
+    },
+    {
+      "esm2": {
+        "auc": 0.6711992041686852,
+        "cohens_d_pooled": 0.5432442341921454,
+        "count_per_class": 25326,
+        "mann_whitney_pair_level_p": 0.0,
+        "matched_concordance": 0.6860933428097608,
+        "status": "ok"
+      },
+      "label": "(20,40]",
+      "lower_exclusive": 20,
+      "progen2": {
+        "auc": 0.5704217540272399,
+        "cohens_d_pooled": 0.2322677227903041,
+        "count_per_class": 25326,
+        "mann_whitney_pair_level_p": 6.720548155996384e-166,
+        "matched_concordance": 0.5813788201847904,
+        "status": "ok"
+      },
+      "upper_inclusive": 40
+    },
+    {
+      "esm2": {
+        "auc": 0.663045438562681,
+        "cohens_d_pooled": 0.5093751985589686,
+        "count_per_class": 14033,
+        "mann_whitney_pair_level_p": 0.0,
+        "matched_concordance": 0.6687807311337561,
+        "status": "ok"
+      },
+      "label": "(40,60]",
+      "lower_exclusive": 40,
+      "progen2": {
+        "auc": 0.5512154116634677,
+        "cohens_d_pooled": 0.16255350925328285,
+        "count_per_class": 14033,
+        "mann_whitney_pair_level_p": 5.91652252378602e-50,
+        "matched_concordance": 0.5608921827121784,
+        "status": "ok"
+      },
+      "upper_inclusive": 60
+    },
+    {
+      "esm2": {
+        "auc": 0.6625900260630725,
+        "cohens_d_pooled": 0.4905686276285076,
+        "count_per_class": 14031,
+        "mann_whitney_pair_level_p": 0.0,
+        "matched_concordance": 0.666381583636234,
+        "status": "ok"
+      },
+      "label": "(60,100]",
+      "lower_exclusive": 60,
+      "progen2": {
+        "auc": 0.5517855859461767,
+        "cohens_d_pooled": 0.16782210031636188,
+        "count_per_class": 14031,
+        "mann_whitney_pair_level_p": 5.0188308205432714e-51,
+        "matched_concordance": 0.5605445085881263,
+        "status": "ok"
+      },
+      "upper_inclusive": 100
+    },
+    {
+      "esm2": {
+        "auc": 0.6237682744591675,
+        "cohens_d_pooled": 0.3639754615346275,
+        "count_per_class": 7658,
+        "mann_whitney_pair_level_p": 4.432935120461859e-155,
+        "matched_concordance": 0.6240532776181771,
+        "status": "ok"
+      },
+      "label": "(100,150]",
+      "lower_exclusive": 100,
+      "progen2": {
+        "auc": 0.55237941658554,
+        "cohens_d_pooled": 0.11958351085314849,
+        "count_per_class": 7658,
+        "mann_whitney_pair_level_p": 2.99106715379949e-29,
+        "matched_concordance": 0.5592844084617393,
+        "status": "ok"
+      },
+      "upper_inclusive": 150
+    },
+    {
+      "esm2": {
+        "auc": 0.5780755369448869,
+        "cohens_d_pooled": 0.25724472574705676,
+        "count_per_class": 13170,
+        "mann_whitney_pair_level_p": 9.250121957135277e-107,
+        "matched_concordance": 0.5798025816249051,
+        "status": "ok"
+      },
+      "label": "(150,500]",
+      "lower_exclusive": 150,
+      "progen2": {
+        "auc": 0.5113467482353592,
+        "cohens_d_pooled": 0.043746661348193806,
+        "count_per_class": 13170,
+        "mann_whitney_pair_level_p": 0.0014248665689852286,
+        "matched_concordance": 0.5100227790432802,
+        "status": "ok"
+      },
+      "upper_inclusive": 500
+    }
+  ],
+  "experiment": 1,
+  "layers": {
+    "esm2": [
+      {
+        "auc": 0.5028635593044631,
+        "cohens_d_pooled": 0.017996464541123594,
+        "count_per_class": 88473,
+        "layer": 0,
+        "mann_whitney_pair_level_p": 0.03694746073687953,
+        "matched_concordance": 0.5059622709753258,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5163792097804714,
+        "cohens_d_pooled": 0.05655181203721689,
+        "count_per_class": 88473,
+        "layer": 1,
+        "mann_whitney_pair_level_p": 7.904573583832501e-33,
+        "matched_concordance": 0.5318006623489652,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5288616238194784,
+        "cohens_d_pooled": 0.10847709428328037,
+        "count_per_class": 88473,
+        "layer": 2,
+        "mann_whitney_pair_level_p": 3.627094952790484e-98,
+        "matched_concordance": 0.5443129542346252,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5396518449693145,
+        "cohens_d_pooled": 0.15457756397301928,
+        "count_per_class": 88473,
+        "layer": 3,
+        "mann_whitney_pair_level_p": 1.607926102280492e-183,
+        "matched_concordance": 0.5575599335390458,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5373711482618629,
+        "cohens_d_pooled": 0.18354450992611038,
+        "count_per_class": 88473,
+        "layer": 4,
+        "mann_whitney_pair_level_p": 3.025830786594525e-163,
+        "matched_concordance": 0.556158376001718,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5255329338028197,
+        "cohens_d_pooled": 0.13586879604200175,
+        "count_per_class": 88473,
+        "layer": 5,
+        "mann_whitney_pair_level_p": 3.044256438839756e-77,
+        "matched_concordance": 0.5443016513512597,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5443999427314955,
+        "cohens_d_pooled": 0.17928906658170643,
+        "count_per_class": 88473,
+        "layer": 6,
+        "mann_whitney_pair_level_p": 1.4284128202947211e-229,
+        "matched_concordance": 0.5693375380059453,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5477283300961507,
+        "cohens_d_pooled": 0.1603596250352356,
+        "count_per_class": 88473,
+        "layer": 7,
+        "mann_whitney_pair_level_p": 5.990790489954355e-265,
+        "matched_concordance": 0.5714172685452059,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5453654963944999,
+        "cohens_d_pooled": 0.16979468023550037,
+        "count_per_class": 88473,
+        "layer": 8,
+        "mann_whitney_pair_level_p": 1.4280613073668169e-239,
+        "matched_concordance": 0.5683541871531428,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5809143702370055,
+        "cohens_d_pooled": 0.2844184352941762,
+        "count_per_class": 88473,
+        "layer": 9,
+        "mann_whitney_pair_level_p": 0.0,
+        "matched_concordance": 0.6128875476133961,
+        "status": "ok"
+      },
+      {
+        "auc": 0.6260197631689204,
+        "cohens_d_pooled": 0.39245332580225767,
+        "count_per_class": 88473,
+        "layer": 10,
+        "mann_whitney_pair_level_p": 0.0,
+        "matched_concordance": 0.6702948922270071,
+        "status": "ok"
+      },
+      {
+        "auc": 0.6834317275373196,
+        "cohens_d_pooled": 0.5213238365740158,
+        "count_per_class": 88473,
+        "layer": 11,
+        "mann_whitney_pair_level_p": 0.0,
+        "matched_concordance": 0.727080578255513,
+        "status": "ok"
+      }
+    ],
+    "progen2": [
+      {
+        "auc": 0.49607550399879574,
+        "cohens_d_pooled": -0.010085788376714151,
+        "count_per_class": 88473,
+        "layer": 0,
+        "mann_whitney_pair_level_p": 0.004245423777059282,
+        "matched_concordance": 0.4958009788296995,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5009465050474154,
+        "cohens_d_pooled": 0.002549434968024129,
+        "count_per_class": 88473,
+        "layer": 1,
+        "mann_whitney_pair_level_p": 0.4904403466805679,
+        "matched_concordance": 0.5003899494761114,
+        "status": "ok"
+      },
+      {
+        "auc": 0.49738625622572336,
+        "cohens_d_pooled": 0.02251131404869962,
+        "count_per_class": 88473,
+        "layer": 2,
+        "mann_whitney_pair_level_p": 0.05686689613993192,
+        "matched_concordance": 0.5009550936443887,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5095418560533775,
+        "cohens_d_pooled": 0.059384103009835654,
+        "count_per_class": 88473,
+        "layer": 3,
+        "mann_whitney_pair_level_p": 3.60026141132101e-12,
+        "matched_concordance": 0.5181354763600194,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5145208171214335,
+        "cohens_d_pooled": 0.05746728976992725,
+        "count_per_class": 88473,
+        "layer": 4,
+        "mann_whitney_pair_level_p": 3.7038443845138357e-26,
+        "matched_concordance": 0.5245103025781876,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5219182285723718,
+        "cohens_d_pooled": 0.09744799490385563,
+        "count_per_class": 88473,
+        "layer": 5,
+        "mann_whitney_pair_level_p": 2.092002503507088e-57,
+        "matched_concordance": 0.5439625648502933,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5153728095949792,
+        "cohens_d_pooled": 0.06695411019721464,
+        "count_per_class": 88473,
+        "layer": 6,
+        "mann_whitney_pair_level_p": 4.0595710013297937e-29,
+        "matched_concordance": 0.5268613023182214,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5211671850421575,
+        "cohens_d_pooled": 0.06640280074159428,
+        "count_per_class": 88473,
+        "layer": 7,
+        "mann_whitney_pair_level_p": 1.163020803407406e-53,
+        "matched_concordance": 0.5327048930182089,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5134299205592187,
+        "cohens_d_pooled": 0.0764279207896986,
+        "count_per_class": 88473,
+        "layer": 8,
+        "mann_whitney_pair_level_p": 1.3081691476243056e-22,
+        "matched_concordance": 0.5204299616832254,
+        "status": "ok"
+      },
+      {
+        "auc": 0.515584199818705,
+        "cohens_d_pooled": 0.06814183746527008,
+        "count_per_class": 88473,
+        "layer": 9,
+        "mann_whitney_pair_level_p": 7.052043442840355e-30,
+        "matched_concordance": 0.5292123020582551,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5196288484736091,
+        "cohens_d_pooled": 0.07303295284665245,
+        "count_per_class": 88473,
+        "layer": 10,
+        "mann_whitney_pair_level_p": 2.1485356625182605e-46,
+        "matched_concordance": 0.5334169746702384,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5149878805777544,
+        "cohens_d_pooled": 0.05508254489327071,
+        "count_per_class": 88473,
+        "layer": 11,
+        "mann_whitney_pair_level_p": 9.25634660685723e-28,
+        "matched_concordance": 0.5185084715110825,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5228202633857127,
+        "cohens_d_pooled": 0.0523753772957516,
+        "count_per_class": 88473,
+        "layer": 12,
+        "mann_whitney_pair_level_p": 4.481296193814845e-62,
+        "matched_concordance": 0.5312355181806879,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5277292436197313,
+        "cohens_d_pooled": 0.07404370543782351,
+        "count_per_class": 88473,
+        "layer": 13,
+        "mann_whitney_pair_level_p": 9.195918938470922e-91,
+        "matched_concordance": 0.5372486521311587,
+        "status": "ok"
+      },
+      {
+        "auc": 0.524553971851209,
+        "cohens_d_pooled": 0.09823137941487088,
+        "count_per_class": 88473,
+        "layer": 14,
+        "mann_whitney_pair_level_p": 1.4203065831825982e-71,
+        "matched_concordance": 0.5314389700812677,
+        "status": "ok"
+      },
+      {
+        "auc": 0.528153523657396,
+        "cohens_d_pooled": 0.10315880824700153,
+        "count_per_class": 88473,
+        "layer": 15,
+        "mann_whitney_pair_level_p": 1.6749507817444778e-93,
+        "matched_concordance": 0.5372034405976964,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5292379651340162,
+        "cohens_d_pooled": 0.07496533259109282,
+        "count_per_class": 88473,
+        "layer": 16,
+        "mann_whitney_pair_level_p": 1.0803417382238241e-100,
+        "matched_concordance": 0.5415889593435286,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5361792940689649,
+        "cohens_d_pooled": 0.11795917055515796,
+        "count_per_class": 88473,
+        "layer": 17,
+        "mann_whitney_pair_level_p": 3.976998809228308e-153,
+        "matched_concordance": 0.5483254778293942,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5145327428112644,
+        "cohens_d_pooled": 0.05240737633515548,
+        "count_per_class": 88473,
+        "layer": 18,
+        "mann_whitney_pair_level_p": 3.375696089414108e-26,
+        "matched_concordance": 0.5183163224938682,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5244201607003978,
+        "cohens_d_pooled": 0.10456729717881151,
+        "count_per_class": 88473,
+        "layer": 19,
+        "mann_whitney_pair_level_p": 8.130805915233743e-71,
+        "matched_concordance": 0.5353723734924779,
+        "status": "ok"
+      },
+      {
+        "auc": 0.533097328418342,
+        "cohens_d_pooled": 0.10923711781022219,
+        "count_per_class": 88473,
+        "layer": 20,
+        "mann_whitney_pair_level_p": 1.774397749476621e-128,
+        "matched_concordance": 0.5501791507013439,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5231966425157816,
+        "cohens_d_pooled": 0.10232887689038003,
+        "count_per_class": 88473,
+        "layer": 21,
+        "mann_whitney_pair_level_p": 4.445353846744254e-64,
+        "matched_concordance": 0.5325579555344568,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5326747905779629,
+        "cohens_d_pooled": 0.14214255895943806,
+        "count_per_class": 88473,
+        "layer": 22,
+        "mann_whitney_pair_level_p": 2.871353033489046e-125,
+        "matched_concordance": 0.5486419585636296,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5236852628688683,
+        "cohens_d_pooled": 0.08897924115610219,
+        "count_per_class": 88473,
+        "layer": 23,
+        "mann_whitney_pair_level_p": 9.962926947918238e-67,
+        "matched_concordance": 0.5392379596034949,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5385168264975027,
+        "cohens_d_pooled": 0.10159346624733662,
+        "count_per_class": 88473,
+        "layer": 24,
+        "mann_whitney_pair_level_p": 2.7917591382182036e-173,
+        "matched_concordance": 0.5551750251489155,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5759448970345812,
+        "cohens_d_pooled": 0.20948244202885027,
+        "count_per_class": 88473,
+        "layer": 25,
+        "mann_whitney_pair_level_p": 0.0,
+        "matched_concordance": 0.6106382738236524,
+        "status": "ok"
+      },
+      {
+        "auc": 0.5290742587618485,
+        "cohens_d_pooled": 0.11973549021543586,
+        "count_per_class": 88473,
+        "layer": 26,
+        "mann_whitney_pair_level_p": 1.3688622556457476e-99,
+        "matched_concordance": 0.5478168480779447,
+        "status": "ok"
+      }
+    ]
+  },
+  "pooled": {
+    "esm2": {
+      "auc": 0.614675147426521,
+      "cohens_d_pooled": 0.39302438898597186,
+      "mann_whitney_pair_level_p": 0.0,
+      "matched_concordance": 0.65132865393962
+    },
+    "matched_pairs": 88473,
+    "progen2": {
+      "auc": 0.5374408454794177,
+      "cohens_d_pooled": 0.15011297193432538,
+      "mann_whitney_pair_level_p": 7.568355600159392e-164,
+      "matched_concordance": 0.5631322550382603
+    }
+  },
+  "result_label": "public-information-partial-reproduction"
+}

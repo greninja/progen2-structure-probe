@@ -31,6 +31,9 @@ def _parser() -> argparse.ArgumentParser:
     cohort.add_argument("--work-dir", type=Path, required=True)
     cohort.add_argument("--threads", type=int, default=8)
 
+    fetch_structures = subcommands.add_parser("fetch-structures")
+    fetch_structures.add_argument("manifest", type=Path)
+
     experiment1 = subcommands.add_parser("experiment1")
     experiment1.add_argument("config", type=Path)
     experiment1.add_argument("--progen-repo", type=Path, required=True)
@@ -57,6 +60,12 @@ def _parser() -> argparse.ArgumentParser:
 
 def main() -> None:
     args = _parser().parse_args()
+    if args.command == "fetch-structures":
+        from .cohort import fetch_manifest_structures
+
+        print(json.dumps(fetch_manifest_structures(args.manifest), indent=2))
+        return
+
     config = load_config(args.config)
     if args.command == "validate-config":
         print(json.dumps(resolved_config_record(args.config), indent=2, sort_keys=True))

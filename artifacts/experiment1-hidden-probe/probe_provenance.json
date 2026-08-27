@@ -1,0 +1,17 @@
+{
+  "project_commit": "d7a22c9d839cad4e80114a6d9d1f35426299d1f2",
+  "representation_index_path": "/workspace/volume/results/experiment1/hidden-probe-full/representations/index.json",
+  "representation_index_sha256": "8455ff8239704a928d66edb2f5e15dc82d7f2c8cdba92afe1c64fbffd4709137",
+  "runtime": {
+    "cuda_available": true,
+    "cuda_version": "11.8",
+    "executable": "/workspace/volume/envs/progen2-probe/bin/python",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "gpu_memory_bytes": 25250627584,
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.17",
+    "python": "3.8.20 | packaged by conda-forge | (default, Sep 30 2024, 17:52:49) \n[GCC 13.3.0]",
+    "pythonhashseed": null,
+    "torch": "2.0.1+cu118"
+  },
+  "validation_workers": 8
+}

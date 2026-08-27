@@ -1,0 +1,20 @@
+{
+  "esm_upstream_commit": "2b369911bb5b4b0dda914521b9475cad1656b2ac",
+  "esm_upstream_path": "/workspace/volume/upstream/esm",
+  "progen_checkpoint_path": "/workspace/volume/checkpoints/progen2-base",
+  "progen_checkpoint_tree_sha256": "2a29f886abdbdbb14be59bb4cfdcfc91951dbbf223b4f14959cc84f8b7405816",
+  "progen_upstream_commit": "c27a419c234a0997923761e1fe7daffcebf0eaf5",
+  "progen_upstream_path": "/workspace/volume/upstream/progen",
+  "project_commit": "7355110b4819c6478f4698134781c18d5b78cda8",
+  "runtime": {
+    "cuda_available": true,
+    "cuda_version": "11.8",
+    "executable": "/workspace/volume/envs/progen2-probe/bin/python",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "gpu_memory_bytes": 25250627584,
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.17",
+    "python": "3.8.20 | packaged by conda-forge | (default, Sep 30 2024, 17:52:49) \n[GCC 13.3.0]",
+    "pythonhashseed": null,
+    "torch": "2.0.1+cu118"
+  }
+}

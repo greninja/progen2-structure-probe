@@ -1,14 +1,19 @@
 # Input manifests
 
-These manifests are deliberately not populated with guessed biological identifiers.
+`experiment1_150.csv` is the exact frozen public-information replacement cohort used
+for the reported attention and hidden-state runs. `experiment1_pilot.csv` contains
+the fixed five-chain engineering subset. These are not Mandrake's unpublished
+identifiers.
 
-An externally recovered `experiment1_pilot.csv` must contain at least:
+Each row records the cluster, RCSB structure and chain identifiers, resolution,
+coordinate coverage, sequence hash, mmCIF hash, and selection seed. Relative
+`mmcif_path` values resolve beneath this directory. Materialize and verify the public
+structure files with:
 
-```text
-structure_id,label_asym_id,mmcif_path
+```bash
+progen2-probe fetch-structures data/manifests/experiment1_150.csv
 ```
 
-The fallback cohort builder creates richer `experiment1_150.csv` and
-`experiment1_pilot.csv` manifests containing the cluster, resolution, coordinate
-coverage, sequence hash, mmCIF hash, and selection seed. The Experiment 1 runner
-accepts these extra provenance columns and verifies each available mmCIF hash.
+The command is restartable and refuses an existing or downloaded file whose SHA-256
+does not match the frozen manifest. The full cohort-construction audit is tracked
+under `artifacts/cohort/`.

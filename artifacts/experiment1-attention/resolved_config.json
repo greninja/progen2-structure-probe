@@ -1,0 +1,104 @@
+{
+  "config": {
+    "attention": {
+      "aggregation": "max-over-layer-head",
+      "aggregation_status": "inferred-from-published-axis-label",
+      "apc_scope": "per-layer-head",
+      "remove_terminal_tokens": true,
+      "symmetrization": "A-plus-transpose",
+      "tensor": "post-softmax",
+      "zscore_population": "valid-upper-triangle-with-primary-minimum-separation"
+    },
+    "cohort": {
+      "bidirectional_coverage": 0.8,
+      "max_length": 500,
+      "maximum_resolution_angstrom": 2.0,
+      "min_length": 100,
+      "minimum_coordinate_coverage": 0.95,
+      "mmseqs_version": "15.6f452",
+      "sequence_identity": 0.3,
+      "source": "live-rcsb-query-recorded-at-retrieval",
+      "target_count": 150
+    },
+    "contact": {
+      "boundary_status": "inferred-from-published-bin-label",
+      "coordinate": "esm-virtual-cbeta",
+      "cutoff_angstrom": 8.0,
+      "cutoff_status": "chosen-from-established-esm-methodology",
+      "minimum_separation_exclusive": 10
+    },
+    "decoy": {
+      "alternative_seed_count": 20,
+      "match": "exact-sequence-separation",
+      "sample_without_replacement": true
+    },
+    "distance_bins": {
+      "closure": "right",
+      "intervals": [
+        [
+          10,
+          20
+        ],
+        [
+          20,
+          40
+        ],
+        [
+          40,
+          60
+        ],
+        [
+          60,
+          100
+        ],
+        [
+          100,
+          150
+        ],
+        [
+          150,
+          500
+        ]
+      ]
+    },
+    "experiment": 1,
+    "model": {
+      "esm2": {
+        "checkpoint_name": "esm2_t12_35M_UR50D",
+        "checkpoint_status": "inferred-from-published-12-layer-description",
+        "upstream_commit": "2b369911bb5b4b0dda914521b9475cad1656b2ac"
+      },
+      "progen2": {
+        "checkpoint_name": "progen2-base",
+        "checkpoint_status": "chosen-because-unspecified",
+        "upstream_commit": "c27a419c234a0997923761e1fe7daffcebf0eaf5"
+      }
+    },
+    "protocol": {
+      "document": "docs/methodology.md",
+      "result_label": "public-information-partial-reproduction",
+      "version": "0.3"
+    },
+    "run": {
+      "device": "cuda",
+      "manifest": "/workspace/volume/data/experiment1-cohort/experiment1_150.csv",
+      "output_directory": "results/experiment1/pilot",
+      "precision": "float16",
+      "seed": 20260822
+    },
+    "schema_version": 1,
+    "structure": {
+      "alternate_location_rule": "highest-occupancy-then-A-then-lexicographic",
+      "chain_identifier": "label_asym_id",
+      "model_number": 1,
+      "modified_residue_policy": "reject",
+      "source": "mmCIF"
+    }
+  },
+  "overrides": {
+    "run.manifest": "/workspace/volume/data/experiment1-cohort/experiment1_150.csv"
+  },
+  "resolved_sha256": "0d18bbb1fd22888d1a933d6a3cb33bfb2b80e32055ea417a75b08bf280d3b4fd",
+  "source_path": "/workspace/project/configs/experiment1_pilot.yaml",
+  "source_sha256": "2c9991f491a3842b6383d1c9a15130dc0c5bd0a035b3a4b263a7bcb523828ef3"
+}

@@ -1,0 +1,14 @@
+{
+  "candidate_csv_sha256": "87942869cd4bf8ce0a7d7dcdb0f322ab0748873b22fc15152e9b46d8c0ce8c81",
+  "cluster_count": 12793,
+  "cluster_tsv_sha256": "b6b1c740abeb43c477407ebf17930fa952567b2720909804366ca8e389498c81",
+  "eligible_candidate_count": 95589,
+  "manifest_sha256": "10b89e0f3a6dccbacf081ca03a18aebc9001e4dd83f1e4c364e15ecbe3022b09",
+  "pilot_manifest_sha256": "7873e16b49516d4ff760f3c0e91989262630ecb66550e76f1ea7d04272a77996",
+  "protocol_sha256": "b7ecf71f004116068e0724e121a44ffe4b64290e111c4dd3229cb9e4a4451e9c",
+  "query_sha256": "8282e4746147be3ce67093b9cb8e537e846b41783dee69ebcfa1690d6e737371",
+  "rejection_count": 2124,
+  "response_sha256": "7ef933db33967675a306e2f3231b01099a0c83de5185f1a50146f04ddc9d1b6b",
+  "search_entity_count": 96666,
+  "selected_count": 150
+}

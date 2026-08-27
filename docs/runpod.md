@@ -43,9 +43,12 @@ The bootstrap script checks out the pinned Salesforce and ESM commits, downloads
 official `progen2-base` archive, and records archive, environment, driver, and source
 provenance. The persistent volume prevents repeated model downloads.
 
-Before inference, populate and hash the manifests described in
-`data/manifests/README.md`. Do not fill unresolved Mandrake sequence or structure IDs
-by guesswork.
+Before inference, download the exact public structures named by the tracked frozen
+replacement-cohort manifest. The command verifies every mmCIF SHA-256:
+
+```bash
+progen2-probe fetch-structures data/manifests/experiment1_150.csv
+```
 
 ## Validate locally or remotely
 
@@ -56,7 +59,7 @@ python -m pytest
 
 ## Model and memory smoke test
 
-Run deterministic extraction before downloading structures or launching the pilot:
+Run deterministic extraction before launching the pilot:
 
 ```bash
 TORCH_HOME=/workspace/volume/torch-cache \
@@ -72,9 +75,11 @@ TORCH_HOME=/workspace/volume/torch-cache \
 Review `smoke.json` for tensor shapes, determinism, causal masking, wall time, and
 peak CUDA allocation. This is an engineering check, not a contact result.
 
-## Build the documented fallback cohort
+## Rebuild the fallback-cohort selection audit
 
-Only use this when the unpublished Mandrake manifest remains unavailable:
+This is not required to reproduce the reported run because its exact manifests are
+tracked. Use it only to repeat the selection procedure against a new live RCSB
+snapshot; a later snapshot may legitimately produce a different cohort:
 
 ```bash
 progen2-probe build-cohort configs/experiment1_pilot.yaml \
@@ -97,12 +102,23 @@ progen2-probe experiment1 configs/experiment1_pilot.yaml \
   --progen-repo /workspace/volume/upstream/progen \
   --progen-checkpoint /workspace/volume/checkpoints/progen2-base \
   --esm-repo /workspace/volume/upstream/esm \
-  --manifest /workspace/volume/data/experiment1-cohort/experiment1_pilot.csv \
+  --manifest /workspace/project/data/manifests/experiment1_pilot.csv \
   --output-dir /workspace/volume/results/experiment1/pilot
 ```
 
 Do not launch the 150-chain run until the five pilot chains pass all methodology
 checks and measured memory/runtime have been reviewed.
+
+## Full 150-chain attention run
+
+```bash
+progen2-probe experiment1 configs/experiment1_pilot.yaml \
+  --progen-repo /workspace/volume/upstream/progen \
+  --progen-checkpoint /workspace/volume/checkpoints/progen2-base \
+  --esm-repo /workspace/volume/upstream/esm \
+  --manifest /workspace/project/data/manifests/experiment1_150.csv \
+  --output-dir /workspace/volume/results/experiment1/full-150
+```
 
 ## Experiment 1 hidden-state follow-up
 
@@ -112,7 +128,7 @@ First verify hidden-only extraction on the frozen five-chain engineering pilot:
 progen2-probe hidden-extract configs/experiment1_hidden_probe.yaml \
   --progen-repo /workspace/volume/upstream/progen \
   --progen-checkpoint /workspace/volume/checkpoints/progen2-base \
-  --manifest /workspace/volume/data/experiment1-cohort/experiment1_pilot.csv \
+  --manifest /workspace/project/data/manifests/experiment1_pilot.csv \
   --output-dir /workspace/volume/results/experiment1/hidden-probe-pilot
 ```
 
@@ -123,7 +139,7 @@ interpret a five-protein probe. After it passes, extract the frozen 150 proteins
 progen2-probe hidden-extract configs/experiment1_hidden_probe.yaml \
   --progen-repo /workspace/volume/upstream/progen \
   --progen-checkpoint /workspace/volume/checkpoints/progen2-base \
-  --manifest /workspace/volume/data/experiment1-cohort/experiment1_150.csv \
+  --manifest /workspace/project/data/manifests/experiment1_150.csv \
   --output-dir /workspace/volume/results/experiment1/hidden-probe-full
 ```
 
