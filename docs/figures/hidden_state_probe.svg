@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="560" viewBox="0 0 1240 560">
+<metadata>summary_sha256=31f8c7ac37d7c0cbc0eed77bbdf5104a86e086b1c1cc3e76ba4bc947758ef251</metadata>
+<rect width="100%" height="100%" fill="#fbfaf7"/>
+<text x="60" y="48" font-family="sans-serif" font-size="24" font-weight="700" fill="#17202a">ProGen2 contextual hidden states improve contact discrimination</text>
+<text x="60" y="78" font-family="sans-serif" font-size="15" fill="#40505c">Held-out mean protein AUC gain: +0.048  (95% protein bootstrap CI +0.033 to +0.062)</text>
+<text x="70" y="91" font-family="sans-serif" font-size="17" font-weight="700" fill="#17202a">Validation: signal strengthens in late layers</text>
+<line x1="70" y1="475.0" x2="610" y2="475.0" stroke="#d9dee2" stroke-width="1"/>
+<text x="58" y="480.0" text-anchor="end" font-family="sans-serif" font-size="12" fill="#52616b">0.50</text>
+<line x1="70" y1="384.99999999999994" x2="610" y2="384.99999999999994" stroke="#d9dee2" stroke-width="1"/>
+<text x="58" y="389.99999999999994" text-anchor="end" font-family="sans-serif" font-size="12" fill="#52616b">0.55</text>
+<line x1="70" y1="295.0" x2="610" y2="295.0" stroke="#d9dee2" stroke-width="1"/>
+<text x="58" y="300.0" text-anchor="end" font-family="sans-serif" font-size="12" fill="#52616b">0.60</text>
+<line x1="70" y1="204.9999999999999" x2="610" y2="204.9999999999999" stroke="#d9dee2" stroke-width="1"/>
+<text x="58" y="209.9999999999999" text-anchor="end" font-family="sans-serif" font-size="12" fill="#52616b">0.65</text>
+<line x1="70" y1="115.0" x2="610" y2="115.0" stroke="#d9dee2" stroke-width="1"/>
+<text x="58" y="120.0" text-anchor="end" font-family="sans-serif" font-size="12" fill="#52616b">0.70</text>
+<line x1="70.0" y1="475" x2="70.0" y2="481" stroke="#52616b"/>
+<text x="70.0" y="498" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#52616b">0</text>
+<line x1="170.0" y1="475" x2="170.0" y2="481" stroke="#52616b"/>
+<text x="170.0" y="498" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#52616b">5</text>
+<line x1="270.0" y1="475" x2="270.0" y2="481" stroke="#52616b"/>
+<text x="270.0" y="498" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#52616b">10</text>
+<line x1="370.0" y1="475" x2="370.0" y2="481" stroke="#52616b"/>
+<text x="370.0" y="498" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#52616b">15</text>
+<line x1="470.0" y1="475" x2="470.0" y2="481" stroke="#52616b"/>
+<text x="470.0" y="498" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#52616b">20</text>
+<line x1="570.0" y1="475" x2="570.0" y2="481" stroke="#52616b"/>
+<text x="570.0" y="498" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#52616b">25</text>
+<line x1="610.0" y1="475" x2="610.0" y2="481" stroke="#52616b"/>
+<text x="610.0" y="498" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#52616b">27</text>
+<line x1="70" y1="115" x2="70" y2="475" stroke="#52616b" stroke-width="1.2"/>
+<line x1="70" y1="475" x2="610" y2="475" stroke="#52616b" stroke-width="1.2"/>
+<text x="340.0" y="523" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#34434d">ProGen2 representation stage</text>
+<text x="22" y="295.0" transform="rotate(-90 22 295.0)" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#34434d">Mean protein AUC</text>
+<polyline points="70.00,263.80 90.00,257.18 110.00,268.43 130.00,272.98 150.00,285.65 170.00,282.21 190.00,284.73 210.00,275.07 230.00,277.22 250.00,260.56 270.00,259.73 290.00,259.05 310.00,253.78 330.00,262.40 350.00,265.06 370.00,265.11 390.00,276.36 410.00,270.99 430.00,266.51 450.00,268.23 470.00,268.69 490.00,254.32 510.00,237.26 530.00,229.77 550.00,211.36 570.00,205.01 590.00,197.47 610.00,239.90" fill="none" stroke="#8fb8d8" stroke-width="2.3"/>
+<polyline points="70.00,264.87 90.00,254.34 110.00,266.68 130.00,275.09 150.00,286.49 170.00,283.30 190.00,283.20 210.00,274.88 230.00,273.43 250.00,257.07 270.00,257.71 290.00,256.64 310.00,251.38 330.00,260.35 350.00,258.71 370.00,261.18 390.00,272.36 410.00,270.06 430.00,261.20 450.00,265.35 470.00,267.98 490.00,253.95 510.00,232.64 530.00,225.78 550.00,211.59 570.00,202.08 590.00,194.74 610.00,235.51" fill="none" stroke="#176b9c" stroke-width="2.3"/>
+<polyline points="70.00,260.99 90.00,249.16 110.00,264.23 130.00,269.40 150.00,284.58 170.00,280.56 190.00,280.25 210.00,270.64 230.00,271.84 250.00,252.84 270.00,255.93 290.00,252.58 310.00,249.38 330.00,258.85 350.00,259.02 370.00,257.20 390.00,271.27 410.00,265.49 430.00,259.19 450.00,263.66 470.00,264.58 490.00,249.55 510.00,233.37 530.00,224.22 550.00,210.91 570.00,202.44 590.00,195.50 610.00,234.14" fill="none" stroke="#45a6a1" stroke-width="2.3"/>
+<circle cx="590.0" cy="194.74350786903665" r="5.5" fill="#e45756" stroke="#ffffff" stroke-width="2"/>
+<text x="585.0" y="181.74350786903665" text-anchor="end" font-family="sans-serif" font-size="12" font-weight="700" fill="#b23b3a">selected: stage 26</text>
+<line x1="82" y1="133" x2="104" y2="133" stroke="#8fb8d8" stroke-width="3"/>
+<text x="111" y="138" font-family="sans-serif" font-size="11" fill="#40505c">α=1e-05</text>
+<line x1="194" y1="133" x2="216" y2="133" stroke="#176b9c" stroke-width="3"/>
+<text x="223" y="138" font-family="sans-serif" font-size="11" fill="#40505c">α=0.0001</text>
+<line x1="306" y1="133" x2="328" y2="133" stroke="#45a6a1" stroke-width="3"/>
+<text x="335" y="138" font-family="sans-serif" font-size="11" fill="#40505c">α=0.001</text>
+<text x="680" y="91" font-family="sans-serif" font-size="17" font-weight="700" fill="#17202a">Held-out test: contextual signal persists at long range</text>
+<line x1="680" y1="475.0" x2="1180" y2="475.0" stroke="#d9dee2" stroke-width="1"/>
+<text x="668" y="480.0" text-anchor="end" font-family="sans-serif" font-size="12" fill="#52616b">0.50</text>
+<line x1="680" y1="384.99999999999994" x2="1180" y2="384.99999999999994" stroke="#d9dee2" stroke-width="1"/>
+<text x="668" y="389.99999999999994" text-anchor="end" font-family="sans-serif" font-size="12" fill="#52616b">0.55</text>
+<line x1="680" y1="295.0" x2="1180" y2="295.0" stroke="#d9dee2" stroke-width="1"/>
+<text x="668" y="300.0" text-anchor="end" font-family="sans-serif" font-size="12" fill="#52616b">0.60</text>
+<line x1="680" y1="204.9999999999999" x2="1180" y2="204.9999999999999" stroke="#d9dee2" stroke-width="1"/>
+<text x="668" y="209.9999999999999" text-anchor="end" font-family="sans-serif" font-size="12" fill="#52616b">0.65</text>
+<line x1="680" y1="115.0" x2="1180" y2="115.0" stroke="#d9dee2" stroke-width="1"/>
+<text x="668" y="120.0" text-anchor="end" font-family="sans-serif" font-size="12" fill="#52616b">0.70</text>
+<line x1="680" y1="115" x2="680" y2="475" stroke="#52616b" stroke-width="1.2"/>
+<line x1="680" y1="475" x2="1180" y2="475" stroke="#52616b" stroke-width="1.2"/>
+<text x="632" y="295.0" transform="rotate(-90 632 295.0)" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#34434d">Pooled AUC</text>
+<rect x="694.67" y="246.14" width="25" height="228.86" rx="2" fill="#e7a28e"/>
+<rect x="723.67" y="165.22" width="25" height="309.78" rx="2" fill="#176b9c"/>
+<text x="721.6666666666666" y="497" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#52616b">(10,20]</text>
+<rect x="778.00" y="249.10" width="25" height="225.90" rx="2" fill="#e7a28e"/>
+<rect x="807.00" y="152.39" width="25" height="322.61" rx="2" fill="#176b9c"/>
+<text x="805.0" y="497" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#52616b">(20,40]</text>
+<rect x="861.33" y="278.18" width="25" height="196.82" rx="2" fill="#e7a28e"/>
+<rect x="890.33" y="173.00" width="25" height="302.00" rx="2" fill="#176b9c"/>
+<text x="888.3333333333333" y="497" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#52616b">(40,60]</text>
+<rect x="944.67" y="276.86" width="25" height="198.14" rx="2" fill="#e7a28e"/>
+<rect x="973.67" y="135.16" width="25" height="339.84" rx="2" fill="#176b9c"/>
+<text x="971.6666666666666" y="497" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#52616b">(60,100]</text>
+<rect x="1028.00" y="283.07" width="25" height="191.93" rx="2" fill="#e7a28e"/>
+<rect x="1057.00" y="170.00" width="25" height="305.00" rx="2" fill="#176b9c"/>
+<text x="1055.0" y="497" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#52616b">(100,150]</text>
+<rect x="1111.33" y="310.48" width="25" height="164.52" rx="2" fill="#e7a28e"/>
+<rect x="1140.33" y="255.83" width="25" height="219.17" rx="2" fill="#176b9c"/>
+<text x="1138.3333333333333" y="497" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#52616b">(150,500]</text>
+<rect x="695" y="125" width="16" height="12" rx="2" fill="#e7a28e"/>
+<text x="718" y="136" font-family="sans-serif" font-size="11" fill="#40505c">Stage 0 embedding</text>
+<rect x="880" y="125" width="16" height="12" rx="2" fill="#176b9c"/>
+<text x="903" y="136" font-family="sans-serif" font-size="11" fill="#40505c">Stage 26 contextual</text>
+<text x="930.0" y="523" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#34434d">Sequence separation (residues)</text>
+<text x="1180" y="542" text-anchor="end" font-family="sans-serif" font-size="11" fill="#687780">Frozen 90/30/30 protein split · 18,166 matched test pairs</text>
+</svg>

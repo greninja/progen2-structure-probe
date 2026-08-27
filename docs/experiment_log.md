@@ -109,3 +109,61 @@ reported 38,286 comparisons rather than the 88,473 used here.
 
 Accepted summary SHA-256:
 `a7a35aaeaeb2d6b692c1152054b3b050224b71293e37d831234c149ee48304a4`.
+
+## 2026-08-27 — Experiment 1 hidden-state follow-up
+
+This follow-up tested whether ProGen2-base contextual hidden states contain
+contact-predictive information beyond the model's non-contextual input embedding.
+It reused the frozen 150-chain replacement cohort and the same virtual-Cβ contacts,
+`|i-j|>10` filter, and exact-separation matched decoys as Experiment 1.
+
+Proteins were split before fitting into 90 train, 30 validation, and 30 untouched
+test proteins. The split hash exactly matched the preregistered value
+`1c4a1b025cf34c37f95eff729039814a378e0dff4a5ffe225416682d9afe2647`.
+At each of the 28 representation stages, the probe used only the 1,536-dimensional
+symmetric elementwise product `h_i * h_j` and an L2-regularized logistic regression.
+Layer and regularization strength were selected by mean per-protein validation AUC.
+
+Stage 26 with regularization `alpha=0.0001` was selected as the contextual model.
+Stage 0 with `alpha=0.001` was selected independently as the non-contextual baseline.
+The final test set contained 18,166 matched contact/decoy units.
+
+| Held-out test result | Stage 0 embedding | Stage 26 contextual |
+|---|---:|---:|
+| Mean per-protein ROC-AUC | 0.6257 | 0.6738 |
+| Pooled ROC-AUC | 0.6131 | 0.6666 |
+| Pooled matched concordance | 0.6095 | 0.6687 |
+
+The preregistered primary effect, contextual minus stage-0 mean test-protein AUC,
+was **+0.0481**. Its 95% interval from 10,000 paired protein-level bootstrap
+resamples was **[+0.0331, +0.0621]**.
+
+Distance-binned pooled test ROC-AUC:
+
+| Separation | Pairs per class | Stage 0 embedding | Stage 26 contextual | Difference |
+|---|---:|---:|---:|---:|
+| (10,20] | 3,065 | 0.6271 | 0.6721 | +0.0450 |
+| (20,40] | 4,492 | 0.6255 | 0.6792 | +0.0537 |
+| (40,60] | 2,650 | 0.6093 | 0.6678 | +0.0584 |
+| (60,100] | 2,971 | 0.6101 | 0.6888 | +0.0787 |
+| (100,150] | 1,844 | 0.6066 | 0.6694 | +0.0628 |
+| (150,500] | 3,144 | 0.5914 | 0.6218 | +0.0304 |
+
+The result supports the narrow claim that late ProGen2 contextual representations
+contain generalizable contact-predictive information beyond residue embeddings under
+this low-capacity supervised probe. The gain remains positive descriptively in the
+longest-range bin, although both models weaken there. It does not show that ProGen2
+simulates folding, uses this information during generation, or contains a purely
+geometric representation. The probe receives contact labels, and the stage-0 AUC of
+0.626 shows that residue identity and other sequence-level regularities already carry
+substantial contact-predictive signal. Sequence-only controls are therefore required
+before making a stronger structural-mechanism claim.
+
+The eight-worker execution changed only scheduling. All 28 stages used the frozen
+protocol, and each completed validation stage was stored in an input-bound atomic
+checkpoint. The compact result artifacts were copied from the persistent volume and
+verified locally. Accepted summary SHA-256:
+`31f8c7ac37d7c0cbc0eed77bbdf5104a86e086b1c1cc3e76ba4bc947758ef251`.
+
+The result figure is available as [SVG](figures/hidden_state_probe.svg) and
+[PNG](figures/hidden_state_probe.png).
