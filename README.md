@@ -28,8 +28,6 @@ PDB. Each example is one protein chain from a PDB structure.
 
 We selected proteins that:
 
-- were 100–500 amino acids long;
-- were determined using X-ray diffraction at resolution ≤ 2.0 Å;
 - had the N, Cα, and C atom coordinates required for at least 95% of residues; and
 - were distributed evenly across four protein-length ranges: 100–199, 200–299,
   300–399, and 400–500 amino acids.
@@ -44,8 +42,9 @@ The exact dataset is in
 
 ## Reproduction assumptions
 
-The post does not specify every implementation detail, so we made the following
-choices. These are our assumptions, not claims about the original analysis.
+To turn the experiment described in the post into a reproducible implementation,
+we filled in a few methodological details. The choices used in our reproduction
+are listed below.
 
 | Detail | Choice used here |
 |---|---|
@@ -72,8 +71,11 @@ different protein dataset. The full protocol is documented in
 | ProGen2 | 0.527 | 0.537 |
 | ESM-2 | 0.611 | 0.615 |
 
-An AUC of 0.5 is random ranking. Like the blog, we found that ProGen2's attention
-signal was weak, while ESM-2 separated contacts more clearly.
+An AUC of 0.5 represents random ranking. As in the blog post, ProGen2's attention
+showed weak contact discrimination, while ESM-2 separated contacts more clearly.
+Our values do not exactly match the reported results, which may reflect differences
+in the dataset and methodological choices. Nevertheless, the overall trend is
+clearly similar.
 
 ### Follow-up: hidden states
 
@@ -110,3 +112,14 @@ progen2-probe fetch-structures data/manifests/experiment1_150.csv
 Experiment settings are in [`configs/`](configs/), compact results are in
 [`artifacts/`](artifacts/), and the complete RunPod commands are in
 [`docs/runpod.md`](docs/runpod.md).
+
+## Contributions
+
+Shadab came up with the project, chose the questions and overall direction, provided
+the compute, reviewed the assumptions and results, and made the final calls.
+
+OpenAI Codex helped plan the experiments, implemented and ran the pipeline, analyzed
+the results, and prepared the figures and documentation.
+
+The project was built collaboratively through an ongoing back-and-forth between
+Shadab and Codex.

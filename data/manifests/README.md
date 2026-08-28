@@ -1,19 +1,14 @@
-# Input manifests
+# Protein dataset
 
-`experiment1_150.csv` is the exact frozen public-information replacement cohort used
-for the reported attention and hidden-state runs. `experiment1_pilot.csv` contains
-the fixed five-chain engineering subset. These are not Mandrake's unpublished
-identifiers.
+`experiment1_150.csv` lists the 150 public RCSB proteins used in both experiments.
+It includes the protein identifiers, sequences, structure details, and information
+needed to check the downloaded files.
 
-Each row records the cluster, RCSB structure and chain identifiers, resolution,
-coordinate coverage, sequence hash, mmCIF hash, and selection seed. Relative
-`mmcif_path` values resolve beneath this directory. Materialize and verify the public
-structure files with:
+Download the structures with:
 
 ```bash
 progen2-probe fetch-structures data/manifests/experiment1_150.csv
 ```
 
-The command is restartable and refuses an existing or downloaded file whose SHA-256
-does not match the frozen manifest. The full cohort-construction audit is tracked
-under `artifacts/cohort/`.
+The command checks that every downloaded structure is the expected file. It can be
+run again if a download is interrupted.
