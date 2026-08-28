@@ -1,134 +1,111 @@
 # ProGen2 Structure Probe
 
-This repository first performs a **best-effort reproduction of Experiment 1** from
-Mandrake Bio's blog post,
-[“Protein Language Models: Fluent, but clueless”](https://research.mandrake.bio/p/protein-language-models-fluent-but).
+This repository contains a best-effort reproduction of Experiment 1 from Mandrake
+Bio's [“Protein Language Models: Fluent, but clueless”](https://research.mandrake.bio/p/protein-language-models-fluent-but),
+followed by one small experiment on ProGen2's hidden states.
 
-The experiment asks a simple question: **does a protein language model give higher
-attention scores to residue pairs that touch in the folded protein than to pairs
-that do not touch?** We reproduced the reported comparison between ProGen2 and
-ESM-2, then ran one follow-up asking whether contact information is easier to decode
-from ProGen2's hidden states than from its attention scores.
+Both experiments use the same **150-protein dataset** built from public structures
+in the [RCSB Protein Data Bank](https://www.rcsb.org/).
 
-While reproducing the experiment, we made several assumptions about details such
-as the protein set, model checkpoints, and scoring procedure. We based these choices
-on the information provided in the post and its figures, the official model
-implementations, and standard contact-prediction methods. For transparency, all of
-our assumptions are listed below.
+## Approach
+
+**1. Reproduce the attention experiment.** We tested whether ProGen2-base and
+ESM-2 35M give higher attention-derived scores to residue pairs that contact in 3D
+than to non-contacting pairs at the same sequence separation.
+
+**2. Probe the hidden states.** We kept ProGen2 fixed and trained a small logistic
+classifier to distinguish contacts using the model's internal residue
+representations. The 150 proteins were divided into 90 for training, 30 for choosing
+the layer and classifier setting, and 30 for the final test. We compared the selected
+layer with Stage 0—the amino-acid embedding before ProGen2 processes any context.
 
 ## Dataset
 
-We used public structures from the
-[RCSB Protein Data Bank](https://www.rcsb.org/) (RCSB PDB).
+The blog describes 150 non-redundant protein structures, 100–500 amino acids long,
+determined using X-ray diffraction at resolution ≤ 2.0 Å. Since the original protein
+list was not available, we constructed a replacement 150-protein dataset from RCSB
+PDB. Each example is one protein chain from a PDB structure.
 
-The blog described 150 non-redundant protein structures with resolution at most
-2.0 Å and sequence lengths from 100 to 500 residues. We constructed a replacement dataset of **150 protein chains** using
-the following rules:
+We selected proteins that:
 
-- X-ray structure with resolution ≤ 2.0 Å
-- protein length from 100 to 500 residues
-- at least 95% of residues have the backbone coordinates needed by the analysis
-- sequences clustered at 30% identity and 80% bidirectional coverage
-- one chain selected per cluster to reduce near-duplicate proteins
-- balanced across four length ranges: 38, 38, 37, and 37 chains in 100–199,
-  200–299, 300–399, and 400–500 residues
+- were 100–500 amino acids long;
+- were determined using X-ray diffraction at resolution ≤ 2.0 Å;
+- had the N, Cα, and C atom coordinates required for at least 95% of residues; and
+- were distributed evenly across four protein-length ranges.
 
-The RCSB search was recorded on 23 August 2026. The exact 150 identifiers,
-sequences, structure paths, and file hashes are tracked in
+To reduce repetition, proteins were grouped when an alignment covered at least 80%
+of both sequences and had at least 30% sequence identity. We selected the
+best-resolution structure from each group, breaking ties by coordinate coverage and
+then PDB identifier.
+
+The exact dataset is in
 [`data/manifests/experiment1_150.csv`](data/manifests/experiment1_150.csv).
 
-## Assumptions required for the reproduction
+## Reproduction assumptions
 
-The following details were not fully specified in the blog. These are **our fixed
-choices**, not claims about Mandrake's unpublished implementation.
+The post does not specify every implementation detail, so we made the following
+choices. These are our assumptions, not claims about the original analysis.
 
-| Missing detail | Choice used here |
+| Detail | Choice used here |
 |---|---|
-| Original 150 structures | Public replacement cohort described above |
-| Meaning of “non-redundant” | MMseqs2 clustering at 30% sequence identity and 80% coverage in both directions |
-| ProGen2 checkpoint | Official `progen2-base`; 27 layers matched the blog's description |
-| ESM-2 checkpoint | Official `esm2_t12_35M_UR50D`; inferred from the blog's 12-layer description |
-| Structure handling | First structural model, one PDB polymer chain, intrachain contacts only; modified residues rejected |
-| Missing/alternate coordinates | Require ≥95% backbone coverage; select alternate locations by occupancy, then `A`, then lexicographically |
-| True contact | Virtual Cβ distance below 8 Å and sequence separation greater than 10 residues |
-| Decoy selection | One noncontact per true contact at exactly the same sequence separation, sampled without replacement |
-| Randomness | Seed `20260822` |
-| Attention values | Post-softmax attention returned by each official model; terminal tokens removed |
-| ProGen2's directional attention | Combine the two directions as `A + Aᵀ` |
-| Attention correction | Apply APC separately to every layer and attention head, then z-score valid residue pairs |
-| Final pair score | Maximum corrected z-score across all layers and heads; inferred from the figure label “Max Z-Score” |
-| Distance bins | `(10,20]`, `(20,40]`, `(40,60]`, `(60,100]`, `(100,150]`, `(150,500]` |
-| Overall AUC | Pool all selected contact scores and all selected decoy scores across the 150 proteins |
+| Protein dataset | The public 150-protein RCSB replacement set described above |
+| ProGen2 model | Official `progen2-base` checkpoint |
+| ESM-2 model | Official 12-layer `esm2_t12_35M_UR50D` checkpoint |
+| Contact | Virtual Cβ distance below 8 Å; residues more than 10 positions apart |
+| Non-contact comparison | One noncontact at exactly the same sequence separation as each selected contact |
+| Attention processing | Symmetrize, apply APC and z-scoring, then take the maximum across layers and heads |
+| Distance ranges | `(10,20]`, `(20,40]`, `(40,60]`, `(60,100]`, `(100,150]`, `(150,500]` |
+| Random seed | `20260822` |
 
-Our replacement cohort produced **88,473 matched contact/decoy units**—each unit is
-one true contact plus one decoy. The blog reported 38,286. This difference is
-expected because its structures and several sampling details are unavailable; we
-did not discard valid pairs merely to force the same count.
+This produced 88,473 contact/non-contact comparisons, compared with 38,286 in the
+blog. We retained all valid comparisons rather than adjusting the count to match a
+different protein dataset. The full protocol is documented in
+[`docs/methodology.md`](docs/methodology.md).
 
-## Experiment 1 result
+## Results
 
-| Pooled ROC-AUC | Blog | This reproduction |
+### Experiment 1: attention
+
+| Pooled ROC-AUC | Blog | Our result |
 |---|---:|---:|
 | ProGen2 | 0.527 | 0.537 |
 | ESM-2 | 0.611 | 0.615 |
 
-An AUC of 0.5 means random ranking. Our replacement experiment reproduced the
-blog's main qualitative result: **ProGen2 attention was only slightly better than
-random, while ESM-2 attention contained a clearer contact signal.** The close
-numbers are encouraging, but they should not be presented as an exact numerical
-replication because the underlying protein set and some method choices differ.
+An AUC of 0.5 is random ranking. Like the blog, we found that ProGen2's attention
+signal was weak, while ESM-2 separated contacts more clearly.
 
-Detailed plots, per-distance results, and statistical tests are recorded in
-[`docs/experiment_log.md`](docs/experiment_log.md). The complete reconstructed
-protocol and its limitations are in [`docs/methodology.md`](docs/methodology.md).
+### Follow-up: hidden states
 
-## Follow-up: hidden-state probe
-
-We next asked whether ProGen2's hidden representation contains contact information
-that is not obvious in attention scores. A small supervised classifier was trained
-on frozen residue representations, using separate proteins for training,
-validation, and testing (90/30/30 proteins).
-
-| Held-out test result | Mean per-protein ROC-AUC |
+| Final test result | Mean AUC across 30 test proteins |
 |---|---:|
-| Input embedding before contextual processing | 0.626 |
-| Best validation-selected contextual stage (stage 26) | 0.674 |
-| Improvement | **+0.048** (95% protein-bootstrap CI **+0.033 to +0.062**) |
+| Stage 0: amino-acid embedding | 0.626 |
+| Stage 26: contextual representation | 0.674 |
+| Improvement | **+0.048** (95% CI: **+0.033 to +0.062**) |
 
-![Hidden-state probe result](docs/figures/hidden_state_probe.png)
+![Hidden-state probe results](docs/figures/hidden_state_probe.png)
 
-This means contact information was more easily decoded after ProGen2 processed the
-sequence. It does **not** show that ProGen2 can fold proteins, stores an explicit 3D
-map, or uses this information during generation. See
-[`docs/hidden-state-probe.md`](docs/hidden-state-probe.md) for the exact probe.
+The result shows that contact information was easier for the classifier to recover
+after ProGen2 processed the sequence. It does not show that ProGen2 can predict a
+complete 3D structure.
 
-## Reproducing the runs
+More results are in [`docs/experiment_log.md`](docs/experiment_log.md).
 
-Create the local environment and run the tests:
+## Compute
+
+The model runs and hidden-state extraction were performed on a RunPod Secure Cloud
+pod with one NVIDIA RTX 4090 GPU (24 GB VRAM). The recorded environment used Python
+3.8, PyTorch 2.0.1, and CUDA 11.8. The hidden-state classifier was fitted on CPU.
+
+## Reproduce
 
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -e '.[probe,test]'
-python -m pytest
-```
-
-Download and verify the public structures in the frozen manifest:
-
-```bash
+python3 -m pip install -e '.[probe,test]'
+python3 -m pytest
 progen2-probe fetch-structures data/manifests/experiment1_150.csv
 ```
 
-The compact machine-readable results are tracked in [`artifacts/`](artifacts/).
-Large model checkpoints, downloaded structures, attention arrays, and the hidden-
-state cache are regenerated rather than stored in Git. End-to-end GPU commands are
-in [`docs/runpod.md`](docs/runpod.md).
-
-## Repository map
-
-- [`data/manifests/`](data/manifests/) — exact public protein cohorts
-- [`configs/`](configs/) — frozen experiment settings
-- [`artifacts/`](artifacts/) — compact results and provenance
-- [`docs/experiment_log.md`](docs/experiment_log.md) — results and interpretations
-- [`src/progen2_structure_probe/`](src/progen2_structure_probe/) — experiment code
+Experiment settings are in [`configs/`](configs/), compact results are in
+[`artifacts/`](artifacts/), and the complete RunPod commands are in
+[`docs/runpod.md`](docs/runpod.md).
