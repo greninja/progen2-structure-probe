@@ -1,23 +1,25 @@
 # ProGen2 Structure Probe
 
 This repository contains a best-effort reproduction of Experiment 1 from Mandrake
-Bio's [“Protein Language Models: Fluent, but clueless”](https://research.mandrake.bio/p/protein-language-models-fluent-but),
-followed by one small experiment on ProGen2's hidden states.
+Bio's [“Protein Language Models: Fluent, but clueless”](https://research.mandrake.bio/p/protein-language-models-fluent-but), followed by one small experiment on ProGen2's hidden states.
 
 Both experiments use the same **150-protein dataset** built from public structures
 in the [RCSB Protein Data Bank](https://www.rcsb.org/).
 
-## Approach
+## What we did
 
 **1. Reproduce the attention experiment.** We tested whether ProGen2-base and
 ESM-2 35M give higher attention-derived scores to residue pairs that contact in 3D
 than to non-contacting pairs at the same sequence separation.
 
-**2. Probe the hidden states.** We kept ProGen2 fixed and trained a small logistic
-classifier to distinguish contacts using the model's internal residue
-representations. The 150 proteins were divided into 90 for training, 30 for choosing
-the layer and classifier setting, and 30 for the final test. We compared the selected
-layer with Stage 0—the amino-acid embedding before ProGen2 processes any context.
+**2. Probe the hidden states.** The hypothesis is that ProGen2's hidden states may
+contain 3D contact information that is not clearly visible in its attention scores.
+We kept ProGen2 fixed and trained a small logistic classifier on the model's internal
+(hidden-state) representations to distinguish contacts from non-contacts. For this
+probe, the dataset was divided into 90 training proteins, 30 validation proteins used
+to choose the layer and classifier setting, and 30 final test proteins. We compared
+the selected layer with Stage 0—the amino-acid embedding before ProGen2 processes any
+context.
 
 ## Dataset
 
@@ -51,9 +53,10 @@ are listed below.
 | Protein dataset | The public 150-protein RCSB replacement set described above |
 | ProGen2 model | Official `progen2-base` checkpoint |
 | ESM-2 model | Official 12-layer `esm2_t12_35M_UR50D` checkpoint |
-| Contact | Virtual Cβ distance below 8 Å; residues more than 10 positions apart |
+| Contact definition | We followed ESM's contact tutorial: virtual Cβ distance below 8 Å. This cutoff is not stated in the blog |
+| Eligible residue pairs | More than 10 positions apart, inferred from the blog's first distance range `(10,20]` |
 | Non-contact comparison | One noncontact at exactly the same sequence separation as each selected contact |
-| Attention processing | Symmetrize, apply APC and z-scoring, then take the maximum across layers and heads |
+| Attention processing | The blog reports APC and a maximum corrected z-score. We inferred the symmetrization, z-scoring details, and maximum across layers and heads |
 | Distance ranges | `(10,20]`, `(20,40]`, `(40,60]`, `(60,100]`, `(100,150]`, `(150,500]` |
 | Random seed | `20260822` |
 
@@ -87,9 +90,21 @@ clearly similar.
 
 ![Hidden-state probe results](docs/figures/hidden_state_probe.png)
 
-The result shows that contact information was easier for the classifier to recover
-after ProGen2 processed the sequence. It does not show that ProGen2 can predict a
-complete 3D structure.
+We found that in contrast to attention scores, the hidden-state of ProGen2
+might contain slightly more information that a simple logistic regression
+classifier can extract. Our classifier especially performed better after ProGen2
+processed the sequence than it did on the initial amino-acid embeddings. The
+improvement appeared in all six sequence-distance ranges, including contacts between
+residues 150–500 positions apart.
+
+This suggests that ProGen2's deeper layers maybe contains contact-related information that is not
+clearly visible by inspecting attention scores alone. Because the classifier learned
+from labelled contacts, the result only shows that this information can be recovered
+from the hidden states—not that ProGen2 can predict a complete 3D structure yet.
+ProGen2 was trained on protein sequences without explicit 3D contact labels, so we
+should not assume that it learned strong contact representations. Any contact signal
+would have emerged indirectly from structural and evolutionary patterns in the
+training sequences.
 
 More results are in [`docs/experiment_log.md`](docs/experiment_log.md).
 
@@ -115,10 +130,11 @@ Experiment settings are in [`configs/`](configs/), compact results are in
 
 ## Contributions
 
-Shadab came up with the project, chose the questions and overall direction, provided
-the compute, reviewed the assumptions and results, and made the final calls.
+Shadab came up with the initial idea and the project, chose the questions and overall direction,
+provided the compute, planned some of the experiments, reviewed the assumptions and results, and
+made the final calls and did 50-60% of the writing.
 
-OpenAI Codex helped plan the experiments, implemented and ran the pipeline, analyzed
+Codex helped plan the experiments, implemented and ran the pipeline, analyzed
 the results, and prepared the figures and documentation.
 
 The project was built collaboratively through an ongoing back-and-forth between
