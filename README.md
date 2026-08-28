@@ -31,7 +31,8 @@ We selected proteins that:
 - were 100–500 amino acids long;
 - were determined using X-ray diffraction at resolution ≤ 2.0 Å;
 - had the N, Cα, and C atom coordinates required for at least 95% of residues; and
-- were distributed evenly across four protein-length ranges.
+- were distributed evenly across four protein-length ranges: 100–199, 200–299,
+  300–399, and 400–500 amino acids.
 
 To reduce repetition, proteins were grouped when an alignment covered at least 80%
 of both sequences and had at least 30% sequence identity. We selected the
